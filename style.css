@@ -108,6 +108,16 @@ html[lang="ar"] .kicker { letter-spacing: 0; }
 .get-card p { color: var(--ink-2); margin: 0 0 12px; flex: 1; }
 .get-card .btn { justify-content: center; }
 .btn.soon { background: var(--line); color: var(--muted); pointer-events: none; }
+.win-ver { color: var(--muted); text-align: center; min-height: 1.2em; }
+.win-help { border-top: 1px solid var(--line); margin-top: 6px; padding-top: 12px; font-size: .92rem; }
+.win-help ol { margin: 10px 0 6px; padding-inline-start: 22px; }
+.win-help p { margin: 0; color: var(--muted); flex: 0; }
+.ss { background: #0067b8; color: #fff; border-radius: 8px; padding: 12px 14px 44px; margin-top: 10px; position: relative; font-family: 'Segoe UI', system-ui, sans-serif; direction: ltr; text-align: left; }
+.ss-h { font-size: 1rem; font-weight: 600; }
+.ss-t { font-size: .74rem; opacity: .9; margin: 4px 0 6px; }
+.ss-more { font-size: .78rem; text-decoration: underline; position: relative; }
+.ss-run { position: absolute; right: 12px; bottom: 10px; border: 1px solid #fff; padding: 3px 12px; font-size: .78rem; }
+.ss i { position: absolute; top: -9px; right: -16px; width: 18px; height: 18px; border-radius: 50%; background: var(--sun); color: #0b0b0b; font: 800 .7rem/18px var(--font); text-align: center; }
 
 .intro { color: var(--ink-2); font-size: 1.1rem; max-width: 40em; }
 .seg { display: inline-flex; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; margin: 8px 0 24px; background: var(--page); }

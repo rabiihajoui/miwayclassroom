@@ -1,6 +1,7 @@
 // Fill these in when ready. Empty = hidden or "coming soon".
 const CONFIG = {
-  windowsUrl: '',
+  windowsUrl: 'https://github.com/rabiihajoui/miwayclassroom/releases/latest/download/MI-WAY-Classroom-Setup.exe',
+  releaseApi: 'https://api.github.com/repos/rabiihajoui/miwayclassroom/releases/latest',
   donateUrl: '',
   contactEmail: '',
   teacherPhoto: '',
@@ -42,7 +43,8 @@ const T = {
     cmp_r5: 'Les données restent dans votre classe',
     get_h: 'Obtenir MI WAY Classroom',
     get_android_h: 'Téléphone ou tablette Android', get_android_p: 'Votre téléphone gère la classe. Avec un projecteur ou une télé si vous en avez.', get_android_b: 'Ouvrir Google Play',
-    get_win_h: 'Ordinateur Windows', get_win_p: 'Idéal avec un projecteur. Windows 10 et 11.', get_win_soon: 'Très bientôt', get_win_b: 'Télécharger pour Windows',
+    get_win_h: 'Ordinateur Windows', get_win_p: 'Idéal avec un projecteur. Windows 10 et 11.', get_win_soon: 'Très bientôt', get_win_b: 'Télécharger pour Windows', win_ver: 'Version',
+    win_help_h: 'Windows peut afficher un avertissement bleu', win_help_1: 'Cliquez sur <b>Informations complémentaires</b> (More info).', win_help_2: 'Cliquez sur <b>Exécuter quand même</b> (Run anyway).', win_help_p: 'C\'est normal pour une nouvelle appli gratuite. MI WAY Classroom est sûre.',
     get_stu_h: 'Élèves', get_stu_p: 'Rien à installer. Ils scannent le QR code en classe. Sur Android, ils peuvent aussi recevoir l\'appli gratuite MI WAY Student depuis l\'appli du professeur.',
     t_k: 'Créée par un professeur', t_h: 'Bonjour, je suis Rabii Hajoui',
     t_p1: 'Je suis professeur d\'anglais au Maroc. Mes élèves adorent les jeux de quiz, mais notre école n\'a pas de Wi-Fi. Alors j\'ai créé ma propre application, qui marche sans internet.',
@@ -89,7 +91,8 @@ const T = {
     cmp_r5: 'بيانات التلاميذ تبقى في قسمك',
     get_h: 'احصل على MI WAY Classroom',
     get_android_h: 'هاتف أو لوحة أندرويد', get_android_p: 'هاتفك يدير القسم. مع جهاز عرض أو تلفاز إن وُجد.', get_android_b: 'افتح Google Play',
-    get_win_h: 'حاسوب Windows', get_win_p: 'الأفضل مع جهاز عرض. Windows 10 و 11.', get_win_soon: 'قريباً جداً', get_win_b: 'تحميل لـ Windows',
+    get_win_h: 'حاسوب Windows', get_win_p: 'الأفضل مع جهاز عرض. Windows 10 و 11.', get_win_soon: 'قريباً جداً', get_win_b: 'تحميل لـ Windows', win_ver: 'الإصدار',
+    win_help_h: 'قد يُظهر Windows تحذيراً أزرق', win_help_1: 'اضغط على <b>مزيد من المعلومات</b> (More info).', win_help_2: 'اضغط على <b>تشغيل على أي حال</b> (Run anyway).', win_help_p: 'هذا عادي بالنسبة لتطبيق مجاني جديد. MI WAY Classroom آمن.',
     get_stu_h: 'التلاميذ', get_stu_p: 'لا شيء للتثبيت. يمسحون رمز QR في القسم. يمكن لتلاميذ أندرويد أيضاً الحصول على تطبيق MI WAY Student المجاني من تطبيق الأستاذ.',
     t_k: 'من إنجاز أستاذ', t_h: 'مرحباً، أنا Rabii Hajoui',
     t_p1: 'أنا أستاذ للغة الإنجليزية في المغرب. تلاميذي يحبّون ألعاب الاختبارات، لكن مؤسستنا ليس فيها Wi-Fi. فصنعت تطبيقي الخاص الذي يعمل بدون إنترنت.',
@@ -125,10 +128,28 @@ function setLang(lang) {
   try { localStorage.setItem('lang', lang); } catch {}
 }
 
+// Version and size of the newest installer, read from GitHub.
+let release;
+async function showWinVersion(d) {
+  try { release = release || await fetch(CONFIG.releaseApi).then(r => r.json()); } catch { return; }
+  const exe = (release.assets || []).find(a => a.name.endsWith('.exe'));
+  if (exe) document.getElementById('win-ver').textContent = `${d.win_ver || 'Version'} ${release.tag_name.replace(/^v/, '')} · ${Math.round(exe.size / 1048576)} MB`;
+}
+
+// The hero Windows button downloads, then shows the steps for the blue warning.
+document.getElementById('win-link').addEventListener('click', () => {
+  if (CONFIG.windowsUrl) setTimeout(() => document.getElementById('windows').scrollIntoView({ behavior: 'smooth' }), 300);
+});
+
 function applyConfig(d) {
   const win = document.getElementById('win-btn');
-  if (CONFIG.windowsUrl) { win.href = CONFIG.windowsUrl; win.textContent = d.get_win_b || 'Download for Windows'; win.classList.remove('soon'); }
-  else win.classList.add('soon');
+  if (CONFIG.windowsUrl) {
+    win.href = document.getElementById('win-link').href = CONFIG.windowsUrl;
+    win.textContent = d.get_win_b || 'Download for Windows';
+    win.classList.remove('soon');
+    document.getElementById('win-help').hidden = false;
+    showWinVersion(d);
+  } else win.classList.add('soon');
   if (CONFIG.donateUrl) { document.getElementById('support').hidden = false; document.getElementById('donate-btn').href = CONFIG.donateUrl; }
   if (CONFIG.contactEmail) { document.getElementById('contact-wrap').hidden = false; document.getElementById('contact-link').href = 'mailto:' + CONFIG.contactEmail; }
   if (CONFIG.teacherPhoto) document.getElementById('teacher-photo').src = CONFIG.teacherPhoto;
