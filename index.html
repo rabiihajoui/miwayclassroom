@@ -28,6 +28,7 @@
       <a href="#features" data-t="nav_features">Features</a>
       <a href="#tutorials" data-t="nav_tut">Tutorials</a>
       <a href="#teacher" data-t="nav_teacher">The teacher</a>
+      <a href="#stories" id="nav-stories" hidden data-t="nav_stories">Stories</a>
       <a href="#faq" data-t="nav_faq">Questions</a>
     </nav>
     <div class="langs" role="group" aria-label="Language">
@@ -211,6 +212,51 @@
       <p data-t="t_p2">I use it with my classes every week, and I improve it with every teacher's ideas. It is free, and it will stay free.</p>
       <p class="sig">Created by RABII HAJOUI</p>
     </div>
+  </div>
+</section>
+
+<section id="stories" class="block alt" hidden>
+  <div class="wrap">
+    <p class="kicker" data-t="st_k">Teachers say</p>
+    <h2 data-t="st_h">Stories from real classrooms</h2>
+    <p class="st-lead" data-t="st_p">Do you use MI WAY with your students? Tell other teachers how it went.</p>
+    <div class="st-wall" id="st-wall"></div>
+    <div class="st-actions">
+      <button class="btn btn-ghost-dark" id="st-more" type="button" hidden data-t="st_more">See more stories</button>
+      <button class="btn btn-main" id="st-open" type="button" data-t="st_open">Share your experience</button>
+    </div>
+    <form class="st-form" id="share" hidden novalidate>
+      <h3 data-t="st_fh">Share your experience</h3>
+      <div class="st-row">
+        <label><span><span data-t="st_name">Your name</span> *</span><input name="name" maxlength="60" required autocomplete="name"></label>
+        <label><span data-t="st_country">Country</span><input name="country" maxlength="60" autocomplete="country-name"></label>
+      </div>
+      <div class="st-row">
+        <label><span data-t="st_level">I teach in</span><select name="level">
+          <option value="Primary school" data-t="lv1">Primary school</option>
+          <option value="Middle school" data-t="lv2" selected>Middle school</option>
+          <option value="High school" data-t="lv3">High school</option>
+          <option value="University" data-t="lv4">University</option>
+          <option value="Language centre" data-t="lv5">Language centre</option>
+          <option value="Other" data-t="lv6">Other</option>
+        </select></label>
+        <label><span data-t="st_email">Email (only for a reply, never shown)</span><input name="email" type="email" maxlength="100" autocomplete="email"></label>
+      </div>
+      <fieldset class="st-stars"><legend data-t="st_rate">Your rating</legend>
+        <input type="radio" name="stars" id="s5" value="5"><label for="s5" title="5">★</label>
+        <input type="radio" name="stars" id="s4" value="4"><label for="s4" title="4">★</label>
+        <input type="radio" name="stars" id="s3" value="3"><label for="s3" title="3">★</label>
+        <input type="radio" name="stars" id="s2" value="2"><label for="s2" title="2">★</label>
+        <input type="radio" name="stars" id="s1" value="1"><label for="s1" title="1">★</label>
+      </fieldset>
+      <label><span><span data-t="st_story">Your story</span> *</span><textarea name="story" rows="5" maxlength="1500" required data-t-ph="st_story_ph" placeholder="What did you do with MI WAY? How did your students react?"></textarea></label>
+      <label class="st-photo"><span data-t="st_photo">Photo of your class (optional)</span><input name="photo" type="file" accept="image/*"></label>
+      <label class="st-check" id="st-photo-ok" hidden><input type="checkbox" name="photoOk"> <span data-t="st_photo_ok">I have permission to share this photo, and no child can be recognised in it.</span></label>
+      <input class="st-trap" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <p class="st-note" data-t="st_note">Rabii reads every story before it appears here. Your email is never shown.</p>
+      <p class="st-msg" id="st-msg" role="status"></p>
+      <button class="btn btn-main" id="st-send" type="submit" data-t="st_send">Send my story</button>
+    </form>
   </div>
 </section>
 

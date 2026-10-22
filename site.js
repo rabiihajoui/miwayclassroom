@@ -5,6 +5,8 @@ const CONFIG = {
   donateUrl: '',
   contactEmail: '',
   teacherPhoto: '',
+  // Teacher stories: the Google Apps Script web app link (see scripts/stories.gs). Empty = section hidden.
+  storiesUrl: 'https://script.google.com/macros/s/AKfycbzds4d-KsP-LtuNuhBcqG3ZQGLf2Cqbzwt1Qq0Klfn7gugJ1lGXNwD-YiLscNY37HGQeA/exec',
   play: { en: 'en', fr: 'fr', ar: 'ar' },
   // Real class videos: put the file in website/videos/, then add { file: 'videos/class-1.mp4', poster: 'videos/class-1.jpg', caption: { en: '', fr: '', ar: '' } }
   classClips: [],
@@ -57,6 +59,16 @@ const T = {
     q4: 'Je n\'utilise pas les manuels marocains. Puis-je l\'utiliser ?', a4: 'Oui. Vous pouvez taper vos propres leçons pour n\'importe quel manuel et niveau.',
     q5: 'Les données de mes élèves sont-elles protégées ?', a5: 'Tout reste sur votre appareil. Rien n\'est envoyé dans un cloud. <a href="https://sites.google.com/view/miway-classroom-privacy/home" target="_blank" rel="noopener">Politique de confidentialité</a>',
     q6: 'Ça marche sur Mac ou iPhone pour le professeur ?', a6: 'Pas encore. Le professeur a besoin d\'un téléphone Android ou d\'un ordinateur Windows. Les élèves peuvent utiliser n\'importe quel téléphone.',
+    nav_stories: 'Témoignages',
+    st_k: 'Les professeurs racontent', st_h: 'Des histoires de vraies classes', st_p: 'Vous utilisez MI WAY avec vos élèves ? Racontez aux autres professeurs comment ça s\'est passé.',
+    st_more: 'Voir plus de témoignages', st_less: 'Voir moins', st_open: 'Partager votre expérience', st_fh: 'Partager votre expérience',
+    st_name: 'Votre nom', st_country: 'Pays', st_level: 'J\'enseigne en', st_email: 'E-mail (seulement pour répondre, jamais affiché)',
+    lv1: 'Primaire', lv2: 'Collège', lv3: 'Lycée', lv4: 'Université', lv5: 'Centre de langues', lv6: 'Autre',
+    st_rate: 'Votre note', st_story: 'Votre histoire', st_story_ph: 'Qu\'avez-vous fait avec MI WAY ? Comment vos élèves ont-ils réagi ?',
+    st_photo: 'Photo de votre classe (facultatif)', st_photo_ok: 'J\'ai la permission de partager cette photo, et aucun enfant n\'y est reconnaissable.',
+    st_note: 'Rabii lit chaque histoire avant qu\'elle apparaisse ici. Votre e-mail n\'est jamais affiché.', st_send: 'Envoyer mon histoire',
+    st_sending: 'Envoi…', st_thanks: 'Merci ! Votre histoire apparaîtra ici après lecture.', st_err: 'L\'envoi n\'a pas marché. Vérifiez votre internet et réessayez.',
+    st_need: 'Écrivez votre nom et une histoire (au moins 20 lettres).', st_need_ok: 'Cochez la case pour la photo, ou retirez la photo.',
     foot_made: 'Créée par', foot_privacy: 'Confidentialité', foot_contact: 'Contact',
   },
   ar: {
@@ -105,12 +117,28 @@ const T = {
     q4: 'لا أستعمل الكتب المغربية. هل يمكنني استعماله؟', a4: 'نعم. يمكنك كتابة دروسك لأي كتاب وأي مستوى.',
     q5: 'هل بيانات تلاميذي آمنة؟', a5: 'كل شيء يبقى على جهازك. لا شيء يُرسل إلى سحابة. <a href="https://sites.google.com/view/miway-classroom-privacy/home" target="_blank" rel="noopener">سياسة الخصوصية</a>',
     q6: 'هل يعمل على Mac أو آيفون للأستاذ؟', a6: 'ليس بعد. يحتاج الأستاذ هاتف أندرويد أو حاسوب Windows. يمكن للتلاميذ استعمال أي هاتف.',
+    nav_stories: 'شهادات',
+    st_k: 'الأساتذة يحكون', st_h: 'قصص من أقسام حقيقية', st_p: 'هل تستعمل MI WAY مع تلاميذك؟ احكِ للأساتذة الآخرين كيف كانت التجربة.',
+    st_more: 'عرض قصص أخرى', st_less: 'عرض أقل', st_open: 'شارك تجربتك', st_fh: 'شارك تجربتك',
+    st_name: 'اسمك', st_country: 'البلد', st_level: 'أدرّس في', st_email: 'البريد الإلكتروني (للرد فقط، لا يُعرض أبداً)',
+    lv1: 'الابتدائي', lv2: 'الإعدادي', lv3: 'الثانوي', lv4: 'الجامعة', lv5: 'مركز لغات', lv6: 'آخر',
+    st_rate: 'تقييمك', st_story: 'قصتك', st_story_ph: 'ماذا فعلت بـ MI WAY؟ كيف كان تفاعل تلاميذك؟',
+    st_photo: 'صورة قسمك (اختياري)', st_photo_ok: 'لدي إذن بمشاركة هذه الصورة، ولا يمكن التعرف على أي طفل فيها.',
+    st_note: 'يقرأ ربيع كل قصة قبل ظهورها هنا. بريدك الإلكتروني لا يُعرض أبداً.', st_send: 'أرسل قصتي',
+    st_sending: 'جارٍ الإرسال…', st_thanks: 'شكراً! ستظهر قصتك هنا بعد قراءتها.', st_err: 'لم ينجح الإرسال. تحقق من الإنترنت وحاول مجدداً.',
+    st_need: 'اكتب اسمك وقصة (20 حرفاً على الأقل).', st_need_ok: 'ضع علامة في خانة الصورة، أو احذف الصورة.',
     foot_made: 'من إنجاز', foot_privacy: 'الخصوصية', foot_contact: 'اتصل بنا',
   },
 };
 
 const en = {};
 document.querySelectorAll('[data-t]').forEach(el => { en[el.dataset.t] = el.innerHTML; });
+document.querySelectorAll('[data-t-ph]').forEach(el => { en[el.dataset.tPh] = el.placeholder; });
+Object.assign(en, {
+  st_less: 'See fewer', st_sending: 'Sending…', st_thanks: 'Thank you! Your story will appear here after Rabii reads it.',
+  st_err: 'Sending did not work. Check your internet and try again.', st_need: 'Write your name and a story (at least 20 letters).',
+  st_need_ok: 'Tick the box for the photo, or remove the photo.',
+});
 T.en = en;
 
 function setLang(lang) {
@@ -119,10 +147,12 @@ function setLang(lang) {
   document.documentElement.lang = lang;
   document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
   document.querySelectorAll('[data-t]').forEach(el => { const v = d[el.dataset.t]; if (v) el.innerHTML = v; });
+  document.querySelectorAll('[data-t-ph]').forEach(el => { el.placeholder = d[el.dataset.tPh] || en[el.dataset.tPh]; });
   document.querySelectorAll('[data-lang]').forEach(b => b.classList.toggle('on', b.dataset.lang === lang));
   setPromo(lang);
   renderTutorials();
   renderClips();
+  renderStories();
   document.querySelectorAll('a[href*="play.google.com"]').forEach(a => { a.href = `https://play.google.com/store/apps/details?id=com.miway.classroom&hl=${CONFIG.play[lang]}`; });
   applyConfig(d);
   try { localStorage.setItem('lang', lang); } catch {}
@@ -227,7 +257,95 @@ function renderClips() {
   });
 }
 
+// Teacher stories: approved ones come from the Google sheet (scripts/stories.gs); new ones go there too.
+const LEVELS = ['Primary school', 'Middle school', 'High school', 'University', 'Language centre', 'Other'];
+const SHOW = 6;
+let stories = [], allStories = false;
+const form = document.getElementById('share');
+
+function renderStories() {
+  const wall = document.getElementById('st-wall');
+  wall.innerHTML = '';
+  (allStories ? stories : stories.slice(0, SHOW)).forEach((s) => {
+    const f = document.createElement('figure');
+    f.className = 'st-card';
+    const photo = /^https:\/\/drive\.google\.com\//.test(s.photo || '');
+    f.innerHTML = `${photo ? '<img loading="lazy" alt="">' : ''}<div class="st-rating"></div><blockquote dir="auto"></blockquote><figcaption><b dir="auto"></b><span></span></figcaption>`;
+    if (photo) Object.assign(f.querySelector('img'), { src: s.photo, onerror() { this.remove(); } });
+    const n = Math.min(5, Number(s.stars) || 0);
+    f.querySelector('.st-rating').textContent = n ? '★'.repeat(n) + '☆'.repeat(5 - n) : '';
+    f.querySelector('blockquote').textContent = s.story;
+    f.querySelector('b').textContent = s.name;
+    const lv = LEVELS.indexOf(s.level);
+    f.querySelector('span').textContent = [s.country, lv >= 0 ? word('lv' + (lv + 1)) : s.level].filter(Boolean).join(' · ');
+    wall.appendChild(f);
+  });
+  const more = document.getElementById('st-more');
+  more.hidden = stories.length <= SHOW;
+  more.textContent = word(allStories ? 'st_less' : 'st_more');
+  const msg = document.getElementById('st-msg');
+  if (msg.dataset.k) msg.textContent = word(msg.dataset.k);
+}
+
+async function loadStories() {
+  if (!CONFIG.storiesUrl) return;
+  document.getElementById('stories').hidden = document.getElementById('nav-stories').hidden = false;
+  try { stories = (await fetch(CONFIG.storiesUrl).then(r => r.json())).stories || []; } catch { stories = []; }
+  renderStories();
+  if (location.hash === '#share') openShare();
+}
+
+function openShare() {
+  form.hidden = false;
+  form.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  form.elements.name.focus({ preventScroll: true });
+}
+
+// Phone photos are big: make them at most 1000 px before sending.
+function shrink(file) {
+  return new Promise((ok, no) => {
+    const img = new Image();
+    img.onload = () => {
+      const k = Math.min(1, 1000 / Math.max(img.width, img.height));
+      const c = document.createElement('canvas');
+      c.width = Math.round(img.width * k);
+      c.height = Math.round(img.height * k);
+      c.getContext('2d').drawImage(img, 0, 0, c.width, c.height);
+      URL.revokeObjectURL(img.src);
+      ok(c.toDataURL('image/jpeg', 0.8));
+    };
+    img.onerror = no;
+    img.src = URL.createObjectURL(file);
+  });
+}
+
+const say = (k) => { document.getElementById('st-msg').textContent = word(k); document.getElementById('st-msg').dataset.k = k; };
+document.getElementById('st-open').addEventListener('click', openShare);
+document.getElementById('st-more').addEventListener('click', () => { allStories = !allStories; renderStories(); });
+addEventListener('hashchange', () => { if (location.hash === '#share' && CONFIG.storiesUrl) openShare(); });
+form.elements.photo.addEventListener('change', () => { document.getElementById('st-photo-ok').hidden = !form.elements.photo.files.length; });
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const f = form.elements, file = f.photo.files[0];
+  if (!f.name.value.trim() || f.story.value.trim().length < 20) return say('st_need');
+  if (file && !f.photoOk.checked) return say('st_need_ok');
+  const send = document.getElementById('st-send');
+  send.disabled = true;
+  say('st_sending');
+  try {
+    const d = { name: f.name.value, country: f.country.value, level: f.level.value, email: f.email.value, stars: f.stars.value, story: f.story.value, website: f.website.value, lang: lang() };
+    if (file) { d.photo = await shrink(file); d.photoOk = true; }
+    const r = await fetch(CONFIG.storiesUrl, { method: 'POST', body: JSON.stringify(d) }).then(x => x.json());
+    if (!r.ok) throw new Error('refused');
+    form.reset();
+    document.getElementById('st-photo-ok').hidden = true;
+    say('st_thanks');
+  } catch { say('st_err'); }
+  send.disabled = false;
+});
+
 let start = 'en';
 try { start = localStorage.getItem('lang') || ''; } catch {}
 if (!start) { const n = (navigator.language || 'en').slice(0, 2); start = T[n] ? n : 'en'; }
 setLang(start);
+loadStories();
