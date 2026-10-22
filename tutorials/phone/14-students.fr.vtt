@@ -1,0 +1,49 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:04.894 line:91%
+Chapitre 14. La page Élèves : noms, téléphones et niveaux.
+
+00:00:06.312 --> 00:00:11.194 line:91%
+Ouvrez « Students ». Voici votre liste de classe : un nom par ligne.
+
+00:00:11.656 --> 00:00:20.754 line:91%
+Pour corriger l'orthographe, changez le nom sur sa ligne : l'élève garde ses résultats. Pour un nouvel élève, ajoutez une ligne. Puis appuyez sur « Save class ».
+
+00:00:21.216 --> 00:00:25.795 line:91%
+Votre liste est dans Excel ? Appuyez sur « Import », et choisissez le fichier.
+
+00:00:26.256 --> 00:00:32.555 line:91%
+« Class details » contient le nom de la classe, le niveau et le manuel, l'établissement, les heures de cours, et la salle.
+
+00:00:33.021 --> 00:00:37.054 line:91%
+Pas de liste ? Appuyez sur « Invite students to add their names ».
+
+00:00:37.514 --> 00:00:42.554 line:91%
+Les élèves scannent le code, écrivent leur prénom et leur nom, et choisissent un animal.
+
+00:00:48.878 --> 00:00:55.015 line:91%
+Un nom tapé attend votre accord. Appuyez sur « Accept », ou « Refuse ». Puis appuyez sur « Done ».
+
+00:00:56.183 --> 00:01:01.494 line:91%
+Un nom par téléphone. Pendant un test, le premier téléphone qui touche un nom le garde.
+
+00:01:04.726 --> 00:01:11.353 line:91%
+Si un autre téléphone essaie le même nom, il ne peut pas. Un encadré jaune vous dit qui a essayé. Appuyez sur « OK ».
+
+00:01:12.508 --> 00:01:20.055 line:91%
+Un élève qui a touché le mauvais nom touche « This is not my name ». Vous appuyez sur « Free », et l'élève touche son propre nom.
+
+00:01:20.510 --> 00:01:23.834 line:91%
+La fois suivante, le téléphone se connecte tout seul.
+
+00:01:35.346 --> 00:01:45.623 line:91%
+Nouveau téléphone, ou une erreur ? Sur la page Élèves, « Students' phones » montre qui a un téléphone. Appuyez sur « Unlink » pour un élève, ou « Unlink all phones ».
+
+00:01:46.799 --> 00:01:55.744 line:91%
+« Student levels » : l'application donne à chaque élève un niveau d'après ses tests. Starter, Explorer ou Champion. Changez n'importe quel élève ici.
+
+00:01:56.203 --> 00:02:01.444 line:91%
+Le niveau change l'aide dans Time to speak, et les listes de mots dans Send to learn.
+
+00:02:01.902 --> 00:02:06.905 line:91%
+En bas : l'aide à la lecture, et les téléphones des parents. Voir le chapitre 13.
