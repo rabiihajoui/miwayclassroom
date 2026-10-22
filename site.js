@@ -59,7 +59,7 @@ const T = {
     q4: 'Je n\'utilise pas les manuels marocains. Puis-je l\'utiliser ?', a4: 'Oui. Vous pouvez taper vos propres leçons pour n\'importe quel manuel et niveau.',
     q5: 'Les données de mes élèves sont-elles protégées ?', a5: 'Tout reste sur votre appareil. Rien n\'est envoyé dans un cloud. <a href="https://sites.google.com/view/miway-classroom-privacy/home" target="_blank" rel="noopener">Politique de confidentialité</a>',
     q6: 'Ça marche sur Mac ou iPhone pour le professeur ?', a6: 'Pas encore. Le professeur a besoin d\'un téléphone Android ou d\'un ordinateur Windows. Les élèves peuvent utiliser n\'importe quel téléphone.',
-    nav_stories: 'Témoignages',
+    nav_stories: 'Témoignages', nav_app: 'Obtenir l\'appli',
     st_k: 'Les professeurs racontent', st_h: 'Des histoires de vraies classes', st_p: 'Vous utilisez MI WAY avec vos élèves ? Racontez aux autres professeurs comment ça s\'est passé.',
     st_more: 'Voir plus de témoignages', st_less: 'Voir moins', st_open: 'Partager votre expérience', st_fh: 'Partager votre expérience',
     st_name: 'Votre nom', st_country: 'Pays', st_level: 'J\'enseigne en', st_email: 'E-mail (seulement pour répondre, jamais affiché)',
@@ -117,7 +117,7 @@ const T = {
     q4: 'لا أستعمل الكتب المغربية. هل يمكنني استعماله؟', a4: 'نعم. يمكنك كتابة دروسك لأي كتاب وأي مستوى.',
     q5: 'هل بيانات تلاميذي آمنة؟', a5: 'كل شيء يبقى على جهازك. لا شيء يُرسل إلى سحابة. <a href="https://sites.google.com/view/miway-classroom-privacy/home" target="_blank" rel="noopener">سياسة الخصوصية</a>',
     q6: 'هل يعمل على Mac أو آيفون للأستاذ؟', a6: 'ليس بعد. يحتاج الأستاذ هاتف أندرويد أو حاسوب Windows. يمكن للتلاميذ استعمال أي هاتف.',
-    nav_stories: 'شهادات',
+    nav_stories: 'شهادات', nav_app: 'حمّل التطبيق',
     st_k: 'الأساتذة يحكون', st_h: 'قصص من أقسام حقيقية', st_p: 'هل تستعمل MI WAY مع تلاميذك؟ احكِ للأساتذة الآخرين كيف كانت التجربة.',
     st_more: 'عرض قصص أخرى', st_less: 'عرض أقل', st_open: 'شارك تجربتك', st_fh: 'شارك تجربتك',
     st_name: 'اسمك', st_country: 'البلد', st_level: 'أدرّس في', st_email: 'البريد الإلكتروني (للرد فقط، لا يُعرض أبداً)',
@@ -186,6 +186,14 @@ function applyConfig(d) {
 }
 
 document.querySelectorAll('[data-lang]').forEach(b => b.addEventListener('click', () => setLang(b.dataset.lang)));
+
+// Phone menu: ☰ opens the links under the top bar; a link or Escape closes it.
+const nav = document.querySelector('.nav'), menuBtn = document.getElementById('menu-btn');
+const openMenu = (on) => { nav.classList.toggle('open', on); menuBtn.setAttribute('aria-expanded', on); };
+menuBtn.addEventListener('click', () => openMenu(!nav.classList.contains('open')));
+document.querySelectorAll('#nav-links a').forEach(a => a.addEventListener('click', () => openMenu(false)));
+addEventListener('keydown', (e) => { if (e.key === 'Escape') openMenu(false); });
+document.addEventListener('click', (e) => { if (!nav.contains(e.target)) openMenu(false); });
 
 const lang = () => document.documentElement.lang;
 const word = (k) => (T[lang()] || T.en)[k] || T.en[k] || '';

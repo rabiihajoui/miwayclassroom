@@ -32,9 +32,11 @@ html[lang="ar"] .kicker { letter-spacing: 0; }
 .links { display: flex; gap: 22px; margin-inline-start: auto; }
 .links a { color: var(--ink-2); text-decoration: none; font-weight: 700; font-size: .95rem; }
 .links a:hover { color: var(--accent); }
-.langs { display: flex; border: 1px solid var(--line); border-radius: 999px; overflow: hidden; }
+.langs { display: flex; flex: none; border: 1px solid var(--line); border-radius: 999px; overflow: hidden; }
 .langs button { border: 0; background: none; color: var(--ink-2); font: 800 .85rem var(--font); padding: 6px 12px; cursor: pointer; }
 .langs button.on { background: var(--accent); color: #fff; }
+.menu-btn, .links .nav-app { display: none; }
+.links a[hidden] { display: none !important; }
 
 .hero { background: radial-gradient(1200px 600px at 10% 0%, var(--hero-1), transparent 60%), linear-gradient(160deg, var(--hero-2), var(--hero-3)); color: #fff; overflow: hidden; }
 .hero-in { display: grid; grid-template-columns: 1fr 1.15fr; gap: 40px; align-items: center; padding-block: 72px 88px; }
@@ -196,7 +198,17 @@ html[dir="rtl"] .tut-list button.on { box-shadow: inset -4px 0 0 var(--accent); 
 .foot p { margin: 0; color: var(--muted); font-size: .95rem; }
 
 @media (max-width: 900px) {
-  .links { display: none; }
+  .links { display: none; position: absolute; top: 64px; inset-inline: 0; flex-direction: column; gap: 0; padding: 8px 20px 20px; background: var(--page); border-bottom: 1px solid var(--line); box-shadow: var(--shadow); max-height: calc(100vh - 64px); overflow-y: auto; }
+  .nav.open .links { display: flex; }
+  .links a { padding: 14px 4px; font-size: 1.1rem; border-bottom: 1px solid var(--line); }
+  .links .nav-app { display: flex; justify-content: center; margin-top: 16px; border: 0; color: #fff; }
+  .links .nav-app:hover { color: #fff; }
+  .nav-in { gap: 12px; }
+  .menu-btn { display: grid; gap: 5px; place-content: center; width: 44px; height: 44px; flex: none; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); cursor: pointer; }
+  .menu-btn span { display: block; width: 20px; height: 2px; border-radius: 2px; background: var(--ink); transition: transform .2s, opacity .2s; }
+  .nav.open .menu-btn span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .nav.open .menu-btn span:nth-child(2) { opacity: 0; }
+  .nav.open .menu-btn span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
   .langs { margin-inline-start: auto; }
   .hero-in, .split, .teacher, .tut, .st-row { grid-template-columns: 1fr; }
   .st-form { padding: 20px 16px; }
@@ -208,7 +220,12 @@ html[dir="rtl"] .tut-list button.on { box-shadow: inset -4px 0 0 var(--accent); 
   .teacher-photo { width: 160px; height: 160px; }
   .block { padding: 56px 0; }
 }
+@media (max-width: 400px) {
+  .brand b { display: none; }
+}
 @media (max-width: 420px) {
   .brand span { font-size: .95rem; }
+  .langs button { padding: 6px 9px; }
+  .nav-in { gap: 8px; }
   .btn { padding: 10px 16px; }
 }
