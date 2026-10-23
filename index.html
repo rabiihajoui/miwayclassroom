@@ -195,7 +195,18 @@
     </div>
     <div class="tut">
       <div class="tut-player">
-        <div class="tut-frame" id="tut-frame"><video id="tut-video" controls playsinline preload="none"></video></div>
+        <div class="tut-frame" id="tut-frame"><video id="tut-video" controls playsinline preload="none"></video>
+          <div class="tut-up" id="tut-up" hidden>
+            <small data-t="tut_upnext">Next video</small><b id="tut-up-title"></b>
+            <div><button class="tut-go" id="tut-up-go">▶ <span data-t="tut_play">Play now</span> <span id="tut-up-n"></span></button><button class="tut-cancel" id="tut-up-x" data-t="tut_cancel">Cancel</button></div>
+          </div>
+        </div>
+        <div class="tut-nav">
+          <button class="tut-step" id="tut-prev"><span class="arr">◀</span> <span data-t="tut_prev">Previous</span></button>
+          <span class="tut-pos" id="tut-pos"></span>
+          <button class="tut-step" id="tut-next"><span data-t="tut_next">Next</span> <span class="arr">▶</span></button>
+        </div>
+        <label class="tut-auto"><input type="checkbox" id="tut-auto"> <span data-t="tut_auto">Play the next video by itself</span></label>
         <h3 id="tut-title"></h3>
         <p id="tut-sub"></p>
       </div>

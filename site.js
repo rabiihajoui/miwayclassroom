@@ -28,7 +28,8 @@ const T = {
     s3_h: 'Lancez le quiz', s3_p: 'Les réponses arrivent en direct sur votre écran ou le projecteur.',
     video_cap: 'À voir : MI WAY en 30 secondes', nav_tut: 'Tutoriels',
     tut_h: 'Tutoriels vidéo', tut_p: 'Apprenez toute l\'application, pas à pas. Voix en anglais, sous-titres en anglais, français et arabe.',
-    tut_laptop: '💻 Ordinateur', tut_phone: '📱 Téléphone', tut_students: 'Élèves', tut_min: 'min', cls_h: 'Dans de vraies classes',
+    tut_laptop: '💻 Ordinateur', tut_phone: '📱 Téléphone', tut_students: 'Élèves', tut_min: 'min',
+    tut_prev: 'Précédente', tut_next: 'Suivante', tut_of: 'sur', tut_vid: 'Vidéo', tut_upnext: 'Vidéo suivante', tut_play: 'Lire', tut_cancel: 'Annuler', tut_auto: 'Lire la vidéo suivante automatiquement', cls_h: 'Dans de vraies classes',
     ttt_k: 'Test · Teach · Test', ttt_h: 'Voyez qui a compris, tout de suite',
     ttt_p1: 'Le test 1 montre ce que la classe sait déjà. L\'application montre les points manqués : vous n\'enseignez que ceux-là. Le test 2 montre les progrès.',
     ttt_proof: 'En 3 semaines, une classe est passée de 42 % à 58 % sur la même compétence.',
@@ -86,7 +87,8 @@ const T = {
     s3_h: 'ابدأ الاختبار', s3_p: 'تصل الأجوبة مباشرة إلى شاشتك أو جهاز العرض.',
     video_cap: 'شاهد: MI WAY في 30 ثانية', nav_tut: 'دروس الفيديو',
     tut_h: 'دروس بالفيديو', tut_p: 'تعلّم التطبيق كله خطوة بخطوة. الصوت بالإنجليزية، مع ترجمة بالإنجليزية والفرنسية والعربية.',
-    tut_laptop: '💻 حاسوب', tut_phone: '📱 هاتف', tut_students: 'للتلاميذ', tut_min: 'د', cls_h: 'في أقسام حقيقية',
+    tut_laptop: '💻 حاسوب', tut_phone: '📱 هاتف', tut_students: 'للتلاميذ', tut_min: 'د',
+    tut_prev: 'السابق', tut_next: 'التالي', tut_of: 'من', tut_vid: 'فيديو', tut_upnext: 'الفيديو التالي', tut_play: 'شغّل', tut_cancel: 'إلغاء', tut_auto: 'شغّل الفيديو التالي تلقائيًا', cls_h: 'في أقسام حقيقية',
     ttt_k: 'اختبار · تدريس · اختبار', ttt_h: 'اعرف من فهم، فوراً',
     ttt_p1: 'الاختبار الأول يُظهر ما يعرفه القسم. يُظهر التطبيق النقاط التي لم يفهمها التلاميذ، فتدرّسها وحدها. الاختبار الثاني يُظهر التقدّم.',
     ttt_proof: 'في 3 أسابيع، انتقل أحد الأقسام من 42% إلى 58% في نفس المهارة.',
@@ -228,8 +230,63 @@ function showTutorial(c, play) {
   document.getElementById('tut-title').textContent = c.title[lang()] || c.title.en;
   document.getElementById('tut-sub').textContent = c.sub[lang()] || c.sub.en;
   document.querySelectorAll('#tut-list button').forEach((b) => b.classList.toggle('on', b.dataset.id === c.id));
+  const i = tutorials.indexOf(c);
+  document.getElementById('tut-pos').textContent = `${word('tut_vid') || 'Video'} ${i + 1} ${word('tut_of') || 'of'} ${tutorials.length}`;
+  document.getElementById('tut-prev').disabled = i <= 0;
+  document.getElementById('tut-next').disabled = i >= tutorials.length - 1;
+  hideUpNext();
   if (play) tv.play().catch(() => {});
 }
+
+// Previous / Next, the "Next video" card, keyboard arrows and phone swipes.
+const up = document.getElementById('tut-up');
+const auto = document.getElementById('tut-auto');
+let upTimer = null;
+try { auto.checked = localStorage.getItem('tutAuto') !== 'off'; } catch { auto.checked = true; }
+auto.addEventListener('change', () => { try { localStorage.setItem('tutAuto', auto.checked ? 'on' : 'off'); } catch {} });
+function step(d) {
+  const c = tutorials[tutorials.indexOf(current) + d];
+  if (c) showTutorial(c, true);
+}
+function hideUpNext() { clearInterval(upTimer); up.hidden = true; }
+tv.addEventListener('ended', () => {
+  const c = tutorials[tutorials.indexOf(current) + 1];
+  if (!c) return;
+  document.getElementById('tut-up-title').textContent = c.title[lang()] || c.title.en;
+  const n = document.getElementById('tut-up-n');
+  let left = 5;
+  n.textContent = auto.checked ? `(${left})` : '';
+  up.hidden = false;
+  if (auto.checked) upTimer = setInterval(() => { left -= 1; n.textContent = `(${left})`; if (left <= 0) step(1); }, 1000);
+});
+document.getElementById('tut-up-go').addEventListener('click', () => step(1));
+document.getElementById('tut-up-x').addEventListener('click', hideUpNext);
+document.getElementById('tut-prev').addEventListener('click', () => step(-1));
+document.getElementById('tut-next').addEventListener('click', () => step(1));
+document.addEventListener('keydown', (e) => {
+  if (!['ArrowLeft', 'ArrowRight'].includes(e.key) || e.altKey || e.ctrlKey || e.metaKey) return;
+  if (e.target.closest?.('input, textarea, select, video')) return;
+  const r = document.getElementById('tutorials').getBoundingClientRect();
+  if (r.bottom < 100 || r.top > innerHeight - 100) return;
+  const fwd = (e.key === 'ArrowRight') !== (document.documentElement.dir === 'rtl');
+  step(fwd ? 1 : -1);
+});
+let touch = null;
+const frame = document.getElementById('tut-frame');
+frame.addEventListener('touchstart', (e) => {
+  const t = e.touches[0];
+  const r = frame.getBoundingClientRect();
+  touch = e.touches.length === 1 && t.clientY < r.bottom - 60 ? { x: t.clientX, y: t.clientY } : null;
+}, { passive: true });
+frame.addEventListener('touchend', (e) => {
+  if (!touch) return;
+  const t = e.changedTouches[0];
+  const dx = t.clientX - touch.x;
+  const dy = t.clientY - touch.y;
+  touch = null;
+  if (Math.abs(dx) < 60 || Math.abs(dy) > Math.abs(dx)) return;
+  step((dx < 0) !== (document.documentElement.dir === 'rtl') ? 1 : -1);
+});
 
 function renderTutorials() {
   if (!tutorials.length) { document.getElementById('tutorials').hidden = true; return; }
