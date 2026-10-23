@@ -29,8 +29,9 @@ html[lang="ar"] .kicker { letter-spacing: 0; }
 .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink); font-weight: 900; font-size: 1.1rem; white-space: nowrap; }
 .brand img { border-radius: 8px; }
 .brand b { color: var(--accent); }
-.links { display: flex; gap: 22px; margin-inline-start: auto; }
-.links a { color: var(--ink-2); text-decoration: none; font-weight: 700; font-size: .95rem; }
+.links { display: flex; flex: none; align-items: center; gap: 22px; margin-inline-start: auto; }
+.links a { color: var(--ink-2); text-decoration: none; font-weight: 700; font-size: .95rem; white-space: nowrap; }
+.links > * { flex: none; }
 .links a:hover { color: var(--accent); }
 .langs { display: flex; flex: none; border: 1px solid var(--line); border-radius: 999px; overflow: hidden; }
 .langs button { border: 0; background: none; color: var(--ink-2); font: 800 .85rem var(--font); padding: 6px 12px; cursor: pointer; }
@@ -232,7 +233,24 @@ html[dir="rtl"] .tut-list button.on { box-shadow: inset -4px 0 0 var(--accent); 
 .nav-social { gap: 4px; align-items: center; }
 .links .soc { padding: 6px; border: 0; background: none; }
 .links .soc span { display: none; }
-@media (min-width: 901px) and (max-width: 1240px) { .nav-social { display: none; } }
+/* Laptop top bar: site.js hides the icons, then switches to the ☰ menu, when the words don't fit on one line. */
+.nav.tight .nav-in { gap: 16px; }
+.nav.tight .links { gap: 16px; }
+.nav.tight .nav-social { gap: 0; }
+.nav.no-soc .nav-social { display: none; }
+.nav.compact .links { display: none; position: absolute; top: 64px; inset-inline: 0; flex-direction: column; gap: 0; padding: 8px 20px 20px; background: var(--page); border-bottom: 1px solid var(--line); box-shadow: var(--shadow); max-height: calc(100vh - 64px); overflow-y: auto; }
+.nav.compact.open .links { display: flex; }
+.nav.compact .links a { padding: 14px 4px; font-size: 1.1rem; border-bottom: 1px solid var(--line); }
+.nav.compact .links .nav-app { display: flex; justify-content: center; margin-top: 16px; border: 0; color: #fff; }
+.nav.compact .nav-social { display: flex; padding: 14px 0 0; gap: 8px; }
+.nav.compact .links .soc { padding: 8px 12px; font-size: .95rem; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); }
+.nav.compact .links .soc span { display: inline; }
+.nav.compact .menu-btn { display: grid; gap: 5px; place-content: center; width: 44px; height: 44px; flex: none; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); cursor: pointer; }
+.nav.compact .menu-btn span { display: block; width: 20px; height: 2px; border-radius: 2px; background: var(--ink); transition: transform .2s, opacity .2s; }
+.nav.compact.open .menu-btn span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav.compact.open .menu-btn span:nth-child(2) { opacity: 0; }
+.nav.compact.open .menu-btn span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+.nav.compact .langs { margin-inline-start: auto; }
 
 @media (max-width: 900px) {
   .links { display: none; position: absolute; top: 64px; inset-inline: 0; flex-direction: column; gap: 0; padding: 8px 20px 20px; background: var(--page); border-bottom: 1px solid var(--line); box-shadow: var(--shadow); max-height: calc(100vh - 64px); overflow-y: auto; }

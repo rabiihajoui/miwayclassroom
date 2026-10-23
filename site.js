@@ -215,6 +215,25 @@ const openMenu = (on) => { nav.classList.toggle('open', on); menuBtn.setAttribut
 menuBtn.addEventListener('click', () => openMenu(!nav.classList.contains('open')));
 document.querySelectorAll('#nav-links a').forEach(a => a.addEventListener('click', () => openMenu(false)));
 addEventListener('keydown', (e) => { if (e.key === 'Escape') openMenu(false); });
+
+// Laptop top bar: if the words don't fit on one line (French is longer), hide the icons, then use ☰.
+const navIn = nav.querySelector('.nav-in');
+function navFull() {
+  const cs = getComputedStyle(navIn), kids = [...navIn.children].filter(k => k.offsetWidth);
+  const need = kids.reduce((w, k) => w + k.offsetWidth, 0) + parseFloat(cs.columnGap) * (kids.length - 1);
+  return need + 8 > navIn.clientWidth - parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight);
+}
+function fitNav() {
+  nav.classList.remove('tight', 'no-soc', 'compact');
+  if (innerWidth > 900) {
+    for (const step of ['tight', 'no-soc', 'compact']) { if (!navFull()) break; nav.classList.add(step); }
+  }
+  if (!nav.classList.contains('compact') && innerWidth > 900) openMenu(false);
+}
+addEventListener('resize', fitNav);
+fitNav();
+document.fonts?.ready.then(fitNav);
+document.querySelectorAll('[data-lang]').forEach(b => b.addEventListener('click', () => setTimeout(fitNav)));
 document.addEventListener('click', (e) => { if (!nav.contains(e.target)) openMenu(false); });
 
 const lang = () => document.documentElement.lang;
