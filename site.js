@@ -10,7 +10,25 @@ const CONFIG = {
   play: { en: 'en', fr: 'fr', ar: 'ar' },
   // Real class videos: put the file in website/videos/, then add { file: 'videos/class-1.mp4', poster: 'videos/class-1.jpg', caption: { en: '', fr: '', ar: '' } }
   classClips: [],
+  // Social accounts: shown in the top menu, Follow section, teacher section and footer.
+  social: [
+    { id: 'tiktok', name: 'TikTok', url: 'https://www.tiktok.com/@miwayclassroom' },
+    { id: 'instagram', name: 'Instagram', url: 'https://www.instagram.com/miwayclassroom' },
+    { id: 'facebook', name: 'Facebook', url: 'https://www.facebook.com/profile.php?id=61595855607514' },
+    { id: 'youtube', name: 'YouTube', url: 'https://www.youtube.com/@RabiiHajoui' },
+  ],
 };
+
+const ICONS = {
+  tiktok: '<path fill="currentColor" d="M16.6 3c.3 2.4 1.8 4 4.4 4.2v3.2c-1.6.1-3-.4-4.4-1.3v6.3c0 3.4-2.6 5.6-5.7 5.6S5.2 18.7 5.2 15.6c0-3.4 3-5.8 6.4-5.3v3.4c-1.6-.5-3.1.5-3.1 2 0 1.3 1 2.3 2.3 2.3 1.4 0 2.4-1 2.4-2.6V3h3.4z"/>',
+  instagram: '<rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.3" cy="6.7" r="1.3" fill="currentColor"/>',
+  facebook: '<path fill="currentColor" d="M13.5 22v-8.2h2.8l.4-3.3h-3.2V8.4c0-.9.3-1.6 1.6-1.6h1.7V3.9c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.4H7.3v3.3h2.8V22h3.4z"/>',
+  youtube: '<path fill="currentColor" d="M22 8.2c-.2-1.6-1-2.7-2.6-2.9C17 5 12 5 12 5s-5 0-7.4.3C3 5.5 2.2 6.6 2 8.2 1.8 9.6 1.8 12 1.8 12s0 2.4.2 3.8c.2 1.6 1 2.7 2.6 2.9C7 19 12 19 12 19s5 0 7.4-.3c1.6-.2 2.4-1.3 2.6-2.9.2-1.4.2-3.8.2-3.8s0-2.4-.2-3.8zM10 15V9l5.2 3L10 15z"/>',
+};
+
+document.querySelectorAll('[data-social]').forEach(box => {
+  box.innerHTML = CONFIG.social.map(s => `<a class="soc soc-${s.id}" href="${s.url}" target="_blank" rel="noopener" title="${s.name}" aria-label="${s.name}"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">${ICONS[s.id]}</svg><span>${s.name}</span></a>`).join('');
+});
 
 const T = {
   fr: {
@@ -71,6 +89,7 @@ const T = {
     st_sending: 'Envoi…', st_thanks: 'Merci ! Votre histoire apparaîtra ici après lecture.', st_err: 'L\'envoi n\'a pas marché. Vérifiez votre internet et réessayez.',
     st_need: 'Écrivez votre nom et une histoire (au moins 20 lettres).', st_need_ok: 'Cochez la case pour la photo, ou retirez la photo.',
     foot_made: 'Créée par', foot_privacy: 'Confidentialité', foot_contact: 'Contact',
+    fol_h: 'Suivez MI WAY', fol_p: 'Une nouvelle petite vidéo chaque jour : jeux, idées et astuces pour votre classe.', t_follow: 'Suivez-moi :',
   },
   ar: {
     nav_how: 'كيف يعمل', nav_features: 'المميزات', nav_teacher: 'الأستاذ', nav_faq: 'أسئلة',
@@ -130,6 +149,7 @@ const T = {
     st_sending: 'جارٍ الإرسال…', st_thanks: 'شكراً! ستظهر قصتك هنا بعد قراءتها.', st_err: 'لم ينجح الإرسال. تحقق من الإنترنت وحاول مجدداً.',
     st_need: 'اكتب اسمك وقصة (20 حرفاً على الأقل).', st_need_ok: 'ضع علامة في خانة الصورة، أو احذف الصورة.',
     foot_made: 'من إنجاز', foot_privacy: 'الخصوصية', foot_contact: 'اتصل بنا',
+    fol_h: 'تابعوا MI WAY', fol_p: 'فيديو قصير جديد كل يوم: ألعاب وأفكار ونصائح لقسمك.', t_follow: 'تابعوني:',
   },
 };
 

@@ -215,12 +215,35 @@ html[dir="rtl"] .tut-list button.on { box-shadow: inset -4px 0 0 var(--accent); 
 .foot-in { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
 .foot p { margin: 0; color: var(--muted); font-size: .95rem; }
 
+.social { display: flex; flex-wrap: wrap; gap: 8px; }
+.soc { display: inline-flex; align-items: center; gap: 7px; padding: 7px 12px; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); color: var(--ink); text-decoration: none; font-weight: 700; font-size: .9rem; }
+.soc:hover { border-color: currentColor; }
+.soc svg { flex: none; }
+.soc-tiktok svg { color: var(--ink); }
+.soc-instagram svg { color: #e4405f; }
+.soc-facebook svg { color: #1877f2; }
+.soc-youtube svg { color: #ff0000; }
+.follow { text-align: center; }
+.follow p { color: var(--ink-2); max-width: 36em; margin: 0 auto 24px; }
+.social-big { justify-content: center; gap: 12px; }
+.social-big .soc { padding: 12px 20px; font-size: 1.05rem; }
+.social-big .soc svg { width: 26px; height: 26px; }
+.t-follow { margin: 18px 0 8px; font-size: 1rem !important; font-weight: 800; }
+.nav-social { gap: 4px; align-items: center; }
+.links .soc { padding: 6px; border: 0; background: none; }
+.links .soc span { display: none; }
+@media (min-width: 901px) and (max-width: 1240px) { .nav-social { display: none; } }
+
 @media (max-width: 900px) {
   .links { display: none; position: absolute; top: 64px; inset-inline: 0; flex-direction: column; gap: 0; padding: 8px 20px 20px; background: var(--page); border-bottom: 1px solid var(--line); box-shadow: var(--shadow); max-height: calc(100vh - 64px); overflow-y: auto; }
   .nav.open .links { display: flex; }
   .links a { padding: 14px 4px; font-size: 1.1rem; border-bottom: 1px solid var(--line); }
   .links .nav-app { display: flex; justify-content: center; margin-top: 16px; border: 0; color: #fff; }
   .links .nav-app:hover { color: #fff; }
+  .nav-social { padding: 14px 0 0; gap: 8px; }
+  .links .soc { padding: 8px 12px; font-size: .95rem; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); }
+  .links .soc span { display: inline; }
+  .teacher .social { justify-content: center; }
   .nav-in { gap: 12px; }
   .menu-btn { display: grid; gap: 5px; place-content: center; width: 44px; height: 44px; flex: none; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); cursor: pointer; }
   .menu-btn span { display: block; width: 20px; height: 2px; border-radius: 2px; background: var(--ink); transition: transform .2s, opacity .2s; }
