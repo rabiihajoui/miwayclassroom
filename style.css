@@ -26,7 +26,7 @@ html[lang="ar"] .kicker { letter-spacing: 0; }
 
 .nav { position: sticky; top: 0; z-index: 10; background: color-mix(in srgb, var(--page) 88%, transparent); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
 .nav-in { display: flex; align-items: center; gap: 24px; height: 64px; }
-.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink); font-weight: 900; font-size: 1.1rem; white-space: nowrap; }
+.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink); font-weight: 900; font-size: 1.1rem; white-space: nowrap; flex: none; }
 .brand img { border-radius: 8px; }
 .brand b { color: var(--accent); }
 .links { display: flex; flex: none; align-items: center; gap: 22px; margin-inline-start: auto; }
@@ -94,6 +94,20 @@ html[lang="ar"] .kicker { letter-spacing: 0; }
 .card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; }
 .card p { margin: 0; color: var(--ink-2); }
 .ico { display: inline-grid; place-items: center; width: 48px; height: 48px; border-radius: 12px; font-size: 1.5rem; margin-bottom: 12px; background: var(--accent-soft); }
+.new-lead { color: var(--ink-2); font-size: 1.1rem; margin: 0; }
+.news { display: grid; grid-template-columns: repeat(2, 1fr); gap: 26px; margin: 32px 0 40px; }
+.news-card { background: var(--page); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); display: flex; flex-direction: column; }
+.news-card a { display: block; }
+.news-card img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; object-position: left top; border-bottom: 1px solid var(--line); }
+.news-card > div { padding: 18px 20px 22px; }
+.news-card p { margin: 0; color: var(--ink-2); font-size: .97rem; }
+.new-tag { display: inline-block; background: var(--c3); color: #fff; font-weight: 800; font-size: .75rem; text-transform: uppercase; letter-spacing: .06em; padding: 2px 10px; border-radius: 99px; margin-bottom: 8px; }
+html[lang="ar"] .new-tag { letter-spacing: 0; }
+.more-h { margin-bottom: 14px; }
+.more-new { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px 22px; }
+.more-new li { background: var(--page); border: 1px solid var(--line); border-radius: 10px; padding: 10px 14px; color: var(--ink-2); }
+.nav-new { position: relative; }
+.nav-new::after { content: ''; position: absolute; top: 2px; inset-inline-end: -8px; width: 8px; height: 8px; border-radius: 50%; background: var(--c3); }
 .gallery { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; max-width: 900px; margin: 0 auto; }
 
 .table-scroll { overflow-x: auto; margin-top: 24px; }
@@ -251,6 +265,7 @@ html[dir="rtl"] .tut-list button.on { box-shadow: inset -4px 0 0 var(--accent); 
 .nav.compact.open .menu-btn span:nth-child(2) { opacity: 0; }
 .nav.compact.open .menu-btn span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 .nav.compact .langs { margin-inline-start: auto; }
+.nav.compact .links .nav-new::after { position: static; display: inline-block; margin-inline-start: 8px; vertical-align: middle; }
 
 @media (max-width: 900px) {
   .links { display: none; position: absolute; top: 64px; inset-inline: 0; flex-direction: column; gap: 0; padding: 8px 20px 20px; background: var(--page); border-bottom: 1px solid var(--line); box-shadow: var(--shadow); max-height: calc(100vh - 64px); overflow-y: auto; }
@@ -273,7 +288,8 @@ html[dir="rtl"] .tut-list button.on { box-shadow: inset -4px 0 0 var(--accent); 
   .st-form { padding: 20px 16px; }
   .tut-list { max-height: 420px; }
   .hero-in { padding-block: 48px 72px; }
-  .cards, .steps, .get-cards, .pains { grid-template-columns: 1fr; }
+  .cards, .steps, .get-cards, .pains, .news, .more-new { grid-template-columns: 1fr; }
+  .links .nav-new::after { position: static; display: inline-block; margin-inline-start: 8px; vertical-align: middle; }
   .gallery { grid-template-columns: repeat(2, 1fr); }
   .teacher { text-align: center; justify-items: center; }
   .teacher-photo { width: 160px; height: 160px; }
