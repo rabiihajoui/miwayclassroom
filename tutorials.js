@@ -50,7 +50,7 @@ window.TUTORIALS = [
  },
  {
   "id": "04-lessons",
-  "seconds": 221,
+  "seconds": 223,
   "students": false,
   "phone": true,
   "title": {
@@ -66,7 +66,7 @@ window.TUTORIALS = [
  },
  {
   "id": "05-live",
-  "seconds": 139,
+  "seconds": 157,
   "students": false,
   "phone": true,
   "title": {
@@ -82,7 +82,7 @@ window.TUTORIALS = [
  },
  {
   "id": "06-plans",
-  "seconds": 107,
+  "seconds": 108,
   "students": false,
   "phone": true,
   "title": {
@@ -114,7 +114,7 @@ window.TUTORIALS = [
  },
  {
   "id": "08-activities",
-  "seconds": 301,
+  "seconds": 310,
   "students": false,
   "phone": true,
   "title": {
@@ -162,7 +162,7 @@ window.TUTORIALS = [
  },
  {
   "id": "11-writing",
-  "seconds": 187,
+  "seconds": 262,
   "students": false,
   "phone": false,
   "title": {
@@ -226,7 +226,7 @@ window.TUTORIALS = [
  },
  {
   "id": "15-more",
-  "seconds": 164,
+  "seconds": 174,
   "students": false,
   "phone": true,
   "title": {
@@ -254,6 +254,38 @@ window.TUTORIALS = [
    "en": "MI WAY on your home screen, your words, the level test, your skills practice, your certificates and reading help",
    "fr": "MI WAY sur l'écran d'accueil, vos mots, vos certificats",
    "ar": "MI WAY على الشاشة الرئيسية، كلماتك، وشهاداتك"
+  }
+ },
+ {
+  "id": "17-listening",
+  "seconds": 158,
+  "students": false,
+  "phone": true,
+  "title": {
+   "en": "Listening and word cards",
+   "fr": "Écoute et cartes de mots",
+   "ar": "الاستماع وبطاقات الكلمات"
+  },
+  "sub": {
+   "en": "A listening for every lesson and unit of your book, with real voices, help for each level, and word cards to read and hear",
+   "fr": "Une écoute pour chaque leçon et unité, avec de vraies voix, de l'aide par niveau et des cartes de mots",
+   "ar": "استماع لكل درس ووحدة بأصوات حقيقية، مساعدة لكل مستوى، وبطاقات كلمات"
+  }
+ },
+ {
+  "id": "18-students-listen",
+  "seconds": 95,
+  "students": true,
+  "phone": true,
+  "title": {
+   "en": "For students: listening and word cards",
+   "fr": "Pour les élèves : écoute et cartes de mots",
+   "ar": "للتلاميذ: الاستماع وبطاقات الكلمات"
+  },
+  "sub": {
+   "en": "Listen, answer at your level, check with the text, write what you hear, and learn new words",
+   "fr": "Écouter, répondre à son niveau, vérifier avec le texte, écrire ce qu'on entend",
+   "ar": "استمع، أجب حسب مستواك، تحقق بالنص، واكتب ما تسمع"
   }
  }
 ];
