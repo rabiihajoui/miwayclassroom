@@ -7,8 +7,8 @@ const CONFIG = {
   teacherPhoto: '',
   // Teacher stories: the Google Apps Script web app link (see scripts/stories.gs). Empty = section hidden.
   storiesUrl: 'https://script.google.com/macros/s/AKfycbzds4d-KsP-LtuNuhBcqG3ZQGLf2Cqbzwt1Qq0Klfn7gugJ1lGXNwD-YiLscNY37HGQeA/exec',
-  play: { en: 'en', fr: 'fr', ar: 'ar' },
-  // Real class videos: put the file in website/videos/, then add { file: 'videos/class-1.mp4', poster: 'videos/class-1.jpg', caption: { en: '', fr: '', ar: '' } }
+  play: { en: 'en', fr: 'fr', ar: 'ar', tr: 'tr' },
+  // Real class videos: put the file in website/videos/, then add { file: 'videos/class-1.mp4', poster: 'videos/class-1.jpg', caption: { en: '', fr: '', ar: '', tr: '' } }
   classClips: [],
   // Social accounts: shown in the top menu, Follow section, teacher section and footer.
   social: [
@@ -45,7 +45,7 @@ const T = {
     s2_h: 'Les élèves scannent un QR code', s2_p: 'Ils touchent leur nom. Rien à installer, pas de compte.',
     s3_h: 'Lancez le quiz', s3_p: 'Les réponses arrivent en direct sur votre écran ou le projecteur.',
     video_cap: 'À voir : MI WAY en 30 secondes', nav_tut: 'Tutoriels',
-    tut_h: 'Tutoriels vidéo', tut_p: 'Apprenez toute l\'application, pas à pas. Voix en anglais, sous-titres en anglais, français et arabe.',
+    tut_h: 'Tutoriels vidéo', tut_p: 'Apprenez toute l\'application, pas à pas. Voix en anglais, sous-titres en anglais, français, arabe et turc.',
     tut_laptop: '💻 Ordinateur', tut_phone: '📱 Téléphone', tut_students: 'Élèves', tut_min: 'min',
     tut_prev: 'Précédente', tut_next: 'Suivante', tut_of: 'sur', tut_vid: 'Vidéo', tut_upnext: 'Vidéo suivante', tut_play: 'Lire', tut_cancel: 'Annuler', tut_auto: 'Lire la vidéo suivante automatiquement', cls_h: 'Dans de vraies classes',
     ttt_k: 'Test · Teach · Test', ttt_h: 'Voyez qui a compris, tout de suite',
@@ -120,7 +120,7 @@ const T = {
     s2_h: 'يمسح التلاميذ رمز QR واحداً', s2_p: 'يختارون أسماءهم. بدون تثبيت تطبيق، بدون حساب.',
     s3_h: 'ابدأ الاختبار', s3_p: 'تصل الأجوبة مباشرة إلى شاشتك أو جهاز العرض.',
     video_cap: 'شاهد: MI WAY في 30 ثانية', nav_tut: 'دروس الفيديو',
-    tut_h: 'دروس بالفيديو', tut_p: 'تعلّم التطبيق كله خطوة بخطوة. الصوت بالإنجليزية، مع ترجمة بالإنجليزية والفرنسية والعربية.',
+    tut_h: 'دروس بالفيديو', tut_p: 'تعلّم التطبيق كله خطوة بخطوة. الصوت بالإنجليزية، مع ترجمة بالإنجليزية والفرنسية والعربية والتركية.',
     tut_laptop: '💻 حاسوب', tut_phone: '📱 هاتف', tut_students: 'للتلاميذ', tut_min: 'د',
     tut_prev: 'السابق', tut_next: 'التالي', tut_of: 'من', tut_vid: 'فيديو', tut_upnext: 'الفيديو التالي', tut_play: 'شغّل', tut_cancel: 'إلغاء', tut_auto: 'شغّل الفيديو التالي تلقائيًا', cls_h: 'في أقسام حقيقية',
     ttt_k: 'اختبار · تدريس · اختبار', ttt_h: 'اعرف من فهم، فوراً',
@@ -181,6 +181,82 @@ const T = {
     foot_made: 'من إنجاز', foot_privacy: 'الخصوصية', foot_contact: 'اتصل بنا',
     fol_h: 'تابعوا MI WAY', fol_p: 'فيديو قصير جديد كل يوم: ألعاب وأفكار ونصائح لقسمك.', t_follow: 'تابعوني:',
   },
+  tr: {
+    nav_how: 'Nasıl çalışır', nav_features: 'Özellikler', nav_teacher: 'Öğretmen', nav_faq: 'Sorular',
+    hero_h: 'Tüm sınıf <em>canlı</em> cevaplıyor',
+    hero_p: 'Kendi telefonlarından. İnternet yok, hesap yok, reklam yok. Tüm öğretmenler için ücretsiz.',
+    get_on: 'Şuradan edinin:', for_laptop: 'Bilgisayarınız için',
+    hero_made: 'Fas\'ta bir İngilizce öğretmeni tarafından, dünyanın her yerindeki öğretmenler için yapıldı.',
+    app_lang: 'Uygulama İngilizcedir ve İngilizce dersleri için yapılmıştır.',
+    pain1_h: 'Okulda Wi-Fi yok mu?', pain1_p: 'Ağı telefonunuz veya bilgisayarınız kurar. Hiçbir şey internetten geçmez.',
+    pain2_h: 'Bütçe yok mu?', pain2_p: 'Sonsuza dek ücretsiz. Hesap yok, reklam yok, öğrenci sınırı yok.',
+    pain3_h: 'Zaman yok mu?', pain3_p: 'Ders kitabınız için hazır dersler. Ya da kendi testinizi birkaç dakikada yazın.',
+    how_h: '1 dakikada hazır',
+    s1_h: 'Mobil erişim noktanızı açın', s1_p: 'Ya da okulun Wi-Fi\'ını kullanın. İnternet gerekmez.',
+    s2_h: 'Öğrenciler QR kodu okutur', s2_p: 'Adlarına dokunurlar. Kurulacak bir şey yok, hesap yok.',
+    s3_h: 'Testi başlatın', s3_p: 'Cevaplar ekranınıza veya projeksiyona canlı olarak gelir.',
+    video_cap: 'İzleyin: 30 saniyede MI WAY', nav_tut: 'Eğitim videoları',
+    tut_h: 'Eğitim videoları', tut_p: 'Tüm uygulamayı adım adım öğrenin. Ses İngilizce; İngilizce, Fransızca, Arapça ve Türkçe altyazılı.',
+    tut_laptop: '💻 Bilgisayar', tut_phone: '📱 Telefon', tut_students: 'Öğrenciler', tut_min: 'dk',
+    tut_prev: 'Önceki', tut_next: 'Sonraki', tut_of: '/', tut_vid: 'Video', tut_upnext: 'Sıradaki video', tut_play: 'Şimdi oynat', tut_cancel: 'İptal', tut_auto: 'Sıradaki videoyu otomatik oynat', cls_h: 'Gerçek sınıflarda',
+    ttt_k: 'Test · Teach · Test', ttt_h: 'Kimin anladığını hemen görün',
+    ttt_p1: '1. test, sınıfın neyi zaten bildiğini gösterir. Uygulama kaçırılan noktaları gösterir: sadece onları öğretirsiniz. 2. test ilerlemeyi gösterir.',
+    ttt_proof: 'Bir sınıf, aynı beceride 3 haftada %42\'den %58\'e çıktı.',
+    feat_h: 'Bir İngilizce dersi için gereken her şey',
+    f1_h: 'Ders kitabınıza hazır', f1_p: 'Spotlight 1AC–3AC, Outlook, Ticket to English, Gateway ve Insights. Ya da herhangi bir ders kitabı için kendi derslerinizi oluşturun.',
+    f2_h: 'Öğrenciler çok seviyor', f2_p: 'Puanlar, kürsü, sesler ve konfeti. Her sorunun 4 farklı hâli var: kopya çekmek imkânsız.',
+    f3_h: 'Her seviyeye dinleme ve konuşma', f3_p: 'Her ders ve her ünite için doğal seslerle bir dinleme ve konuşma etkinlikleri. 3 yardım seviyesi 🌱🌿🌳: her öğrenci katılır.',
+    f4_h: 'Resimlerle kelime', f4_p: 'Sınıfta kelime oyunları, okunup dinlenebilen kelime kartları ve evde tekrar için telefonlara gönderilen listeler.',
+    f5_h: 'Tüm sınıf araçlarınız', f5_p: 'Rastgele öğrenci seçme, yoklama, oturma planı, davranış puanları, 20 üzerinden notlar, Excel\'e aktarma.',
+    f6_h: 'Baştan gizlilik odaklı', f6_p: 'Her şey cihazınızda kalır. Bulut yok, takip yok, öğrenci hesabı yok.',
+    cmp_h: 'Gerçek sınıflar için yapıldı', cmp_other: 'Çoğu çevrim içi test uygulaması',
+    cmp_r1: 'İnternetsiz çalışır', cmp_r2: 'Ücretsiz, sınırsız', cmp_limited: 'Sınırlı ücretsiz sürüm',
+    cmp_r3: 'Fas ders kitapları için hazır dersler', cmp_r4: 'Test, teach, test ve öğrenci başına ilerleme', cmp_some: 'Bazen',
+    cmp_r5: 'Veriler sınıfınızda kalır',
+    get_h: 'MI WAY Classroom\'u edinin',
+    get_android_h: 'Android telefon veya tablet', get_android_p: 'Sınıfı telefonunuz yönetir. Varsa projeksiyon veya televizyonla.', get_android_b: 'Google Play\'i aç',
+    get_win_h: 'Windows bilgisayar', get_win_p: 'Projeksiyonla en iyisi. Windows 10 ve 11.', get_win_soon: 'Çok yakında', get_win_b: 'Windows için indir', win_ver: 'Sürüm',
+    win_help_h: 'Windows mavi bir uyarı gösterebilir', win_help_1: '<b>Ek bilgi</b> (More info) düğmesine tıklayın.', win_help_2: '<b>Yine de çalıştır</b> (Run anyway) düğmesine tıklayın.', win_help_p: 'Yeni ve ücretsiz bir uygulama için bu normaldir. MI WAY Classroom güvenlidir.',
+    get_stu_h: 'Öğrenciler', get_stu_p: 'Kurulacak bir şey yok. Sınıfta QR kodu okuturlar. Android kullanan öğrenciler ücretsiz MI WAY Student uygulamasını öğretmenin uygulamasından da alabilir.',
+    t_k: 'Bir öğretmen tarafından yapıldı', t_h: 'Merhaba, ben Rabii Hajoui',
+    t_p1: 'Fas\'ta İngilizce öğretmeniyim. Öğrencilerim test oyunlarını çok seviyor ama okulumuzda Wi-Fi yok. Ben de internetsiz çalışan kendi uygulamamı yaptım.',
+    t_p2: 'Onu her hafta sınıflarımla kullanıyorum ve öğretmenlerin fikirleriyle geliştiriyorum. Ücretsizdir ve hep öyle kalacak.',
+    sup_h: 'MI WAY\'in ücretsiz kalmasına yardım edin', sup_p: 'MI WAY\'de reklam ve ücretli sürüm yok. Sınıfınıza yardımcı oluyorsa, küçük bir bağış büyümesine yardım eder.', sup_b: 'MI WAY\'i destekle',
+    faq_h: 'Sorular',
+    q1: 'Gerçekten internetsiz çalışıyor mu?', a1: 'Evet. Telefonunuzun mobil erişim noktası veya bilgisayarınız küçük bir yerel ağ kurar. Öğrenciler ona bağlanır. Mobil veri kullanılmaz.',
+    q2: 'Gerçekten ücretsiz mi?', a2: 'Evet. Reklam yok, ücretli sürüm yok, öğrenci sınırı yok. Sadece bir seçenek, yapay zekâ ile test hazırlama, size ait ücretli bir Claude anahtarı ister.',
+    q3: 'Öğrencilerin neye ihtiyacı var?', a3: 'Tarayıcısı olan bir telefona: Android veya iPhone. Uygulama ya da hesap gerekmez.',
+    q4: 'Fas ders kitaplarını kullanmıyorum. Yine de kullanabilir miyim?', a4: 'Evet. Herhangi bir ders kitabı ve seviye için kendi derslerinizi yazabilirsiniz.',
+    q5: 'Öğrencilerimin verileri güvende mi?', a5: 'Her şey cihazınızda kalır. Hiçbir şey buluta gönderilmez. <a href="https://sites.google.com/view/miway-classroom-privacy/home" target="_blank" rel="noopener">Gizlilik politikası</a>',
+    q6: 'Öğretmen için Mac veya iPhone\'da çalışıyor mu?', a6: 'Henüz değil. Öğretmenin bir Android telefona veya Windows bilgisayara ihtiyacı var. Öğrenciler her telefonu kullanabilir.',
+    nav_stories: 'Öğretmen hikâyeleri', nav_app: 'Uygulamayı edinin',
+    nav_new: 'Yenilikler', new_k: 'Yenilikler', new_ver: 'Sürüm 1.0.12 · Ekim 2026', new_h: 'MI WAY\'de yeni neler var', new_tag: 'Yeni',
+    new_lead: 'Tüm öğretmenler için ücretsiz güncellemeler. Uygulama güncellemeyi size kendisi önerir.',
+    n1_h: '🎧 Her ders için bir dinleme', n1_p: '9 ders kitabının her dersi ve ünitesi için doğal seslerle bir dinleme (öğrenci karakterleri için genç sesler). Öğrenciler telefonlarından, 🌱🌿🌳 yardımıyla cevaplar. Kelime kartları: anlamını okumak ve duymak için bir anahtar kelimeye dokunun.',
+    n2_h: '🎮 8 yeni sınıf oyunu', n2_p: 'Sahtekâr, Çiz ve tahmin et, Yanlış cevap, Takım yarışı, Sıcak sandalye, Hızlı sohbet, İki doğru bir yalan, Polis soruşturması. Her oyundan önce bir baykuş 🦉 kuralları anlatır ve bir deneme turu yapılır.',
+    n3_h: '🧠 Beceri haritası', n3_p: 'Her öğrencinin her becerisini yıl boyunca görün: 🟢 tamam, 🟡 neredeyse, 🔴 tekrar gerekli. Her telefon evde kendi zayıf noktalarına çalışır.',
+    n4_h: '📱 Evde öğrenilecek kelimeler', n4_p: 'Her öğrenciye kendi seviyesindeki kelimeleri gönderin. İnternet olmasa bile telefonunda çalışır. %80 ile seviye atlar: 🌱 → 🌿 → 🌳 → 🏆.',
+    n5_h: '📒 Ders defteri ve ders planları', n5_p: 'Uygulama her dersi sizin için yazar: hedefler, adımlar, 20 üzerinden notlar, yoklama ve notlar. Yazdırın ya da Excel\'e aktarın. Hazır başlatılabilir etkinlikli ders planları.',
+    n6_h: '👨‍👩‍👧 Veliler için karneler', n6_p: 'Her öğrenci için bir karne: devam, ilerleme, notlar, beceriler ve evde yardım için öneriler, Arapça. Tek tıkla WhatsApp\'tan gönderin, yazdırın ya da öğrencinin telefonunda gösterin.',
+    new_more: 'Ayrıca',
+    m1: '✍️ Yazma değerlendirmesi: bilgisayar hataları bulur, siz ipucu gönderirsiniz, sonra 20 üzerinden bir not',
+    m2: '🗣️ Konuşma kontrolü: öğrenciler sesli okur, bilgisayar dinler (internetsiz)',
+    m3: '📲 Android için MI WAY Student uygulaması: bir kez eşleştirin, öğretmeni her Wi-Fi\'da bulur',
+    m4: 'Aa Okuma yardımı: büyük yazı, disleksi dostu yazı tipi, sesli okuma, ek süre',
+    m5: '🖨️ Yazdırılabilir: çalışma kâğıtları, tombala, bulmaca, kelime kartları ve imzanızla sertifikalar',
+    m6: '🤝 Derslerinizi diğer öğretmenlerle tek bir dosyayla paylaşın',
+    st_k: 'Öğretmenler anlatıyor', st_h: 'Gerçek sınıflardan hikâyeler', st_p: 'MI WAY\'i öğrencilerinizle kullanıyor musunuz? Nasıl geçtiğini diğer öğretmenlere anlatın.',
+    st_more: 'Daha fazla hikâye gör', st_less: 'Daha az gör', st_open: 'Deneyiminizi paylaşın', st_fh: 'Deneyiminizi paylaşın',
+    st_name: 'Adınız', st_country: 'Ülke', st_level: 'Öğrettiğim kademe', st_email: 'E-posta (sadece cevap vermek için, asla gösterilmez)',
+    lv1: 'İlkokul', lv2: 'Ortaokul', lv3: 'Lise', lv4: 'Üniversite', lv5: 'Dil kursu', lv6: 'Diğer',
+    st_rate: 'Puanınız', st_story: 'Hikâyeniz', st_story_ph: 'MI WAY ile ne yaptınız? Öğrencileriniz nasıl tepki verdi?',
+    st_photo: 'Sınıfınızın fotoğrafı (isteğe bağlı)', st_photo_ok: 'Bu fotoğrafı paylaşma iznim var ve fotoğrafta hiçbir çocuk tanınmıyor.',
+    st_note: 'Rabii her hikâyeyi burada görünmeden önce okur. E-postanız asla gösterilmez.', st_send: 'Hikâyemi gönder',
+    st_sending: 'Gönderiliyor…', st_thanks: 'Teşekkürler! Hikâyeniz Rabii okuduktan sonra burada görünecek.', st_err: 'Gönderilemedi. İnternetinizi kontrol edip tekrar deneyin.',
+    st_need: 'Adınızı ve bir hikâye yazın (en az 20 harf).', st_need_ok: 'Fotoğraf için kutuyu işaretleyin ya da fotoğrafı kaldırın.',
+    foot_made: 'Yapan', foot_privacy: 'Gizlilik', foot_contact: 'İletişim',
+    fol_h: 'MI WAY\'i takip edin', fol_p: 'Her gün yeni kısa bir video: sınıfınız için oyunlar, fikirler ve ipuçları.', t_follow: 'Beni takip edin:',
+  },
 };
 
 const en = {};
@@ -201,6 +277,7 @@ function setLang(lang) {
   document.querySelectorAll('[data-t]').forEach(el => { const v = d[el.dataset.t]; if (v) el.innerHTML = v; });
   document.querySelectorAll('[data-t-ph]').forEach(el => { el.placeholder = d[el.dataset.tPh] || en[el.dataset.tPh]; });
   document.querySelectorAll('[data-lang]').forEach(b => b.classList.toggle('on', b.dataset.lang === lang));
+  document.getElementById('app-lang').hidden = !d.app_lang;
   setPromo(lang);
   renderTutorials();
   renderClips();
@@ -292,7 +369,7 @@ function showTutorial(c, play) {
   const k = kind === 'phone' && c.phone ? 'phone' : 'laptop';
   const base = `tutorials/${k}/${c.id}`;
   tv.pause();
-  tv.innerHTML = ['en', 'fr', 'ar'].map((l) => `<track kind="subtitles" srclang="${l}" label="${{ en: 'English', fr: 'Français', ar: 'العربية' }[l]}" src="${base}.${l}.vtt"${l === lang() && l !== 'en' ? ' default' : ''}>`).join('');
+  tv.innerHTML = ['en', 'fr', 'ar', 'tr'].map((l) => `<track kind="subtitles" srclang="${l}" label="${{ en: 'English', fr: 'Français', ar: 'العربية', tr: 'Türkçe' }[l]}" src="${base}.${l}.vtt"${l === lang() && l !== 'en' ? ' default' : ''}>`).join('');
   tv.src = `${base}.mp4`;
   tv.poster = `${base}.jpg`;
   document.getElementById('tut-frame').classList.toggle('tall', k === 'phone');
