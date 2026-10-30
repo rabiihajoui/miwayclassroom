@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MI WAY Training Kit</title>
+<meta name="description" content="Free kit for English inspectors and teacher trainers: handout, slides, videos and a 20-minute demo plan for MI WAY Classroom.">
+<meta property="og:title" content="MI WAY Classroom: kit for inspectors and trainers">
+<meta property="og:description" content="Handout, slides and videos to show live English quizzes without internet at a training day.">
+<meta property="og:image" content="https://www.miwayclassroom.com/img/og.png">
+<link rel="icon" href="../img/icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800;900&family=Tajawal:wght@400;700;800&display=swap" rel="stylesheet">
+<style>
+:root { --page: #f6f5f1; --surface: #fcfcfb; --ink: #0b0b0b; --ink-2: #3d3c39; --muted: #6b6964; --line: #e1e0d9; --accent: #1f4f9c; --accent-soft: #e6eefb; --hero: #14306b; --sun: #fbbf24; --font: 'Nunito', system-ui, -apple-system, 'Segoe UI', sans-serif; }
+@media (prefers-color-scheme: dark) { :root { --page: #12151c; --surface: #1b202b; --ink: #e8eaf0; --ink-2: #b9bfcf; --muted: #8d95a8; --line: #2e3647; --accent: #6c9ef8; --accent-soft: #1d2d4f; } }
+html[lang="ar"] { --font: 'Tajawal', 'Nunito', system-ui, sans-serif; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--page); color: var(--ink); font: 17px/1.6 var(--font); }
+a { color: var(--accent); }
+.wrap { max-width: 1040px; margin: 0 auto; padding: 0 16px; }
+.top { display: flex; align-items: center; gap: 12px; height: 64px; }
+.brand { display: flex; align-items: center; gap: 10px; font-weight: 900; text-decoration: none; color: var(--ink); }
+.brand img { width: 34px; height: 34px; border-radius: 8px; }
+.brand b { color: var(--accent); }
+.langs { margin-inline-start: auto; display: flex; border: 1px solid var(--line); border-radius: 999px; overflow: hidden; }
+.langs button { border: 0; background: none; color: var(--ink-2); font: 800 .85rem var(--font); padding: 6px 12px; cursor: pointer; }
+.langs button.on { background: var(--accent); color: #fff; }
+.hero { background: radial-gradient(900px 500px at 10% 0%, #2a78d6, transparent 60%), linear-gradient(160deg, var(--hero), #0d1b45); color: #fff; }
+.hero .wrap { padding-block: 56px 60px; }
+.kicker { color: var(--sun); font-weight: 800; text-transform: uppercase; letter-spacing: .08em; font-size: .85rem; margin: 0 0 .4em; }
+html[lang="ar"] .kicker { letter-spacing: 0; }
+h1 { font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1.15; margin: 0 0 .4em; font-weight: 900; }
+.hero p { color: #d6e2f7; font-size: 1.15rem; max-width: 36em; margin: 0; }
+section { padding: 48px 0; }
+h2 { font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 900; margin: 0 0 .6em; line-height: 1.2; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 16px; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 20px; display: grid; gap: 10px; align-content: start; }
+.card .ico { font-size: 1.8rem; line-height: 1; }
+.card h3 { margin: 0; font-size: 1.15rem; font-weight: 800; }
+.card p { margin: 0; color: var(--muted); font-size: .95rem; }
+.dl { display: flex; flex-wrap: wrap; gap: 8px; }
+.dl a { text-decoration: none; font-weight: 800; font-size: .9rem; background: var(--accent-soft); color: var(--accent); border-radius: 10px; padding: 8px 12px; }
+.dl a.main { background: var(--accent); color: #fff; }
+video { width: 100%; border-radius: 10px; background: #000; aspect-ratio: 16 / 9; }
+.steps { counter-reset: s; display: grid; gap: 10px; padding: 0; margin: 0; list-style: none; }
+.steps li { counter-increment: s; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; display: flex; gap: 14px; align-items: baseline; }
+.steps li::before { content: counter(s); flex: none; display: grid; place-items: center; width: 30px; height: 30px; border-radius: 50%; background: var(--accent); color: #fff; font-weight: 900; }
+.steps b { display: block; }
+.steps span { color: var(--ink-2); }
+.share { display: grid; grid-template-columns: auto 1fr; gap: 24px; align-items: center; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 20px; }
+#qr { background: #fff; padding: 10px; border-radius: 12px; }
+.copy { display: flex; gap: 8px; margin-top: 10px; }
+.copy input { flex: 1; min-width: 0; font: inherit; font-size: .9rem; padding: 10px; border: 1px solid var(--line); border-radius: 10px; background: var(--page); color: var(--ink); }
+.copy button { font: inherit; font-weight: 800; border: 0; border-radius: 10px; padding: 0 14px; background: var(--accent); color: #fff; cursor: pointer; }
+.contact { background: var(--accent-soft); border-radius: 14px; padding: 22px; }
+.contact p { margin: 0 0 6px; }
+footer { padding: 28px 0 40px; color: var(--muted); font-size: .9rem; text-align: center; }
+@media (max-width: 640px) { .share { grid-template-columns: 1fr; justify-items: center; } section { padding: 36px 0; } }
+</style>
+</head>
+<body>
+<div class="wrap top">
+  <a class="brand" href="../"><img src="../img/icon.png" alt=""> MI WAY <b>Classroom</b></a>
+  <div class="langs" role="group"><button data-l="fr">FR</button><button data-l="en">EN</button><button data-l="ar">ع</button></div>
+</div>
+<header class="hero"><div class="wrap">
+  <p class="kicker" data-t="kick"></p>
+  <h1 data-t="h1"></h1>
+  <p data-t="lead"></p>
+</div></header>
+
+<main class="wrap">
+  <section>
+    <h2 data-t="dl_h"></h2>
+    <div class="grid">
+      <div class="card"><div class="ico">📄</div><h3 data-t="c1"></h3><p data-t="c1p"></p>
+        <div class="dl"><a class="main" href="MI-WAY-Classroom-FR.pdf" download>PDF FR</a><a href="MI-WAY-Classroom-EN.pdf" download>PDF EN</a><a href="MI-WAY-Classroom-AR.pdf" download>PDF ع</a></div></div>
+      <div class="card"><div class="ico">🖥️</div><h3 data-t="c2"></h3><p data-t="c2p"></p>
+        <div class="dl"><a class="main" href="MI-WAY-Classroom-Formation-FR.pptx" download>PowerPoint FR</a><a href="MI-WAY-Classroom-Training-EN.pptx" download>PowerPoint EN</a><a href="MI-WAY-Classroom-Formation-FR.pdf" download>PDF FR</a><a href="MI-WAY-Classroom-Training-EN.pdf" download>PDF EN</a></div></div>
+      <div class="card"><div class="ico">🎬</div><h3 data-t="c3"></h3><p data-t="c3p"></p>
+        <video id="vid" controls playsinline preload="none" poster="../videos/promo-fr.jpg"><source id="vid-src" src="../videos/promo-fr.mp4" type="video/mp4"></video>
+        <div class="dl"><a href="../videos/promo-fr.mp4" download>MP4 FR</a><a href="../videos/promo-en.mp4" download>MP4 EN</a><a href="../videos/promo-ar.mp4" download>MP4 ع</a><a href="../#tutorials" data-t="c3b"></a></div></div>
+    </div>
+  </section>
+
+  <section>
+    <h2 data-t="demo_h"></h2>
+    <ol class="steps">
+      <li><div><b data-t="d1"></b><span data-t="d1p"></span></div></li>
+      <li><div><b data-t="d2"></b><span data-t="d2p"></span></div></li>
+      <li><div><b data-t="d3"></b><span data-t="d3p"></span></div></li>
+      <li><div><b data-t="d4"></b><span data-t="d4p"></span></div></li>
+    </ol>
+  </section>
+
+  <section>
+    <h2 data-t="share_h"></h2>
+    <div class="share">
+      <div id="qr" aria-label="QR code"></div>
+      <div><p data-t="share_p" style="margin:0"></p>
+        <div class="copy"><input id="link" readonly><button id="copy" data-t="copy"></button></div></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="contact">
+      <h2 data-t="ct_h"></h2>
+      <p data-t="ct_p"></p>
+      <p><a id="mail" href="mailto:miwayclassroom@gmail.com"><b>miwayclassroom@gmail.com</b></a></p>
+    </div>
+  </section>
+</main>
+<footer>Created by RABII HAJOUI · <a href="../">miwayclassroom.com</a></footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script>
+const T = {
+  fr: {
+    kick: 'Inspecteurs · formateurs · CRMEF', h1: 'Kit gratuit pour présenter MI WAY en formation',
+    lead: 'Des quiz d\'anglais en direct sur les téléphones des élèves, sans internet. Tout ce qu\'il faut pour une démonstration de 20 minutes. À partager librement.',
+    dl_h: 'Télécharger le kit',
+    c1: 'Fiche d\'une page', c1p: 'À imprimer ou à envoyer aux enseignants. Avec un code QR pour télécharger.',
+    c2: 'Diapositives', c2p: '9 diapositives avec notes pour l\'animateur : le constat, Test · Teach · Test, résultats, démonstration, questions.',
+    c3: 'Vidéo de 30 secondes', c3p: 'Pour ouvrir la séance. Les tutoriels complets sont sur le site.', c3b: 'Tutoriels',
+    demo_h: 'Animer la démonstration (20 minutes)',
+    d1: 'Préparez (0–3 min)', d1p: 'Installez MI WAY sur un téléphone Android ou un PC Windows. Allumez le point d\'accès et ouvrez une leçon prête.',
+    d2: 'Faites rejoindre (3–8 min)', d2p: 'Projetez le code QR. Les participants scannent avec leur téléphone et jouent les élèves.',
+    d3: 'Jouez (8–15 min)', d3p: 'Un quiz de 5 questions : réponses en direct, podium, puis les points à revoir.',
+    d4: 'Discutez (15–20 min)', d4p: 'Montrez le Test 2 et le progrès de chaque « élève ». Lien avec l\'évaluation diagnostique et la remédiation.',
+    share_h: 'Le lien pour vos enseignants', share_p: 'Ce lien ouvre Google Play sur Android, ou télécharge la version Windows sur un PC.', copy: 'Copier', copied: 'Copié ✓',
+    ct_h: 'Une formation en ligne pour votre équipe ?', ct_p: 'Je peux présenter l\'application en ligne (30 minutes) à vos enseignants, gratuitement. Écrivez-moi : Rabii Hajoui, professeur d\'anglais au lycée.',
+    subj: 'Formation MI WAY Classroom',
+  },
+  en: {
+    kick: 'Inspectors · trainers · teacher colleges', h1: 'Free kit to show MI WAY at a training day',
+    lead: 'Live English quizzes on students\' phones, with no internet. Everything you need for a 20-minute demo. Free to share.',
+    dl_h: 'Download the kit',
+    c1: 'One-page handout', c1p: 'Print it or send it to teachers. With a QR code to download.',
+    c2: 'Slides', c2p: '9 slides with presenter notes: the problem, Test · Teach · Test, results, demo, questions.',
+    c3: '30-second video', c3p: 'To open the session. Full tutorials are on the website.', c3b: 'Tutorials',
+    demo_h: 'Run the demo (20 minutes)',
+    d1: 'Prepare (0–3 min)', d1p: 'Install MI WAY on an Android phone or a Windows laptop. Turn on the hotspot and open a ready lesson.',
+    d2: 'Let them join (3–8 min)', d2p: 'Project the QR code. Participants scan with their phones and play the students.',
+    d3: 'Play (8–15 min)', d3p: 'A 5-question quiz: live answers, podium, then the points to reteach.',
+    d4: 'Discuss (15–20 min)', d4p: 'Show Test 2 and each "student\'s" progress. Link it to diagnostic assessment and remediation.',
+    share_h: 'The link for your teachers', share_p: 'This link opens Google Play on Android, or downloads the Windows version on a laptop.', copy: 'Copy', copied: 'Copied ✓',
+    ct_h: 'An online session for your team?', ct_p: 'I can present the app online (30 minutes) to your teachers, for free. Write to me: Rabii Hajoui, high school English teacher.',
+    subj: 'MI WAY Classroom training',
+  },
+  ar: {
+    kick: 'المفتشون · المكوّنون · المراكز الجهوية', h1: 'عدّة مجانية لتقديم MI WAY في الأيام التكوينية',
+    lead: 'اختبارات إنجليزية مباشرة على هواتف التلاميذ، بدون إنترنت. كل ما تحتاجه لعرض تطبيقي في 20 دقيقة. للمشاركة بحرية.',
+    dl_h: 'تحميل العدّة',
+    c1: 'ورقة من صفحة واحدة', c1p: 'للطباعة أو للإرسال إلى الأساتذة. مع رمز QR للتحميل.',
+    c2: 'شرائح العرض', c2p: '9 شرائح مع ملاحظات للمنشّط: المشكلة، اختبار · تدريس · اختبار، النتائج، العرض، الأسئلة.',
+    c3: 'فيديو 30 ثانية', c3p: 'لافتتاح الحصة. الدروس المصورة الكاملة على الموقع.', c3b: 'الدروس المصورة',
+    demo_h: 'تنشيط العرض التطبيقي (20 دقيقة)',
+    d1: 'التحضير (0–3 د)', d1p: 'ثبّت MI WAY على هاتف Android أو حاسوب Windows. شغّل نقطة الاتصال وافتح درساً جاهزاً.',
+    d2: 'الانضمام (3–8 د)', d2p: 'اعرض رمز QR. يمسحه المشاركون بهواتفهم ويلعبون دور التلاميذ.',
+    d3: 'اللعب (8–15 د)', d3p: 'اختبار من 5 أسئلة: أجوبة مباشرة، منصة الفائزين، ثم النقط التي تحتاج مراجعة.',
+    d4: 'النقاش (15–20 د)', d4p: 'اعرض الاختبار الثاني وتقدّم كل "تلميذ". اربطه بالتقويم التشخيصي والدعم.',
+    share_h: 'الرابط لأساتذتكم', share_p: 'يفتح هذا الرابط Google Play على Android، أو يحمّل نسخة Windows على الحاسوب.', copy: 'نسخ', copied: 'تم النسخ ✓',
+    ct_h: 'حصة تكوينية عن بعد لفريقكم؟', ct_p: 'يمكنني تقديم التطبيق عن بعد (30 دقيقة) لأساتذتكم مجاناً. راسلوني: ربيع حجوي، أستاذ اللغة الإنجليزية بالثانوي.',
+    subj: 'تكوين MI WAY Classroom',
+  },
+};
+let qr;
+function setLang(l) {
+  const t = T[l];
+  document.documentElement.lang = l;
+  document.documentElement.dir = l === 'ar' ? 'rtl' : 'ltr';
+  document.querySelectorAll('[data-t]').forEach((el) => { el.textContent = t[el.dataset.t]; });
+  document.querySelectorAll('.langs button').forEach((b) => b.classList.toggle('on', b.dataset.l === l));
+  const link = `https://www.miwayclassroom.com/get?h=kit&l=${l}&s=kitpage`;
+  document.getElementById('link').value = link;
+  document.getElementById('mail').href = 'mailto:miwayclassroom@gmail.com?subject=' + encodeURIComponent(t.subj);
+  const v = document.getElementById('vid');
+  if (v.paused && !v.currentTime) { v.poster = `../videos/promo-${l}.jpg`; document.getElementById('vid-src').src = `../videos/promo-${l}.mp4`; v.load(); }
+  const box = document.getElementById('qr'); box.innerHTML = '';
+  try { qr = new QRCode(box, { text: link, width: 160, height: 160 }); } catch (e) { box.hidden = true; }
+  try { localStorage.setItem('mw-kit-lang', l); } catch (e) {}
+}
+document.querySelectorAll('.langs button').forEach((b) => b.onclick = () => setLang(b.dataset.l));
+document.getElementById('copy').onclick = async () => {
+  const i = document.getElementById('link'), b = document.getElementById('copy');
+  try { await navigator.clipboard.writeText(i.value); } catch (e) { i.select(); document.execCommand('copy'); }
+  b.textContent = T[document.documentElement.lang].copied;
+};
+let start = new URLSearchParams(location.search).get('l');
+try { start = start || localStorage.getItem('mw-kit-lang'); } catch (e) {}
+setLang(T[start] ? start : 'fr');
+</script>
+</body>
+</html>
