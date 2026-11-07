@@ -103,7 +103,7 @@ const T = {
     st_note: 'Rabii lit chaque histoire avant qu\'elle apparaisse ici. Votre e-mail n\'est jamais affiché.', st_send: 'Envoyer mon histoire',
     st_sending: 'Envoi…', st_thanks: 'Merci ! Votre histoire apparaîtra ici après lecture.', st_err: 'L\'envoi n\'a pas marché. Vérifiez votre internet et réessayez.',
     st_need: 'Écrivez votre nom et une histoire (au moins 20 lettres).', st_need_ok: 'Cochez la case pour la photo, ou retirez la photo.',
-    foot_made: 'Créée par', foot_privacy: 'Confidentialité', foot_contact: 'Contact',
+    foot_made: 'Créée par', foot_articles: 'Articles pour les professeurs', foot_privacy: 'Confidentialité', foot_contact: 'Contact',
     fol_h: 'Suivez MI WAY', fol_p: 'Une nouvelle petite vidéo chaque jour : jeux, idées et astuces pour votre classe.', t_follow: 'Suivez-moi :',
   },
   ar: {
@@ -178,7 +178,7 @@ const T = {
     st_note: 'يقرأ ربيع كل قصة قبل ظهورها هنا. بريدك الإلكتروني لا يُعرض أبداً.', st_send: 'أرسل قصتي',
     st_sending: 'جارٍ الإرسال…', st_thanks: 'شكراً! ستظهر قصتك هنا بعد قراءتها.', st_err: 'لم ينجح الإرسال. تحقق من الإنترنت وحاول مجدداً.',
     st_need: 'اكتب اسمك وقصة (20 حرفاً على الأقل).', st_need_ok: 'ضع علامة في خانة الصورة، أو احذف الصورة.',
-    foot_made: 'من إنجاز', foot_privacy: 'الخصوصية', foot_contact: 'اتصل بنا',
+    foot_made: 'من إنجاز', foot_articles: 'مقالات للأساتذة', foot_privacy: 'الخصوصية', foot_contact: 'اتصل بنا',
     fol_h: 'تابعوا MI WAY', fol_p: 'فيديو قصير جديد كل يوم: ألعاب وأفكار ونصائح لقسمك.', t_follow: 'تابعوني:',
   },
   tr: {
@@ -254,7 +254,7 @@ const T = {
     st_note: 'Rabii her hikâyeyi burada görünmeden önce okur. E-postanız asla gösterilmez.', st_send: 'Hikâyemi gönder',
     st_sending: 'Gönderiliyor…', st_thanks: 'Teşekkürler! Hikâyeniz Rabii okuduktan sonra burada görünecek.', st_err: 'Gönderilemedi. İnternetinizi kontrol edip tekrar deneyin.',
     st_need: 'Adınızı ve bir hikâye yazın (en az 20 harf).', st_need_ok: 'Fotoğraf için kutuyu işaretleyin ya da fotoğrafı kaldırın.',
-    foot_made: 'Yapan', foot_privacy: 'Gizlilik', foot_contact: 'İletişim',
+    foot_made: 'Yapan', foot_articles: 'Öğretmenler için yazılar (İngilizce)', foot_privacy: 'Gizlilik', foot_contact: 'İletişim',
     fol_h: 'MI WAY\'i takip edin', fol_p: 'Her gün yeni kısa bir video: sınıfınız için oyunlar, fikirler ve ipuçları.', t_follow: 'Beni takip edin:',
   },
 };
@@ -284,7 +284,6 @@ function setLang(lang) {
   renderStories();
   document.querySelectorAll('a[href*="play.google.com"]').forEach(a => { a.href = `https://play.google.com/store/apps/details?id=com.miway.classroom&hl=${CONFIG.play[lang]}`; });
   applyConfig(d);
-  try { localStorage.setItem('lang', lang); } catch {}
 }
 
 // Version and size of the newest installer, read from GitHub.
@@ -314,7 +313,13 @@ function applyConfig(d) {
   if (CONFIG.teacherPhoto) document.getElementById('teacher-photo').src = CONFIG.teacherPhoto;
 }
 
-document.querySelectorAll('[data-lang]').forEach(b => b.addEventListener('click', () => setLang(b.dataset.lang)));
+// Each language has its own address (/fr/, /ar/, /tr/) so Google can find it.
+const home = (l) => (l === 'en' ? '/' : `/${l}/`);
+document.querySelectorAll('[data-lang]').forEach(b => b.addEventListener('click', () => {
+  try { localStorage.setItem('lang', b.dataset.lang); } catch {}
+  if (location.protocol === 'file:') setLang(b.dataset.lang);
+  else if (b.dataset.lang !== document.documentElement.lang) location.href = home(b.dataset.lang) + location.search + location.hash;
+}));
 
 // Phone menu: ☰ opens the links under the top bar; a link or Escape closes it.
 const nav = document.querySelector('.nav'), menuBtn = document.getElementById('menu-btn');
@@ -555,8 +560,12 @@ form.addEventListener('submit', async (e) => {
   send.disabled = false;
 });
 
-let start = 'en';
-try { start = localStorage.getItem('lang') || ''; } catch {}
-if (!start) { const n = (navigator.language || 'en').slice(0, 2); start = T[n] ? n : 'en'; }
+// The English page sends visitors to their own language once (saved choice, else the browser's).
+let start = document.documentElement.lang;
+if (start === 'en') {
+  try { start = localStorage.getItem('lang') || ''; } catch {}
+  if (!start) { const n = (navigator.language || 'en').slice(0, 2); start = T[n] ? n : 'en'; }
+  if (start !== 'en' && T[start] && location.protocol !== 'file:') location.replace(home(start) + location.search + location.hash);
+}
 setLang(start);
 loadStories();
