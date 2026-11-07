@@ -104,6 +104,7 @@ const T = {
     st_sending: 'Envoi…', st_thanks: 'Merci ! Votre histoire apparaîtra ici après lecture.', st_err: 'L\'envoi n\'a pas marché. Vérifiez votre internet et réessayez.',
     st_need: 'Écrivez votre nom et une histoire (au moins 20 lettres).', st_need_ok: 'Cochez la case pour la photo, ou retirez la photo.',
     foot_made: 'Créée par', foot_articles: 'Articles pour les professeurs', foot_privacy: 'Confidentialité', foot_contact: 'Contact',
+    nav_articles: 'Articles', art_k: 'Articles pour les professeurs', art_h: 'Idées et guides tirés de ma classe', art_lead: "Une aide pratique pour les professeurs d'anglais : quiz en direct sans internet, plans de cours, jeux et quiz prêts pour votre manuel.", art_books: 'Quiz gratuits pour votre manuel :', art_all: 'Voir tous les articles →',
     fol_h: 'Suivez MI WAY', fol_p: 'Une nouvelle petite vidéo chaque jour : jeux, idées et astuces pour votre classe.', t_follow: 'Suivez-moi :',
   },
   ar: {
@@ -179,6 +180,7 @@ const T = {
     st_sending: 'جارٍ الإرسال…', st_thanks: 'شكراً! ستظهر قصتك هنا بعد قراءتها.', st_err: 'لم ينجح الإرسال. تحقق من الإنترنت وحاول مجدداً.',
     st_need: 'اكتب اسمك وقصة (20 حرفاً على الأقل).', st_need_ok: 'ضع علامة في خانة الصورة، أو احذف الصورة.',
     foot_made: 'من إنجاز', foot_articles: 'مقالات للأساتذة', foot_privacy: 'الخصوصية', foot_contact: 'اتصل بنا',
+    nav_articles: 'مقالات', art_k: 'مقالات للأساتذة', art_h: 'أفكار وأدلة من قسمي', art_lead: 'مساعدة عملية لأساتذة الإنجليزية: اختبارات مباشرة بدون إنترنت، جذاذات، ألعاب، واختبارات جاهزة لكتابك المدرسي.', art_books: 'اختبارات مجانية لكتابك المدرسي:', art_all: 'كل المقالات ←',
     fol_h: 'تابعوا MI WAY', fol_p: 'فيديو قصير جديد كل يوم: ألعاب وأفكار ونصائح لقسمك.', t_follow: 'تابعوني:',
   },
   tr: {
@@ -255,6 +257,7 @@ const T = {
     st_sending: 'Gönderiliyor…', st_thanks: 'Teşekkürler! Hikâyeniz Rabii okuduktan sonra burada görünecek.', st_err: 'Gönderilemedi. İnternetinizi kontrol edip tekrar deneyin.',
     st_need: 'Adınızı ve bir hikâye yazın (en az 20 harf).', st_need_ok: 'Fotoğraf için kutuyu işaretleyin ya da fotoğrafı kaldırın.',
     foot_made: 'Yapan', foot_articles: 'Öğretmenler için yazılar (İngilizce)', foot_privacy: 'Gizlilik', foot_contact: 'İletişim',
+    nav_articles: 'Yazılar', art_k: 'Öğretmenler için yazılar', art_h: 'Sınıfımdan fikirler ve rehberler', art_lead: 'İngilizce öğretmenleri için pratik yardım: internetsiz canlı sınavlar, ders planları ve oyunlar (yazılar İngilizce).', art_books: 'Fas ders kitapları için ücretsiz sınavlar:', art_all: 'Tüm yazılar →',
     fol_h: 'MI WAY\'i takip edin', fol_p: 'Her gün yeni kısa bir video: sınıfınız için oyunlar, fikirler ve ipuçları.', t_follow: 'Beni takip edin:',
   },
 };

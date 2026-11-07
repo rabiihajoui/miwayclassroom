@@ -22,19 +22,24 @@
 .a-cta { margin-top: 40px; padding: 24px; border-radius: var(--radius); background: var(--surface); border: 1px solid var(--line); box-shadow: var(--shadow); text-align: center; }
 .a-cta h2 { margin-top: 0; }
 .a-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
-.a-more ul { padding-inline-start: 1.2em; }
-.a-list { display: grid; gap: 18px; }
-.a-card { display: grid; grid-template-columns: 200px 1fr; gap: 16px; padding: 14px; border-radius: var(--radius); background: var(--surface); border: 1px solid var(--line); text-decoration: none; color: var(--ink); }
-.a-card img { border-radius: 10px; aspect-ratio: 16 / 9; object-fit: cover; width: 100%; }
-.a-card span { display: flex; flex-direction: column; gap: 6px; }
-.a-card small { color: var(--muted); font-size: .95rem; }
-.a-card em { color: var(--accent); font-style: normal; font-weight: 800; }
 @media (max-width: 760px) {
   .wrap.nav-in { gap: 10px; padding-inline: 16px; }
   .a-nav { display: none; }
   .a-langs { margin-inline-start: auto; }
   .a-main { padding-inline: 16px; }
-  .a-card { grid-template-columns: 1fr; }
 }
 .a-art figure img { max-height: 520px; width: auto; }
 .a-more h2 { font-size: 1.4rem; margin-top: 40px; }
+.a-crumbs { font-weight: 700; margin-bottom: 18px; }
+.a-crumbs a { text-decoration: none; }
+.a-tools { display: grid; gap: 12px; margin: 24px 0; }
+.a-tools input { font: inherit; font-size: 1.05rem; padding: 12px 16px; border-radius: 12px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); width: 100%; box-sizing: border-box; }
+.a-tools input:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+.a-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.a-chips button { font: inherit; font-weight: 800; font-size: .92rem; padding: 7px 14px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); color: var(--ink-2); cursor: pointer; }
+.a-chips button:hover { border-color: var(--accent); color: var(--accent); }
+.a-chips button[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: #fff; }
+.a-none { text-align: center; color: var(--muted); font-weight: 700; padding: 24px; }
+.a-card[hidden] { display: none; }
+.a-next { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+@media (max-width: 760px) { .a-next { grid-template-columns: 1fr; } }
