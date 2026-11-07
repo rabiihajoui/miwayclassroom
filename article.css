@@ -37,3 +37,4 @@
   .a-card { grid-template-columns: 1fr; }
 }
 .a-art figure img { max-height: 520px; width: auto; }
+.a-more h2 { font-size: 1.4rem; margin-top: 40px; }
