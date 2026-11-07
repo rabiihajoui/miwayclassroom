@@ -282,6 +282,7 @@ function setLang(lang) {
   document.querySelectorAll('[data-lang]').forEach(b => b.classList.toggle('on', b.dataset.lang === lang));
   document.getElementById('app-lang').hidden = !d.app_lang;
   setPromo(lang);
+  setHeroAd();
   renderTutorials();
   renderClips();
   renderStories();
@@ -365,6 +366,27 @@ function setPromo(l) {
   document.getElementById('promo').classList.remove('playing');
 }
 document.querySelector('.video-play').addEventListener('click', () => promo.play());
+
+// Hero ad (in English, for English teachers, on every page language): plays silently by itself; 🔊 or a tap turns the sound on.
+const ad = document.getElementById('hero-ad'), adv = document.getElementById('hero-ad-video'), snd = document.getElementById('hero-sound');
+const adShape = () => (matchMedia('(max-width: 760px)').matches ? 'feed' : 'wide');
+function setHeroAd() {
+  if (!adv) return;
+  ad.hidden = false;
+  ad.parentElement.classList.add('ad');
+  const s = adShape(), src = `videos/ad-${s}.mp4`;
+  if (adv.getAttribute('src') !== src) { adv.poster = `videos/ad-${s}.jpg`; adv.src = src; }
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) adv.autoplay = false;
+  else adv.play().catch(() => {});
+}
+function adSound() {
+  adv.muted = !adv.muted;
+  if (!adv.muted) { adv.currentTime = 0; adv.play().catch(() => {}); }
+  snd.classList.toggle('on', !adv.muted);
+  snd.firstChild.textContent = adv.muted ? '🔊 ' : '🔇 ';
+}
+snd?.addEventListener('click', adSound);
+adv?.addEventListener('click', adSound);
 promo.addEventListener('play', () => document.getElementById('promo').classList.add('playing'));
 
 const tutorials = window.TUTORIALS || [];
