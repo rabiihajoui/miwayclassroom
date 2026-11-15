@@ -1,7 +1,9 @@
 /* Articles (made by scripts/website-articles.js) */
 .a-nav { display: flex; gap: 18px; margin-inline-start: auto; }
 .a-nav a { color: var(--ink-2); text-decoration: none; font-weight: 700; }
-.a-nav a:hover { color: var(--accent); }
+.a-nav a:hover, .a-nav a.on { color: var(--accent); }
+.a-get { padding: 8px 16px; font-size: .95rem; flex: none; }
+@media (max-width: 1000px) { .a-nav { display: none; } .a-get { margin-inline-start: auto; } }
 .a-langs { display: flex; gap: 4px; }
 .a-langs a { padding: 4px 10px; border-radius: 8px; text-decoration: none; font-weight: 800; color: var(--ink-2); border: 1px solid var(--line); }
 .a-langs a.on { background: var(--accent); color: #fff; border-color: var(--accent); }
@@ -25,9 +27,10 @@
 @media (max-width: 760px) {
   .wrap.nav-in { gap: 10px; padding-inline: 16px; }
   .a-nav { display: none; }
-  .a-langs { margin-inline-start: auto; }
+  .a-get { padding: 7px 12px; font-size: .88rem; }
   .a-main { padding-inline: 16px; }
 }
+@media (max-width: 480px) { .nav-in .brand span { display: none; } .a-langs a { padding: 4px 8px; } }
 .a-art figure img { max-height: 520px; width: auto; }
 .a-more h2 { font-size: 1.4rem; margin-top: 40px; }
 .a-crumbs { font-weight: 700; margin-bottom: 18px; }

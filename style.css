@@ -36,7 +36,10 @@ html[lang="ar"] .kicker { letter-spacing: 0; }
 .langs { display: flex; flex: none; border: 1px solid var(--line); border-radius: 999px; overflow: hidden; }
 .langs button { border: 0; background: none; color: var(--ink-2); font: 800 .85rem var(--font); padding: 6px 12px; cursor: pointer; }
 .langs button.on { background: var(--accent); color: #fff; }
-.menu-btn, .links .nav-app { display: none; }
+.menu-btn { display: none; }
+.links a.on { color: var(--accent); box-shadow: inset 0 -2px 0 var(--accent); }
+.links .nav-app { padding: 8px 16px; font-size: .95rem; color: #fff; box-shadow: none; }
+.links .nav-app:hover, .links .nav-app.on { color: #fff; }
 .links a[hidden] { display: none !important; }
 
 .hero { background: radial-gradient(1200px 600px at 10% 0%, var(--hero-1), transparent 60%), linear-gradient(160deg, var(--hero-2), var(--hero-3)); color: #fff; overflow: hidden; }
@@ -233,9 +236,56 @@ html[dir="rtl"] .tut-list button.on { box-shadow: inset -4px 0 0 var(--accent); 
 .faq details[open] summary::after { content: '–'; }
 .faq details p { margin: 0 0 16px; color: var(--ink-2); }
 
-.foot { border-top: 1px solid var(--line); padding: 28px 0; }
+.foot { border-top: 1px solid var(--line); background: var(--surface); padding: 40px 0 20px; }
 .foot-in { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
 .foot p { margin: 0; color: var(--muted); font-size: .95rem; }
+.foot-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 32px; }
+.foot-about p { margin: 10px 0 14px; max-width: 26em; }
+.foot-col { display: flex; flex-direction: column; gap: 8px; }
+.foot-col b { color: var(--ink); margin-bottom: 4px; }
+.foot-col a { color: var(--ink-2); text-decoration: none; font-weight: 600; }
+.foot-col a:hover { color: var(--accent); }
+.foot-end { border-top: 1px solid var(--line); margin-top: 28px; padding-top: 16px; }
+
+/* Page top (every page but home) */
+.page-head { background: radial-gradient(900px 400px at 10% 0%, var(--hero-1), transparent 60%), linear-gradient(160deg, var(--hero-2), var(--hero-3)); color: #fff; padding: 56px 0 60px; }
+.page-head h1 { font-size: clamp(2rem, 4.5vw, 3rem); font-weight: 900; letter-spacing: -.02em; margin-bottom: .3em; }
+.page-head .lead { margin: 0; }
+.page-head .dots { margin-bottom: 16px; }
+.page-head .dots i { width: 14px; height: 14px; border-radius: 4px; }
+.center { text-align: center; }
+
+/* Home: one line about the newest version */
+.new-strip { margin-top: 28px; }
+.new-bar { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; padding: 14px 20px; border-radius: var(--radius); background: var(--accent-soft); border: 1px solid var(--line); color: var(--ink); text-decoration: none; }
+.new-bar .new-tag { margin: 0; }
+.new-bar-t { flex: 1; min-width: 14em; color: var(--ink-2); }
+.new-bar-t b { color: var(--ink); margin-inline-end: 6px; }
+.new-bar em { font-style: normal; font-weight: 800; color: var(--accent); white-space: nowrap; }
+.new-bar:hover em { text-decoration: underline; }
+
+/* Last part of a page: big button to the download page */
+.cta-band { text-align: center; background: linear-gradient(160deg, var(--hero-2), var(--hero-3)); color: #fff; }
+.cta-band p { color: #d6e2f7; font-size: 1.15rem; margin: 0 auto 24px; max-width: 32em; }
+.cta-band .btn-main { background: #fff; color: var(--hero-2); font-size: 1.15rem; padding: 14px 30px; }
+
+/* Download page: 3 cards */
+.dl { padding-top: 0; }
+.dl-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: -32px; align-items: start; }
+.dl-card { position: relative; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); padding: 28px 26px; display: flex; flex-direction: column; gap: 10px; }
+.dl-card h2 { font-size: 1.5rem; margin: 0; }
+.dl-card > p { margin: 0; color: var(--ink-2); }
+.dl-card .kicker { margin: 0; }
+.dl-card .btn { justify-content: center; margin-top: 6px; }
+.dl-ico { font-size: 2.2rem; line-height: 1; }
+.dl-steps { margin: 6px 0 0; padding: 0; list-style: none; counter-reset: dl; display: grid; gap: 8px; }
+.dl-steps li { counter-increment: dl; display: flex; gap: 10px; align-items: flex-start; color: var(--ink-2); }
+.dl-steps li::before { content: counter(dl); flex: none; width: 26px; height: 26px; border-radius: 8px; background: var(--accent-soft); color: var(--accent); font-weight: 900; display: grid; place-items: center; font-size: .9rem; }
+.dl-note { font-size: .92rem; background: var(--page); border: 1px dashed var(--line); border-radius: 10px; padding: 10px 12px; }
+.dl-you { display: none; position: absolute; top: -12px; inset-inline-start: 20px; background: var(--c3); color: #fff; font-weight: 800; font-size: .8rem; padding: 3px 12px; border-radius: 99px; }
+.dl-card.you { border: 2px solid var(--c3); }
+.dl-card.you .dl-you { display: block; }
+.dl-card .win-help { margin-top: 4px; }
 
 .social { display: flex; flex-wrap: wrap; gap: 8px; }
 .soc { display: inline-flex; align-items: center; gap: 7px; padding: 7px 12px; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); color: var(--ink); text-decoration: none; font-weight: 700; font-size: .9rem; }
@@ -262,6 +312,7 @@ html[dir="rtl"] .tut-list button.on { box-shadow: inset -4px 0 0 var(--accent); 
 .nav.compact .links { display: none; position: absolute; top: 64px; inset-inline: 0; flex-direction: column; gap: 0; padding: 8px 20px 20px; background: var(--page); border-bottom: 1px solid var(--line); box-shadow: var(--shadow); max-height: calc(100vh - 64px); overflow-y: auto; }
 .nav.compact.open .links { display: flex; }
 .nav.compact .links a { padding: 14px 4px; font-size: 1.1rem; border-bottom: 1px solid var(--line); }
+.nav.compact .links a.on { box-shadow: none; }
 .nav.compact .links .nav-app { display: flex; justify-content: center; margin-top: 16px; border: 0; color: #fff; }
 .nav.compact .nav-social { display: flex; padding: 14px 0 0; gap: 8px; }
 .nav.compact .links .soc { padding: 8px 12px; font-size: .95rem; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); }
@@ -295,7 +346,11 @@ html[dir="rtl"] .tut-list button.on { box-shadow: inset -4px 0 0 var(--accent); 
   .st-form { padding: 20px 16px; }
   .tut-list { max-height: 420px; }
   .hero-in { padding-block: 48px 72px; }
-  .cards, .steps, .get-cards, .pains, .news, .more-new { grid-template-columns: 1fr; }
+  .cards, .steps, .get-cards, .pains, .news, .more-new, .dl-cards, .foot-grid { grid-template-columns: 1fr; }
+  .dl-card.you { order: -1; }
+  .links a.on { box-shadow: none; }
+  .dl-cards { margin-top: -24px; gap: 28px; }
+  .page-head { padding: 40px 0 48px; }
   .links .nav-new::after { position: static; display: inline-block; margin-inline-start: 8px; vertical-align: middle; }
   .gallery { grid-template-columns: repeat(2, 1fr); }
   .teacher { text-align: center; justify-items: center; }

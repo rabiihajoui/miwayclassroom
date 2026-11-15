@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- langs: made by scripts/website-langs.js -->
+<title>دروس الفيديو – MI WAY Classroom</title>
+<meta name="description" content="تعلّم MI WAY Classroom خطوة بخطوة: فيديوهات قصيرة بترجمة إنجليزية وفرنسية وعربية وتركية، للحاسوب والهاتف.">
+<link rel="canonical" href="https://www.miwayclassroom.com/ar/tutorials/">
+<link rel="alternate" hreflang="en" href="https://www.miwayclassroom.com/tutorials/">
+<link rel="alternate" hreflang="fr" href="https://www.miwayclassroom.com/fr/tutorials/">
+<link rel="alternate" hreflang="ar" href="https://www.miwayclassroom.com/ar/tutorials/">
+<link rel="alternate" hreflang="tr" href="https://www.miwayclassroom.com/tr/tutorials/">
+<link rel="alternate" hreflang="x-default" href="https://www.miwayclassroom.com/tutorials/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MI WAY Classroom">
+<meta property="og:locale" content="ar_MA">
+<meta property="og:title" content="دروس الفيديو – MI WAY Classroom">
+<meta property="og:description" content="تعلّم MI WAY Classroom خطوة بخطوة: فيديوهات قصيرة بترجمة إنجليزية وفرنسية وعربية وتركية، للحاسوب والهاتف.">
+<meta property="og:image" content="https://www.miwayclassroom.com/img/og-ar.png">
+<meta property="og:image:width" content="1024">
+<meta property="og:image:height" content="500">
+<meta property="og:url" content="https://www.miwayclassroom.com/ar/tutorials/">
+<meta name="twitter:card" content="summary_large_image">
+<!-- /langs -->
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<link rel="icon" href="/img/icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body data-page="tutorials">
+
+<!-- nav: copied to every page by scripts/website-langs.js -->
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="/ar/"><img src="/img/icon.png" alt="" width="36" height="36"><span>MI WAY <b>Classroom</b></span></a>
+    <nav class="links" id="nav-links">
+      <a href="/ar/" data-page="home" data-t="nav_home">الرئيسية</a>
+      <a href="/ar/features/" data-page="features" data-t="nav_features">المميزات</a>
+      <a href="/ar/tutorials/" data-page="tutorials" data-t="nav_tut">دروس الفيديو</a>
+      <a href="/ar/articles/" data-page="articles" data-goatcounter-click="nav-articles" data-t="nav_articles">مقالات</a>
+      <a href="/ar/about/" data-page="about" data-t="nav_about">من نحن وأسئلة</a>
+      <a class="btn btn-main nav-app" href="/ar/download/" data-page="download" data-goatcounter-click="nav-download" data-t="nav_app">حمّل التطبيق</a>
+    </nav>
+    <div class="langs" role="group" aria-label="Language">
+      <button data-lang="en">EN</button><button data-lang="fr">FR</button><button data-lang="ar">ع</button><button data-lang="tr">TR</button>
+    </div>
+    <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<!-- /nav -->
+
+<main id="top">
+
+<section class="page-head">
+  <div class="wrap">
+    <div class="dots"><i></i><i></i><i></i><i></i></div>
+    <h1 data-t="tut_h">دروس بالفيديو</h1>
+    <p class="lead" data-t="tut_p">تعلّم التطبيق كله خطوة بخطوة. الصوت بالإنجليزية، مع ترجمة بالإنجليزية والفرنسية والعربية والتركية.</p>
+  </div>
+</section>
+
+<section id="tutorials" class="block">
+  <div class="wrap">
+    <div class="seg" role="group">
+      <button data-kind="laptop" data-t="tut_laptop">💻 حاسوب</button><button data-kind="phone" data-t="tut_phone">📱 هاتف</button>
+    </div>
+    <div class="tut">
+      <div class="tut-player">
+        <div class="tut-frame" id="tut-frame"><video id="tut-video" controls playsinline preload="none"></video>
+          <div class="tut-up" id="tut-up" hidden>
+            <small data-t="tut_upnext">الفيديو التالي</small><b id="tut-up-title"></b>
+            <div><button class="tut-go" id="tut-up-go">▶ <span data-t="tut_play">شغّل</span> <span id="tut-up-n"></span></button><button class="tut-cancel" id="tut-up-x" data-t="tut_cancel">إلغاء</button></div>
+          </div>
+        </div>
+        <div class="tut-nav">
+          <button class="tut-step" id="tut-prev"><span class="arr">◀</span> <span data-t="tut_prev">السابق</span></button>
+          <span class="tut-pos" id="tut-pos"></span>
+          <button class="tut-step" id="tut-next"><span data-t="tut_next">التالي</span> <span class="arr">▶</span></button>
+        </div>
+        <label class="tut-auto"><input type="checkbox" id="tut-auto"> <span data-t="tut_auto">شغّل الفيديو التالي تلقائيًا</span></label>
+        <h3 id="tut-title"></h3>
+        <p id="tut-sub"></p>
+      </div>
+      <ol class="tut-list" id="tut-list"></ol>
+    </div>
+  </div>
+</section>
+
+<section class="block cta-band">
+  <div class="wrap">
+    <h2 data-t="cta_h">مجاني لكل الأساتذة</h2>
+    <p data-t="cta_p">بدون إعلانات، بدون حسابات، بدون إنترنت. جاهز في دقيقة واحدة.</p>
+    <a class="btn btn-main" href="/ar/download/" data-goatcounter-click="cta-download" data-t="cta_b">حمّل التطبيق</a>
+  </div>
+</section>
+
+</main>
+
+<!-- foot -->
+<footer class="foot">
+  <div class="wrap foot-grid">
+    <div class="foot-about">
+      <a class="brand" href="/ar/"><img src="/img/icon.png" alt="" width="28" height="28"><span>MI WAY <b>Classroom</b></span></a>
+      <p data-t="foot_p">اختبارات إنجليزية مجانية ومباشرة على هواتف التلاميذ. بدون إنترنت.</p>
+      <div class="social" data-social></div>
+    </div>
+    <nav class="foot-col"><b data-t="foot_app">التطبيق</b>
+      <a href="/ar/features/" data-t="nav_features">المميزات</a>
+      <a href="/ar/tutorials/" data-t="nav_tut">دروس الفيديو</a>
+      <a href="/ar/download/" data-t="nav_app">حمّل التطبيق</a>
+    </nav>
+    <nav class="foot-col"><b data-t="foot_help">مساعدة</b>
+      <a href="/ar/articles/" data-t="foot_articles">مقالات للأساتذة</a>
+      <a href="/ar/about/" data-t="nav_about">من نحن وأسئلة</a>
+      <a href="https://sites.google.com/view/miway-classroom-privacy/home" target="_blank" rel="noopener" data-t="foot_privacy">الخصوصية</a>
+      <span id="contact-wrap" hidden><a id="contact-link" href="#" data-t="foot_contact">اتصل بنا</a></span>
+    </nav>
+  </div>
+  <div class="wrap foot-end"><p><span data-t="foot_made">من إنجاز</span> <b>RABII HAJOUI</b></p></div>
+</footer>
+<!-- /foot -->
+
+<script src="/tutorials.js"></script>
+<script src="/site.js"></script>
+<!-- Visitor counter (GoatCounter: no cookies) -->
+<script data-goatcounter="https://miwayclassroom.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</body>
+</html>

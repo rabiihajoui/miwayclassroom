@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- langs: made by scripts/website-langs.js -->
+<title>Video tutorials – MI WAY Classroom</title>
+<meta name="description" content="Learn MI WAY Classroom step by step: short videos with English, French, Arabic and Turkish subtitles, for laptop and phone.">
+<link rel="canonical" href="https://www.miwayclassroom.com/tutorials/">
+<link rel="alternate" hreflang="en" href="https://www.miwayclassroom.com/tutorials/">
+<link rel="alternate" hreflang="fr" href="https://www.miwayclassroom.com/fr/tutorials/">
+<link rel="alternate" hreflang="ar" href="https://www.miwayclassroom.com/ar/tutorials/">
+<link rel="alternate" hreflang="tr" href="https://www.miwayclassroom.com/tr/tutorials/">
+<link rel="alternate" hreflang="x-default" href="https://www.miwayclassroom.com/tutorials/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MI WAY Classroom">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Video tutorials – MI WAY Classroom">
+<meta property="og:description" content="Learn MI WAY Classroom step by step: short videos with English, French, Arabic and Turkish subtitles, for laptop and phone.">
+<meta property="og:image" content="https://www.miwayclassroom.com/img/og.png">
+<meta property="og:image:width" content="1024">
+<meta property="og:image:height" content="500">
+<meta property="og:url" content="https://www.miwayclassroom.com/tutorials/">
+<meta name="twitter:card" content="summary_large_image">
+<!-- /langs -->
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<link rel="icon" href="/img/icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body data-page="tutorials">
+
+<!-- nav: copied to every page by scripts/website-langs.js -->
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="/"><img src="/img/icon.png" alt="" width="36" height="36"><span>MI WAY <b>Classroom</b></span></a>
+    <nav class="links" id="nav-links">
+      <a href="/" data-page="home" data-t="nav_home">Home</a>
+      <a href="/features/" data-page="features" data-t="nav_features">Features</a>
+      <a href="/tutorials/" data-page="tutorials" data-t="nav_tut">Tutorials</a>
+      <a href="/articles/" data-page="articles" data-goatcounter-click="nav-articles" data-t="nav_articles">Articles</a>
+      <a href="/about/" data-page="about" data-t="nav_about">About &amp; questions</a>
+      <a class="btn btn-main nav-app" href="/download/" data-page="download" data-goatcounter-click="nav-download" data-t="nav_app">Get the app</a>
+    </nav>
+    <div class="langs" role="group" aria-label="Language">
+      <button data-lang="en">EN</button><button data-lang="fr">FR</button><button data-lang="ar">ع</button><button data-lang="tr">TR</button>
+    </div>
+    <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<!-- /nav -->
+
+<main id="top">
+
+<section class="page-head">
+  <div class="wrap">
+    <div class="dots"><i></i><i></i><i></i><i></i></div>
+    <h1 data-t="tut_h">Video tutorials</h1>
+    <p class="lead" data-t="tut_p">Learn the whole app, step by step. Spoken in English, with English, French, Arabic and Turkish subtitles.</p>
+  </div>
+</section>
+
+<section id="tutorials" class="block">
+  <div class="wrap">
+    <div class="seg" role="group">
+      <button data-kind="laptop" data-t="tut_laptop">💻 Laptop</button><button data-kind="phone" data-t="tut_phone">📱 Phone</button>
+    </div>
+    <div class="tut">
+      <div class="tut-player">
+        <div class="tut-frame" id="tut-frame"><video id="tut-video" controls playsinline preload="none"></video>
+          <div class="tut-up" id="tut-up" hidden>
+            <small data-t="tut_upnext">Next video</small><b id="tut-up-title"></b>
+            <div><button class="tut-go" id="tut-up-go">▶ <span data-t="tut_play">Play now</span> <span id="tut-up-n"></span></button><button class="tut-cancel" id="tut-up-x" data-t="tut_cancel">Cancel</button></div>
+          </div>
+        </div>
+        <div class="tut-nav">
+          <button class="tut-step" id="tut-prev"><span class="arr">◀</span> <span data-t="tut_prev">Previous</span></button>
+          <span class="tut-pos" id="tut-pos"></span>
+          <button class="tut-step" id="tut-next"><span data-t="tut_next">Next</span> <span class="arr">▶</span></button>
+        </div>
+        <label class="tut-auto"><input type="checkbox" id="tut-auto"> <span data-t="tut_auto">Play the next video by itself</span></label>
+        <h3 id="tut-title"></h3>
+        <p id="tut-sub"></p>
+      </div>
+      <ol class="tut-list" id="tut-list"></ol>
+    </div>
+  </div>
+</section>
+
+<section class="block cta-band">
+  <div class="wrap">
+    <h2 data-t="cta_h">Free for every teacher</h2>
+    <p data-t="cta_p">No ads, no accounts, no internet needed. Ready in 1 minute.</p>
+    <a class="btn btn-main" href="/download/" data-goatcounter-click="cta-download" data-t="cta_b">Get the app</a>
+  </div>
+</section>
+
+</main>
+
+<!-- foot -->
+<footer class="foot">
+  <div class="wrap foot-grid">
+    <div class="foot-about">
+      <a class="brand" href="/"><img src="/img/icon.png" alt="" width="28" height="28"><span>MI WAY <b>Classroom</b></span></a>
+      <p data-t="foot_p">Free live English quizzes on students' phones. No internet needed.</p>
+      <div class="social" data-social></div>
+    </div>
+    <nav class="foot-col"><b data-t="foot_app">The app</b>
+      <a href="/features/" data-t="nav_features">Features</a>
+      <a href="/tutorials/" data-t="nav_tut">Tutorials</a>
+      <a href="/download/" data-t="nav_app">Get the app</a>
+    </nav>
+    <nav class="foot-col"><b data-t="foot_help">Help</b>
+      <a href="/articles/" data-t="foot_articles">Articles for teachers</a>
+      <a href="/about/" data-t="nav_about">About &amp; questions</a>
+      <a href="https://sites.google.com/view/miway-classroom-privacy/home" target="_blank" rel="noopener" data-t="foot_privacy">Privacy</a>
+      <span id="contact-wrap" hidden><a id="contact-link" href="#" data-t="foot_contact">Contact</a></span>
+    </nav>
+  </div>
+  <div class="wrap foot-end"><p><span data-t="foot_made">Created by</span> <b>RABII HAJOUI</b></p></div>
+</footer>
+<!-- /foot -->
+
+<script src="/tutorials.js"></script>
+<script src="/site.js"></script>
+<!-- Visitor counter (GoatCounter: no cookies) -->
+<script data-goatcounter="https://miwayclassroom.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</body>
+</html>

@@ -107,6 +107,37 @@ const T = {
     foot_made: 'Créée par', foot_articles: 'Articles pour les professeurs', foot_privacy: 'Confidentialité', foot_contact: 'Contact',
     nav_articles: 'Articles', art_k: 'Articles pour les professeurs', art_h: 'Idées et guides tirés de ma classe', art_lead: "Une aide pratique pour les professeurs d'anglais : quiz en direct sans internet, plans de cours, jeux et quiz prêts pour votre manuel.", art_books: 'Quiz gratuits pour votre manuel :', art_all: 'Voir tous les articles →',
     fol_h: 'Suivez MI WAY', fol_p: 'Une nouvelle petite vidéo chaque jour : jeux, idées et astuces pour votre classe.', t_follow: 'Suivez-moi :',
+    // Pages, menu and download (Nov 2026)
+    nav_home: 'Accueil',
+    nav_about: 'À propos & questions',
+    home_new: '📝 Contrôles continus · 🎧 Une écoute pour chaque leçon · 🎮 8 nouveaux jeux de classe',
+    home_new_b: 'Voir les nouveautés →',
+    feat_all: 'Voir toutes les fonctions →',
+    cta_h: 'Gratuit pour tous les professeurs',
+    cta_p: 'Sans publicité, sans compte, sans internet. Prêt en 1 minute.',
+    cta_b: 'Obtenir l\'application',
+    fp_p: 'Quiz en direct, jeux, écoute, expression orale, vocabulaire et tous vos outils de classe. Gratuit, et ça marche sans internet.',
+    fp_gal: 'Ce que les élèves voient sur leur téléphone',
+    ab_h: 'À propos de MI WAY',
+    ab_p: 'Qui l\'a créée, et les réponses aux questions des professeurs.',
+    dl_p: 'Gratuit, sans compte. Il vous faut un seul appareil : un ordinateur Windows ou un téléphone Android. Les élèves n\'installent rien.',
+    dl_you: 'Le meilleur pour cet appareil',
+    dl_tk: 'Pour le professeur',
+    dl_sk: 'Pour les élèves',
+    dl1_1: 'Téléchargez le fichier et ouvrez-le.',
+    dl1_2: 'Suivez les étapes d\'installation. Cela prend 1 minute.',
+    dl1_3: 'Activez votre point d\'accès ou le Wi-Fi et commencez la classe.',
+    dl2_1: 'Installez MI WAY Classroom depuis Google Play.',
+    dl2_2: 'Activez le point d\'accès de votre téléphone.',
+    dl2_3: 'Les élèves scannent le QR code sur votre téléphone.',
+    dl2_note: 'Vous enseignez avec un ordinateur ? <b>MI WAY Remote</b> est une application gratuite pour votre téléphone : dirigez la classe en marchant. Obtenez-la avec le QR code dans l\'application de l\'ordinateur.',
+    dl3_1: 'Rejoindre le point d\'accès ou le Wi-Fi du professeur.',
+    dl3_2: 'Scanner le QR code au tableau.',
+    dl3_3: 'Toucher son nom et répondre.',
+    dl3_b: '▶ Voir comment ça marche',
+    foot_p: 'Quiz d\'anglais gratuits en direct sur les téléphones des élèves. Sans internet.',
+    foot_app: 'L\'application',
+    foot_help: 'Aide',
   },
   ar: {
     nav_how: 'كيف يعمل', nav_features: 'المميزات', nav_teacher: 'الأستاذ', nav_faq: 'أسئلة',
@@ -184,6 +215,37 @@ const T = {
     foot_made: 'من إنجاز', foot_articles: 'مقالات للأساتذة', foot_privacy: 'الخصوصية', foot_contact: 'اتصل بنا',
     nav_articles: 'مقالات', art_k: 'مقالات للأساتذة', art_h: 'أفكار وأدلة من قسمي', art_lead: 'مساعدة عملية لأساتذة الإنجليزية: اختبارات مباشرة بدون إنترنت، جذاذات، ألعاب، واختبارات جاهزة لكتابك المدرسي.', art_books: 'اختبارات مجانية لكتابك المدرسي:', art_all: 'كل المقالات ←',
     fol_h: 'تابعوا MI WAY', fol_p: 'فيديو قصير جديد كل يوم: ألعاب وأفكار ونصائح لقسمك.', t_follow: 'تابعوني:',
+    // Pages, menu and download (Nov 2026)
+    nav_home: 'الرئيسية',
+    nav_about: 'من نحن وأسئلة',
+    home_new: '📝 فروض المراقبة المستمرة · 🎧 استماع لكل درس · 🎮 8 ألعاب جديدة للقسم',
+    home_new_b: 'شاهد الجديد ←',
+    feat_all: 'كل المميزات ←',
+    cta_h: 'مجاني لكل الأساتذة',
+    cta_p: 'بدون إعلانات، بدون حسابات، بدون إنترنت. جاهز في دقيقة واحدة.',
+    cta_b: 'حمّل التطبيق',
+    fp_p: 'اختبارات مباشرة، ألعاب، استماع، تعبير شفهي، مفردات وكل أدوات القسم. مجاني ويعمل بدون إنترنت.',
+    fp_gal: 'ما يراه التلاميذ على هواتفهم',
+    ab_h: 'عن MI WAY',
+    ab_p: 'من صنعه، وأجوبة على أسئلة الأساتذة.',
+    dl_p: 'مجاني وبدون حساب. تحتاج جهازًا واحدًا فقط: حاسوب Windows أو هاتف Android. التلاميذ لا يثبّتون أي شيء.',
+    dl_you: 'الأنسب لهذا الجهاز',
+    dl_tk: 'للأستاذ',
+    dl_sk: 'للتلاميذ',
+    dl1_1: 'حمّل الملف وافتحه.',
+    dl1_2: 'اتبع خطوات التثبيت. يستغرق ذلك دقيقة واحدة.',
+    dl1_3: 'شغّل نقطة الاتصال أو الـ Wi-Fi وابدأ الحصة.',
+    dl2_1: 'ثبّت MI WAY Classroom من Google Play.',
+    dl2_2: 'شغّل نقطة الاتصال في هاتفك.',
+    dl2_3: 'التلاميذ يمسحون رمز QR على هاتفك.',
+    dl2_note: 'تدرّس بالحاسوب؟ <b>MI WAY Remote</b> تطبيق مجاني لهاتفك: سيّر الحصة وأنت تتجول في القسم. حمّله من رمز QR داخل تطبيق الحاسوب.',
+    dl3_1: 'الاتصال بنقطة اتصال الأستاذ أو الـ Wi-Fi.',
+    dl3_2: 'مسح رمز QR على السبورة.',
+    dl3_3: 'الضغط على الاسم والإجابة.',
+    dl3_b: '▶ شاهد كيف يعمل',
+    foot_p: 'اختبارات إنجليزية مجانية ومباشرة على هواتف التلاميذ. بدون إنترنت.',
+    foot_app: 'التطبيق',
+    foot_help: 'مساعدة',
   },
   tr: {
     nav_how: 'Nasıl çalışır', nav_features: 'Özellikler', nav_teacher: 'Öğretmen', nav_faq: 'Sorular',
@@ -262,6 +324,37 @@ const T = {
     foot_made: 'Yapan', foot_articles: 'Öğretmenler için yazılar (İngilizce)', foot_privacy: 'Gizlilik', foot_contact: 'İletişim',
     nav_articles: 'Yazılar', art_k: 'Öğretmenler için yazılar', art_h: 'Sınıfımdan fikirler ve rehberler', art_lead: 'İngilizce öğretmenleri için pratik yardım: internetsiz canlı sınavlar, ders planları ve oyunlar (yazılar İngilizce).', art_books: 'Fas ders kitapları için ücretsiz sınavlar:', art_all: 'Tüm yazılar →',
     fol_h: 'MI WAY\'i takip edin', fol_p: 'Her gün yeni kısa bir video: sınıfınız için oyunlar, fikirler ve ipuçları.', t_follow: 'Beni takip edin:',
+    // Pages, menu and download (Nov 2026)
+    nav_home: 'Ana sayfa',
+    nav_about: 'Hakkında ve sorular',
+    home_new: '📝 Dönem sınavları · 🎧 Her ders için dinleme · 🎮 8 yeni sınıf oyunu',
+    home_new_b: 'Yenilikleri gör →',
+    feat_all: 'Tüm özellikleri gör →',
+    cta_h: 'Her öğretmen için ücretsiz',
+    cta_p: 'Reklam yok, hesap yok, internet gerekmez. 1 dakikada hazır.',
+    cta_b: 'Uygulamayı edinin',
+    fp_p: 'Canlı sınavlar, oyunlar, dinleme, konuşma, kelimeler ve tüm sınıf araçlarınız. Ücretsiz ve internetsiz çalışır.',
+    fp_gal: 'Öğrenciler telefonlarında ne görür',
+    ab_h: 'MI WAY hakkında',
+    ab_p: 'Kim yaptı ve öğretmenlerin sorularına cevaplar.',
+    dl_p: 'Ücretsiz, hesap yok. Sadece bir cihaz yeter: Windows dizüstü bilgisayar veya Android telefon. Öğrenciler hiçbir şey yüklemez.',
+    dl_you: 'Bu cihaz için en iyisi',
+    dl_tk: 'Öğretmen için',
+    dl_sk: 'Öğrenciler için',
+    dl1_1: 'Dosyayı indirin ve açın.',
+    dl1_2: 'Kurulum adımlarını izleyin. 1 dakika sürer.',
+    dl1_3: 'Hotspot veya Wi-Fi açın ve derse başlayın.',
+    dl2_1: 'MI WAY Classroom\'u Google Play\'den yükleyin.',
+    dl2_2: 'Telefonunuzun hotspotunu açın.',
+    dl2_3: 'Öğrenciler telefonunuzdaki QR kodu tarar.',
+    dl2_note: 'Dizüstü bilgisayarla mı ders veriyorsunuz? <b>MI WAY Remote</b> telefonunuz için ücretsiz bir uygulama: sınıfta dolaşırken dersi yönetin. Bilgisayar uygulamasındaki QR koddan edinin.',
+    dl3_1: 'Öğretmenin hotspotuna veya Wi-Fi\'ye bağlan.',
+    dl3_2: 'Tahtadaki QR kodu tara.',
+    dl3_3: 'Adına dokun ve cevap ver.',
+    dl3_b: '▶ Nasıl çalıştığını izleyin',
+    foot_p: 'Öğrenci telefonlarında ücretsiz canlı İngilizce sınavlar. İnternet gerekmez.',
+    foot_app: 'Uygulama',
+    foot_help: 'Yardım',
   },
 };
 
@@ -283,7 +376,8 @@ function setLang(lang) {
   document.querySelectorAll('[data-t]').forEach(el => { const v = d[el.dataset.t]; if (v) el.innerHTML = v; });
   document.querySelectorAll('[data-t-ph]').forEach(el => { el.placeholder = d[el.dataset.tPh] || en[el.dataset.tPh]; });
   document.querySelectorAll('[data-lang]').forEach(b => b.classList.toggle('on', b.dataset.lang === lang));
-  document.getElementById('app-lang').hidden = !d.app_lang;
+  const appLang = document.getElementById('app-lang');
+  if (appLang) appLang.hidden = !d.app_lang;
   setPromo(lang);
   setHeroAd();
   renderTutorials();
@@ -298,30 +392,42 @@ let release;
 async function showWinVersion(d) {
   try { release = release || await fetch(CONFIG.releaseApi).then(r => r.json()); } catch { return; }
   const exe = (release.assets || []).find(a => a.name.endsWith('.exe'));
-  if (exe) document.getElementById('win-ver').textContent = `${d.win_ver || 'Version'} ${release.tag_name.replace(/^v/, '')} · ${Math.round(exe.size / 1048576)} MB`;
+  if (exe && document.getElementById('win-ver')) document.getElementById('win-ver').textContent = `${d.win_ver || 'Version'} ${release.tag_name.replace(/^v/, '')} · ${Math.round(exe.size / 1048576)} MB`;
 }
-
-// The hero Windows button downloads, then shows the steps for the blue warning.
-document.getElementById('win-link').addEventListener('click', () => {
-  if (CONFIG.windowsUrl) setTimeout(() => document.getElementById('windows').scrollIntoView({ behavior: 'smooth' }), 300);
-});
 
 function applyConfig(d) {
   const win = document.getElementById('win-btn');
-  if (CONFIG.windowsUrl) {
-    win.href = document.getElementById('win-link').href = CONFIG.windowsUrl;
+  if (!win) {} else if (CONFIG.windowsUrl) {
+    win.href = CONFIG.windowsUrl;
     win.textContent = d.get_win_b || 'Download for Windows';
     win.classList.remove('soon');
     document.getElementById('win-help').hidden = false;
     showWinVersion(d);
   } else win.classList.add('soon');
-  if (CONFIG.donateUrl) { document.getElementById('support').hidden = false; document.getElementById('donate-btn').href = CONFIG.donateUrl; }
+  if (CONFIG.donateUrl && document.getElementById('support')) { document.getElementById('support').hidden = false; document.getElementById('donate-btn').href = CONFIG.donateUrl; }
   if (CONFIG.contactEmail) { document.getElementById('contact-wrap').hidden = false; document.getElementById('contact-link').href = 'mailto:' + CONFIG.contactEmail; }
-  if (CONFIG.teacherPhoto) document.getElementById('teacher-photo').src = CONFIG.teacherPhoto;
+  if (CONFIG.teacherPhoto && document.getElementById('teacher-photo')) document.getElementById('teacher-photo').src = CONFIG.teacherPhoto;
 }
 
-// Each language has its own address (/fr/, /ar/, /tr/) so Google can find it.
-const home = (l) => (l === 'en' ? '/' : `/${l}/`);
+// Each language has its own address (/fr/, /ar/, /tr/) so Google can find it. Switching keeps the same page.
+const page = () => location.pathname.replace(/^\/(fr|ar|tr)(\/|$)/, '/');
+const home = (l) => (l === 'en' ? '' : '/' + l) + page();
+
+// The menu shows which page is open.
+const here = document.body.dataset.page;
+document.querySelectorAll('#nav-links [data-page]').forEach(a => { if (a.dataset.page === here) { a.classList.add('on'); a.setAttribute('aria-current', 'page'); } });
+
+// Old links to parts of the long page go to their new page.
+const MOVED = { windows: 'download/', get: 'download/', tutorials: 'tutorials/', faq: 'about/#faq', teacher: 'about/', follow: 'about/#follow', new: 'features/#new' };
+const moving = here === 'home' && !!MOVED[location.hash.slice(1)];
+if (moving) {
+  const l = document.documentElement.lang;
+  location.replace((l === 'en' ? '/' : `/${l}/`) + MOVED[location.hash.slice(1)]);
+}
+
+// Download page: mark the card for this device (phone first on phones).
+const dev = /Android/i.test(navigator.userAgent) ? 'android' : /Windows/i.test(navigator.userAgent) ? 'win' : '';
+document.querySelectorAll(`.dl-card[data-dev="${dev}"]`).forEach(c => c.classList.add('you'));
 document.querySelectorAll('[data-lang]').forEach(b => b.addEventListener('click', () => {
   try { localStorage.setItem('lang', b.dataset.lang); } catch {}
   if (location.protocol === 'file:') setLang(b.dataset.lang);
@@ -360,15 +466,16 @@ const word = (k) => (T[lang()] || T.en)[k] || T.en[k] || '';
 
 const promo = document.getElementById('promo-video');
 function setPromo(l) {
-  const src = `videos/promo-${l}.mp4`;
+  if (!promo) return;
+  const src = `/videos/promo-${l}.mp4`;
   if (promo.querySelector('source').getAttribute('src') === src) return;
   promo.pause();
   promo.querySelector('source').src = src;
-  promo.poster = `videos/promo-${l}.jpg`;
+  promo.poster = `/videos/promo-${l}.jpg`;
   promo.load();
   document.getElementById('promo').classList.remove('playing');
 }
-document.querySelector('.video-play').addEventListener('click', () => promo.play());
+document.querySelector('.video-play')?.addEventListener('click', () => promo.play());
 
 // Hero ad (in English, for English teachers, on every page language): plays silently by itself; 🔊 or a tap turns the sound on.
 const ad = document.getElementById('hero-ad'), adv = document.getElementById('hero-ad-video'), snd = document.getElementById('hero-sound');
@@ -377,8 +484,8 @@ function setHeroAd() {
   if (!adv) return;
   ad.hidden = false;
   ad.parentElement.classList.add('ad');
-  const s = adShape(), src = `videos/ad-${s}.mp4`;
-  if (adv.getAttribute('src') !== src) { adv.poster = `videos/ad-${s}.jpg`; adv.src = src; }
+  const s = adShape(), src = `/videos/intro-${s}.mp4`;
+  if (adv.getAttribute('src') !== src) { adv.poster = `/videos/intro-${s}.jpg`; adv.src = src; }
   if (matchMedia('(prefers-reduced-motion: reduce)').matches) adv.autoplay = false;
   else adv.play().catch(() => {});
 }
@@ -390,7 +497,7 @@ function adSound() {
 }
 snd?.addEventListener('click', adSound);
 adv?.addEventListener('click', adSound);
-promo.addEventListener('play', () => document.getElementById('promo').classList.add('playing'));
+promo?.addEventListener('play', () => document.getElementById('promo').classList.add('playing'));
 
 const tutorials = window.TUTORIALS || [];
 const tv = document.getElementById('tut-video');
@@ -400,7 +507,7 @@ let current = tutorials[0];
 function showTutorial(c, play) {
   current = c;
   const k = kind === 'phone' && c.phone ? 'phone' : 'laptop';
-  const base = `tutorials/${k}/${c.id}`;
+  const base = `/tutorials/${k}/${c.id}`;
   tv.pause();
   tv.innerHTML = ['en', 'fr', 'ar', 'tr'].map((l) => `<track kind="subtitles" srclang="${l}" label="${{ en: 'English', fr: 'Français', ar: 'العربية', tr: 'Türkçe' }[l]}" src="${base}.${l}.vtt"${l === lang() && l !== 'en' ? ' default' : ''}>`).join('');
   tv.src = `${base}.mp4`;
@@ -421,6 +528,7 @@ function showTutorial(c, play) {
 const up = document.getElementById('tut-up');
 const auto = document.getElementById('tut-auto');
 let upTimer = null;
+if (tv) {
 try { auto.checked = localStorage.getItem('tutAuto') !== 'off'; } catch { auto.checked = true; }
 auto.addEventListener('change', () => { try { localStorage.setItem('tutAuto', auto.checked ? 'on' : 'off'); } catch {} });
 function step(d) {
@@ -466,8 +574,10 @@ frame.addEventListener('touchend', (e) => {
   if (Math.abs(dx) < 60 || Math.abs(dy) > Math.abs(dx)) return;
   step((dx < 0) !== (document.documentElement.dir === 'rtl') ? 1 : -1);
 });
+}
 
 function renderTutorials() {
+  if (!tv) return;
   if (!tutorials.length) { document.getElementById('tutorials').hidden = true; return; }
   document.querySelectorAll('[data-kind]').forEach((b) => b.classList.toggle('on', b.dataset.kind === kind));
   const list = document.getElementById('tut-list');
@@ -491,6 +601,7 @@ document.querySelectorAll('[data-kind]').forEach((b) => b.addEventListener('clic
 
 function renderClips() {
   const box = document.getElementById('clips');
+  if (!box) return;
   document.getElementById('classes').hidden = !CONFIG.classClips.length;
   box.innerHTML = '';
   CONFIG.classClips.forEach((c) => {
@@ -509,6 +620,7 @@ const form = document.getElementById('share');
 
 function renderStories() {
   const wall = document.getElementById('st-wall');
+  if (!wall) return;
   wall.innerHTML = '';
   (allStories ? stories : stories.slice(0, SHOW)).forEach((s) => {
     const f = document.createElement('figure');
@@ -532,8 +644,8 @@ function renderStories() {
 }
 
 async function loadStories() {
-  if (!CONFIG.storiesUrl) return;
-  document.getElementById('stories').hidden = document.getElementById('nav-stories').hidden = false;
+  if (!CONFIG.storiesUrl || !form) return;
+  document.getElementById('stories').hidden = false;
   try { stories = (await fetch(CONFIG.storiesUrl).then(r => r.json())).stories || []; } catch { stories = []; }
   renderStories();
   if (location.hash === '#share') openShare();
@@ -564,6 +676,7 @@ function shrink(file) {
 }
 
 const say = (k) => { document.getElementById('st-msg').textContent = word(k); document.getElementById('st-msg').dataset.k = k; };
+if (form) {
 document.getElementById('st-open').addEventListener('click', openShare);
 document.getElementById('st-more').addEventListener('click', () => { allStories = !allStories; renderStories(); });
 addEventListener('hashchange', () => { if (location.hash === '#share' && CONFIG.storiesUrl) openShare(); });
@@ -587,10 +700,11 @@ form.addEventListener('submit', async (e) => {
   } catch { say('st_err'); }
   send.disabled = false;
 });
+}
 
 // The English page sends visitors to their own language once (saved choice, else the browser's).
 let start = document.documentElement.lang;
-if (start === 'en') {
+if (start === 'en' && !moving) {
   try { start = localStorage.getItem('lang') || ''; } catch {}
   if (!start) { const n = (navigator.language || 'en').slice(0, 2); start = T[n] ? n : 'en'; }
   if (start !== 'en' && T[start] && location.protocol !== 'file:') location.replace(home(start) + location.search + location.hash);
