@@ -147,10 +147,10 @@ html[lang="ar"] .new-tag { letter-spacing: 0; }
 .ss i { position: absolute; top: -9px; right: -16px; width: 18px; height: 18px; border-radius: 50%; background: var(--sun); color: #0b0b0b; font: 800 .7rem/18px var(--font); text-align: center; }
 
 .intro { color: var(--ink-2); font-size: 1.1rem; max-width: 40em; }
-.seg { display: inline-flex; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; margin: 8px 0 24px; background: var(--page); }
+.seg { display: flex; width: max-content; margin-inline: auto !important; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; margin: 8px 0 24px; background: var(--page); }
 .seg button { border: 0; background: none; color: var(--ink-2); font: 800 1rem var(--font); padding: 10px 18px; cursor: pointer; }
 .seg button.on { background: var(--accent); color: #fff; }
-.tut { display: grid; grid-template-columns: 1.6fr 1fr; gap: 28px; align-items: start; }
+.tut { max-width: 900px; margin: 0 auto; }
 .tut-frame { background: #000; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); }
 .tut-frame video { width: 100%; display: block; aspect-ratio: 16 / 9; background: #000; }
 .tut-frame.tall { max-width: 360px; margin: 0 auto; }
@@ -175,14 +175,20 @@ html[dir="rtl"] .arr { transform: scaleX(-1); }
 .tut-auto input { width: 18px; height: 18px; accent-color: var(--accent); }
 .tut-player h3 { margin: 16px 0 4px; }
 .tut-player p { margin: 0; color: var(--ink-2); }
-.tut-list { list-style: none; margin: 0; padding: 0; max-height: 620px; overflow-y: auto; border: 1px solid var(--line); border-radius: var(--radius); background: var(--page); }
-.tut-list button { display: flex; gap: 12px; align-items: center; width: 100%; text-align: start; border: 0; border-bottom: 1px solid var(--line); background: none; padding: 12px 14px; cursor: pointer; font: inherit; color: var(--ink); }
-.tut-list button:hover { background: var(--accent-soft); }
-.tut-list button.on { background: var(--accent-soft); box-shadow: inset 4px 0 0 var(--accent); }
-html[dir="rtl"] .tut-list button.on { box-shadow: inset -4px 0 0 var(--accent); }
-.tut-n { flex: none; width: 32px; height: 32px; border-radius: 9px; background: var(--accent); color: #fff; display: grid; place-items: center; font-weight: 900; font-size: .9rem; }
-.tut-t { flex: 1; font-weight: 700; line-height: 1.3; font-size: .95rem; }
-.tut-t small { display: block; color: var(--muted); font-weight: 600; font-size: .8rem; margin-top: 2px; }
+.tut-groups { display: grid; gap: 36px; margin-top: 56px; }
+.tut-g h3 { font-size: 1.25rem; margin: 0 0 14px; padding-bottom: 8px; border-bottom: 1px solid var(--line); }
+.tut-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 18px; }
+.tut-card { display: flex; flex-direction: column; gap: 10px; padding: 0 0 12px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); cursor: pointer; font: inherit; color: var(--ink); text-align: start; overflow: hidden; transition: transform .15s, box-shadow .15s; }
+.tut-card:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+.tut-card.on { border-color: var(--accent); box-shadow: 0 0 0 2px var(--accent); }
+.tut-pic { position: relative; display: block; aspect-ratio: 16 / 9; background: #0b1530; }
+.tut-pic img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.tut-pic .tut-n { position: absolute; top: 8px; inset-inline-start: 8px; }
+.tut-len { position: absolute; bottom: 8px; inset-inline-end: 8px; background: rgba(0, 0, 0, .72); color: #fff; font-size: .78rem; font-weight: 800; padding: 2px 8px; border-radius: 6px; }
+.tut-card.on .tut-pic::after { content: '▶'; position: absolute; inset: 0; display: grid; place-items: center; font-size: 2rem; color: #fff; background: rgba(31, 79, 156, .45); }
+.tut-n { flex: none; width: 30px; height: 30px; border-radius: 9px; background: var(--accent); color: #fff; display: grid; place-items: center; font-weight: 900; font-size: .88rem; }
+.tut-t { padding: 0 14px; font-weight: 800; line-height: 1.3; font-size: .98rem; }
+.badge.new { background: #16a34a; color: #fff; }
 .badge { display: inline-block; background: var(--c3); color: #fff; border-radius: 6px; padding: 0 6px; font-size: .72rem; font-weight: 800; margin-inline-start: 6px; vertical-align: 1px; }
 .clips { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; margin-top: 24px; }
 .clips figure { margin: 0; }
@@ -344,7 +350,9 @@ html[dir="rtl"] .tut-list button.on { box-shadow: inset -4px 0 0 var(--accent); 
   .langs { margin-inline-start: auto; }
   .hero-in, .split, .teacher, .tut, .st-row { grid-template-columns: 1fr; }
   .st-form { padding: 20px 16px; }
-  .tut-list { max-height: 420px; }
+  .tut-cards { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .tut-t { padding: 0 10px; font-size: .9rem; }
+  .tut-groups { margin-top: 40px; gap: 28px; }
   .hero-in { padding-block: 48px 72px; }
   .cards, .steps, .get-cards, .pains, .news, .more-new, .dl-cards, .foot-grid { grid-template-columns: 1fr; }
   .dl-card.you { order: -1; }
@@ -388,3 +396,29 @@ html[dir="rtl"] .tut-list button.on { box-shadow: inset -4px 0 0 var(--accent); 
 .art-all { margin-top: 24px; }
 @media (max-width: 900px) { .art-home { grid-template-columns: 1fr; } }
 @media (max-width: 760px) { .a-card { grid-template-columns: 1fr; } }
+.tut-t .badge.new { margin: 0 4px 0 0; vertical-align: 2px; }
+.how-more { margin-top: 28px; }
+/* Features: "And also" in 3 groups */
+.more-groups { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; align-items: start; }
+.more-g { background: var(--page); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px 20px; }
+.more-g h4 { margin: 0 0 10px; font-size: 1.05rem; }
+.more-g .more-new { display: block; }
+.more-g .more-new li { background: none; border: 0; border-top: 1px solid var(--line); border-radius: 0; padding: 9px 0; font-size: .95rem; }
+.more-g .more-new li:first-child { border-top: 0; }
+@media (max-width: 900px) { .more-groups { grid-template-columns: 1fr; } }
+/* Download: cards of the same height; the Windows warning help folds away */
+.dl-cards { align-items: stretch; }
+.dl-card .dl-steps { margin-bottom: auto; }
+.win-help summary { cursor: pointer; font-weight: 800; color: var(--ink); list-style: none; display: flex; align-items: center; gap: 8px; }
+.win-help summary::-webkit-details-marker { display: none; }
+.win-help summary::before { content: 'ⓘ'; color: var(--accent); font-size: 1.1rem; }
+.win-help summary::after { content: '+'; margin-inline-start: auto; color: var(--accent); font-weight: 900; }
+.win-help[open] summary::after { content: '−'; }
+.win-help[hidden] { display: none; }
+/* Phones: steps and feature cards with the icon beside the text (shorter page) */
+@media (max-width: 760px) {
+  .steps li, .cards .card { display: grid; grid-template-columns: auto 1fr; column-gap: 14px; align-items: start; }
+  .steps .num, .cards .ico { grid-row: span 2; margin: 0; width: 40px; height: 40px; font-size: 1.1rem; }
+  .steps li h3, .cards .card h3 { margin: 0 0 4px; }
+  .steps li p, .cards .card p { margin: 0; }
+}

@@ -2,7 +2,7 @@
 window.TUTORIALS = [
  {
   "id": "01-setup",
-  "seconds": 158,
+  "seconds": 169,
   "students": false,
   "phone": true,
   "title": {
@@ -20,7 +20,7 @@ window.TUTORIALS = [
  },
  {
   "id": "02-connect",
-  "seconds": 112,
+  "seconds": 137,
   "students": false,
   "phone": true,
   "title": {
@@ -38,7 +38,7 @@ window.TUTORIALS = [
  },
  {
   "id": "03-students",
-  "seconds": 152,
+  "seconds": 162,
   "students": true,
   "phone": true,
   "title": {
@@ -56,7 +56,7 @@ window.TUTORIALS = [
  },
  {
   "id": "04-lessons",
-  "seconds": 223,
+  "seconds": 225,
   "students": false,
   "phone": true,
   "title": {
@@ -74,7 +74,7 @@ window.TUTORIALS = [
  },
  {
   "id": "05-live",
-  "seconds": 157,
+  "seconds": 155,
   "students": false,
   "phone": true,
   "title": {
@@ -84,7 +84,7 @@ window.TUTORIALS = [
    "tr": "Canlı bir test yapın"
   },
   "sub": {
-   "en": "The waiting room, the questions, the leaderboard and the podium",
+   "en": "Test 1: the waiting room, today's goal, the questions, and what to teach",
    "fr": "La salle d'attente, les questions, le classement et le podium",
    "ar": "قاعة الانتظار، الأسئلة، الترتيب ومنصة التتويج",
    "tr": "Bekleme odası, sorular, sıralama ve kürsü"
@@ -92,7 +92,7 @@ window.TUTORIALS = [
  },
  {
   "id": "06-plans",
-  "seconds": 108,
+  "seconds": 119,
   "students": false,
   "phone": true,
   "title": {
@@ -110,7 +110,7 @@ window.TUTORIALS = [
  },
  {
   "id": "07-lesson-tabs",
-  "seconds": 151,
+  "seconds": 172,
   "students": false,
   "phone": true,
   "title": {
@@ -128,7 +128,7 @@ window.TUTORIALS = [
  },
  {
   "id": "08-activities",
-  "seconds": 310,
+  "seconds": 318,
   "students": false,
   "phone": true,
   "title": {
@@ -182,7 +182,7 @@ window.TUTORIALS = [
  },
  {
   "id": "11-writing",
-  "seconds": 262,
+  "seconds": 267,
   "students": false,
   "phone": false,
   "title": {
@@ -200,7 +200,7 @@ window.TUTORIALS = [
  },
  {
   "id": "12-speaking",
-  "seconds": 141,
+  "seconds": 144,
   "students": false,
   "phone": false,
   "title": {
@@ -236,7 +236,7 @@ window.TUTORIALS = [
  },
  {
   "id": "14-students",
-  "seconds": 137,
+  "seconds": 136,
   "students": false,
   "phone": true,
   "title": {
@@ -254,7 +254,7 @@ window.TUTORIALS = [
  },
  {
   "id": "15-more",
-  "seconds": 174,
+  "seconds": 150,
   "students": false,
   "phone": true,
   "title": {
@@ -290,7 +290,7 @@ window.TUTORIALS = [
  },
  {
   "id": "17-listening",
-  "seconds": 158,
+  "seconds": 173,
   "students": false,
   "phone": true,
   "title": {
@@ -308,7 +308,7 @@ window.TUTORIALS = [
  },
  {
   "id": "18-students-listen",
-  "seconds": 95,
+  "seconds": 100,
   "students": true,
   "phone": true,
   "title": {
@@ -322,6 +322,60 @@ window.TUTORIALS = [
    "fr": "Écouter, répondre à son niveau, vérifier avec le texte, écrire ce qu'on entend",
    "ar": "استمع، أجب حسب مستواك، تحقق بالنص، واكتب ما تسمع",
    "tr": "Dinle, seviyene göre cevapla, metinle kontrol et, duyduğunu yaz ve yeni kelimeler öğren"
+  }
+ },
+ {
+  "id": "19-find",
+  "seconds": 76,
+  "students": false,
+  "phone": true,
+  "title": {
+   "en": "Find things fast",
+   "fr": "Trouver vite",
+   "ar": "البحث السريع",
+   "tr": "Hızlı bulun"
+  },
+  "sub": {
+   "en": "Find anything, your voice, Back, the path, ⭐ My pages, Recent, and letter keys",
+   "fr": "Tout trouver, votre voix, Retour, le chemin, ⭐ Mes pages, Récents et les touches",
+   "ar": "ابحث عن أي شيء، بصوتك، الرجوع، المسار، ⭐ صفحاتي، الأخيرة، والمفاتيح",
+   "tr": "Her şeyi bulun, sesiniz, Geri, yol, ⭐ Sayfalarım, Son kullanılanlar ve harf tuşları"
+  }
+ },
+ {
+  "id": "20-test2",
+  "seconds": 150,
+  "students": false,
+  "phone": true,
+  "title": {
+   "en": "Test 2: think, talk and beat Test 1",
+   "fr": "Test 2 : réfléchir, parler et battre le Test 1",
+   "ar": "الاختبار 2: فكّر، تحدّث، وتفوّق على الاختبار 1",
+   "tr": "Test 2: düşün, konuş ve Test 1’i geç"
+  },
+  "sub": {
+   "en": "How sure?, Talk and answer again, Why?, beat your Test 1, and the Warm-up",
+   "fr": "Sûr ?, Parler et répondre à nouveau, Pourquoi ?, battre son Test 1, et l’échauffement",
+   "ar": "متأكد؟، تحدّث وأجب مرة أخرى، لماذا؟، تفوّق على اختبارك 1، والتسخين",
+   "tr": "Ne kadar eminsin?, Konuş ve yeniden cevapla, Neden?, Test 1’ini geç ve Isınma"
+  }
+ },
+ {
+  "id": "21-remote",
+  "seconds": 87,
+  "students": false,
+  "phone": false,
+  "title": {
+   "en": "MI WAY Remote",
+   "fr": "MI WAY Remote",
+   "ar": "MI WAY Remote",
+   "tr": "MI WAY Remote"
+  },
+  "sub": {
+   "en": "Your Android phone runs the class while you walk around",
+   "fr": "Votre téléphone Android dirige la classe pendant que vous circulez",
+   "ar": "هاتفك الأندرويد يدير القسم وأنت تتجول بين التلاميذ",
+   "tr": "Siz sınıfta dolaşırken Android telefonunuz dersi yönetir"
   }
  }
 ];

@@ -1,49 +1,58 @@
 WEBVTT
 
-00:00:00.000 --> 00:00:03.214 line:91%
+00:00:00.000 --> 00:00:03.161 line:91%
 Chapter 2. Connect the students' phones.
 
-00:00:04.640 --> 00:00:10.994 line:91%
+00:00:04.587 --> 00:00:10.942 line:91%
 Students answer on their phones, in the web browser. There is no app to install, and no account.
 
-00:00:11.458 --> 00:00:19.333 line:91%
+00:00:11.408 --> 00:00:19.302 line:91%
 Your phone and the students' phones must be on the same Wi-Fi, or on your phone's hotspot. You do not need the internet.
 
-00:00:20.504 --> 00:00:23.653 line:91%
+00:00:20.464 --> 00:00:23.601 line:91%
 In the menu, open "Connect phones".
 
-00:00:24.979 --> 00:00:29.114 line:91%
+00:00:24.934 --> 00:00:29.062 line:91%
 Students scan this QR code with the camera of their phone.
 
-00:00:29.573 --> 00:00:32.454 line:91%
+00:00:29.524 --> 00:00:32.422 line:91%
 Or they type this address in the browser.
 
-00:00:32.919 --> 00:00:38.774 line:91%
+00:00:32.880 --> 00:00:38.741 line:91%
 Make the QR code bigger, or show it full screen, so students at the back can scan it.
 
-00:00:39.227 --> 00:00:42.013 line:91%
+00:00:39.205 --> 00:00:41.981 line:91%
 Tap anywhere to close the full screen.
 
-00:00:42.470 --> 00:00:49.154 line:91%
+00:00:42.433 --> 00:00:49.101 line:91%
 The phone opens MI WAY. It waits here. When you start a test, it appears on the phone by itself.
 
-00:00:49.608 --> 00:00:56.874 line:91%
+00:00:49.559 --> 00:00:56.822 line:91%
 Android students can also install their own app: MI WAY Student. Press "Install the app on a phone".
 
-00:00:58.048 --> 00:01:05.686 line:91%
+00:00:57.987 --> 00:01:05.622 line:91%
 Students scan this second QR code and tap "Download the app". It comes from your phone, so they don't need the internet.
 
-00:01:06.145 --> 00:01:18.746 line:91%
+00:01:06.090 --> 00:01:18.683 line:91%
 The first time, the student taps your name. After that, the app finds your phone by itself, on any Wi-Fi, and joins with their own name. iPhones keep using the QR code in Safari.
 
-00:01:19.918 --> 00:01:26.406 line:91%
+00:01:19.136 --> 00:01:25.503 line:91%
 The first time, test with your own phone. If the page does not open, follow this check list.
 
-00:01:26.872 --> 00:01:36.426 line:91%
+00:01:26.669 --> 00:01:36.222 line:91%
 Many school Wi-Fi networks block phones. Then turn on your phone's hotspot: press "Open hotspot settings". Mobile data can stay off.
 
-00:01:36.887 --> 00:01:47.066 line:91%
+00:01:36.685 --> 00:01:46.863 line:91%
 Most phones allow only about 10 phones on their hotspot. For a full class, students work in pairs, or you use a small pocket Wi-Fi router.
 
-00:01:47.529 --> 00:01:57.126 line:91%
+00:01:47.327 --> 00:01:56.924 line:91%
 Using a hotspot? Type its name and password here once. Students scan this Wi-Fi QR code to join it without typing the password.
+
+00:01:57.383 --> 00:02:04.924 line:91%
+When you start a test, each new phone shows the class list. The student taps their name, and taps "Yes, that's me".
+
+00:02:05.381 --> 00:02:11.404 line:91%
+A box on your phone shows the new phones. Look at your class: is each student really here?
+
+00:02:12.573 --> 00:02:21.863 line:91%
+Tap the tick for one student, or press "Accept all". Only the first time: after that, each phone keeps its name and joins by itself.

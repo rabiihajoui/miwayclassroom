@@ -43,10 +43,10 @@ const T = {
     how_h: 'Prêt en 1 minute',
     s1_h: 'Activez votre point d\'accès', s1_p: 'Ou le Wi-Fi de l\'école. Internet n\'est pas nécessaire.',
     s2_h: 'Les élèves scannent un QR code', s2_p: 'Ils touchent leur nom. Rien à installer, pas de compte.',
-    s3_h: 'Lancez le quiz', s3_p: 'Les réponses arrivent en direct sur votre écran ou le projecteur.',
+    s3_h: 'Lancez le quiz', how_tut: '▶ Voir les tutoriels vidéo', s3_p: 'Les réponses arrivent en direct sur votre écran ou le projecteur.',
     video_cap: 'À voir : MI WAY en 30 secondes', nav_tut: 'Tutoriels',
     tut_h: 'Tutoriels vidéo', tut_p: 'Apprenez toute l\'application, pas à pas. Voix en anglais, sous-titres en anglais, français, arabe et turc.',
-    tut_laptop: '💻 Ordinateur', tut_phone: '📱 Téléphone', tut_students: 'Élèves', tut_min: 'min',
+    tut_g1: 'Pour commencer', tut_g2: 'En classe', tut_g3: 'Avant et après la classe', tut_g4: 'Pour les élèves', tut_new: 'Nouveau', tut_laptop: '💻 Ordinateur', tut_phone: '📱 Téléphone', tut_students: 'Élèves', tut_min: 'min',
     tut_prev: 'Précédente', tut_next: 'Suivante', tut_of: 'sur', tut_vid: 'Vidéo', tut_upnext: 'Vidéo suivante', tut_play: 'Lire', tut_cancel: 'Annuler', tut_auto: 'Lire la vidéo suivante automatiquement', cls_h: 'Dans de vraies classes',
     ttt_k: 'Test · Teach · Test', ttt_h: 'Voyez qui a compris, tout de suite',
     ttt_p1: 'Le test 1 montre ce que la classe sait déjà. L\'application montre les points manqués : vous n\'enseignez que ceux-là. Le test 2 montre les progrès.',
@@ -79,7 +79,7 @@ const T = {
     q5: 'Les données de mes élèves sont-elles protégées ?', a5: 'Tout reste sur votre appareil. Rien n\'est envoyé dans un cloud. <a href="https://sites.google.com/view/miway-classroom-privacy/home" target="_blank" rel="noopener">Politique de confidentialité</a>',
     q6: 'Ça marche sur Mac ou iPhone pour le professeur ?', a6: 'Pas encore. Le professeur a besoin d\'un téléphone Android ou d\'un ordinateur Windows. Les élèves peuvent utiliser n\'importe quel téléphone.',
     nav_stories: 'Témoignages', nav_app: 'Obtenir l\'appli',
-    nav_new: 'Nouveautés', new_k: 'Nouveautés', new_ver: 'Version 1.0.33 · novembre 2026', new_h: 'Du nouveau dans MI WAY', new_tag: 'Nouveau',
+    nav_new: 'Nouveautés', new_k: 'Nouveautés', new_ver: 'Version 1.0.34 · novembre 2026', new_h: 'Du nouveau dans MI WAY', new_tag: 'Nouveau',
     new_lead: 'Mises à jour gratuites pour tous les professeurs. L\'appli vous propose la mise à jour toute seule.',
     n1_h: '🎧 Une écoute pour chaque leçon', n1_p: 'Une écoute pour chaque leçon et chaque unité des 9 manuels, avec des voix naturelles (voix jeunes pour les élèves). Les élèves répondent sur leur téléphone, avec l\'aide 🌱🌿🌳. Cartes de mots : touchez un mot clé pour lire et entendre son sens.',
     n10_h: '🎯 Objectifs « Je sais… » et un Test 1 au calme', n10_p: 'Les téléphones affichent l\'objectif de la leçon avant le Test 1 et après le Test 2 ; les élèves répondent 😟 🙂 😃 et le tableau montre le progrès. Le Test 1 n\'a ni points de vitesse ni podium : les élèves réfléchissent au lieu de deviner. Après le Test 2, chaque téléphone affiche « 🎉 Tu as battu ton Test 1 ! »',
@@ -104,7 +104,7 @@ const T = {
     m9: '🌱 Un deuxième essai avec un indice pour les élèves en difficulté (tests à leur rythme et entraînement sur téléphone)',
     m10: '⏱ Discussions 4-3-2 : la même carte avec 3 partenaires, en 4, 3 puis 2 minutes',
     m11: '🎮 8 nouveaux jeux de classe',
-    m12: '🧠 Carte des compétences',
+    m12: '🧠 Carte des compétences', mg1: '🏫 En classe', mg2: '🗣️ Écouter, parler, lire, écrire', mg3: '📒 Outils du professeur',
     st_k: 'Les professeurs racontent', st_h: 'Des histoires de vraies classes', st_p: 'Vous utilisez MI WAY avec vos élèves ? Racontez aux autres professeurs comment ça s\'est passé.',
     st_more: 'Voir plus de témoignages', st_less: 'Voir moins', st_open: 'Partager votre expérience', st_fh: 'Partager votre expérience',
     st_name: 'Votre nom', st_country: 'Pays', st_level: 'J\'enseigne en', st_email: 'E-mail (seulement pour répondre, jamais affiché)',
@@ -120,7 +120,7 @@ const T = {
     // Pages, menu and download (Nov 2026)
     nav_home: 'Accueil',
     nav_about: 'À propos & questions',
-    home_new: '📖 Histoires en 3 niveaux · 🎯 Objectifs « Je sais… » · 🔁 Échauffement · 💡 Pourquoi ?',
+    home_new: '🎬 21 tutoriels vidéo · 📖 Histoires en 3 niveaux · 🎯 Objectifs « Je sais… » · 🔁 Échauffement · 💡 Pourquoi ?',
     home_new_b: 'Voir les nouveautés →',
     feat_all: 'Voir toutes les fonctions →',
     cta_h: 'Gratuit pour tous les professeurs',
@@ -161,10 +161,10 @@ const T = {
     how_h: 'جاهز في دقيقة واحدة',
     s1_h: 'شغّل نقطة الاتصال', s1_p: 'أو Wi-Fi المؤسسة. لا حاجة إلى الإنترنت.',
     s2_h: 'يمسح التلاميذ رمز QR واحداً', s2_p: 'يختارون أسماءهم. بدون تثبيت تطبيق، بدون حساب.',
-    s3_h: 'ابدأ الاختبار', s3_p: 'تصل الأجوبة مباشرة إلى شاشتك أو جهاز العرض.',
+    s3_h: 'ابدأ الاختبار', how_tut: '▶ شاهد دروس الفيديو', s3_p: 'تصل الأجوبة مباشرة إلى شاشتك أو جهاز العرض.',
     video_cap: 'شاهد: MI WAY في 30 ثانية', nav_tut: 'دروس الفيديو',
     tut_h: 'دروس بالفيديو', tut_p: 'تعلّم التطبيق كله خطوة بخطوة. الصوت بالإنجليزية، مع ترجمة بالإنجليزية والفرنسية والعربية والتركية.',
-    tut_laptop: '💻 حاسوب', tut_phone: '📱 هاتف', tut_students: 'للتلاميذ', tut_min: 'د',
+    tut_g1: 'للبدء', tut_g2: 'في القسم', tut_g3: 'قبل الحصة وبعدها', tut_g4: 'للتلاميذ', tut_new: 'جديد', tut_laptop: '💻 حاسوب', tut_phone: '📱 هاتف', tut_students: 'للتلاميذ', tut_min: 'د',
     tut_prev: 'السابق', tut_next: 'التالي', tut_of: 'من', tut_vid: 'فيديو', tut_upnext: 'الفيديو التالي', tut_play: 'شغّل', tut_cancel: 'إلغاء', tut_auto: 'شغّل الفيديو التالي تلقائيًا', cls_h: 'في أقسام حقيقية',
     ttt_k: 'اختبار · تدريس · اختبار', ttt_h: 'اعرف من فهم، فوراً',
     ttt_p1: 'الاختبار الأول يُظهر ما يعرفه القسم. يُظهر التطبيق النقاط التي لم يفهمها التلاميذ، فتدرّسها وحدها. الاختبار الثاني يُظهر التقدّم.',
@@ -197,7 +197,7 @@ const T = {
     q5: 'هل بيانات تلاميذي آمنة؟', a5: 'كل شيء يبقى على جهازك. لا شيء يُرسل إلى سحابة. <a href="https://sites.google.com/view/miway-classroom-privacy/home" target="_blank" rel="noopener">سياسة الخصوصية</a>',
     q6: 'هل يعمل على Mac أو آيفون للأستاذ؟', a6: 'ليس بعد. يحتاج الأستاذ هاتف أندرويد أو حاسوب Windows. يمكن للتلاميذ استعمال أي هاتف.',
     nav_stories: 'شهادات', nav_app: 'حمّل التطبيق',
-    nav_new: 'الجديد', new_k: 'الجديد', new_ver: 'الإصدار 1.0.33 · نونبر 2026', new_h: 'جديد MI WAY', new_tag: 'جديد',
+    nav_new: 'الجديد', new_k: 'الجديد', new_ver: 'الإصدار 1.0.34 · نونبر 2026', new_h: 'جديد MI WAY', new_tag: 'جديد',
     new_lead: 'تحديثات مجانية لكل الأساتذة. التطبيق يقترح عليك التحديث تلقائياً.',
     n1_h: '🎧 نشاط استماع لكل درس', n1_p: 'نشاط استماع لكل درس ولكل وحدة في الكتب التسعة، بأصوات طبيعية (أصوات شابة للتلاميذ). يجيب التلاميذ على هواتفهم مع مساعدة 🌱🌿🌳. بطاقات الكلمات: المس كلمة مهمة لتقرأ معناها وتسمعه.',
     n10_h: '🎯 أهداف «أستطيع…» واختبار أول هادئ', n10_p: 'تعرض الهواتف هدف الدرس قبل الاختبار الأول وبعد الاختبار الثاني؛ يقيّمه التلاميذ 😟 🙂 😃 وتعرض السبورة التقدم. الاختبار الأول بلا نقاط سرعة ولا منصة تتويج، فيفكر التلاميذ بدل التخمين. بعد الاختبار الثاني، يعرض كل هاتف «🎉 تفوقت على اختبارك الأول!»',
@@ -222,7 +222,7 @@ const T = {
     m9: '🌱 محاولة ثانية مع تلميح للتلاميذ الذين يحتاجون إلى مساعدة (اختبارات بإيقاعهم والتدريب على الهاتف)',
     m10: '⏱ محادثات 4-3-2: نفس البطاقة مع 3 شركاء، في 4 ثم 3 ثم دقيقتين',
     m11: '🎮 8 ألعاب جديدة للقسم',
-    m12: '🧠 خريطة المهارات',
+    m12: '🧠 خريطة المهارات', mg1: '🏫 في القسم', mg2: '🗣️ الاستماع والتحدث والقراءة والكتابة', mg3: '📒 أدوات الأستاذ',
     st_k: 'الأساتذة يحكون', st_h: 'قصص من أقسام حقيقية', st_p: 'هل تستعمل MI WAY مع تلاميذك؟ احكِ للأساتذة الآخرين كيف كانت التجربة.',
     st_more: 'عرض قصص أخرى', st_less: 'عرض أقل', st_open: 'شارك تجربتك', st_fh: 'شارك تجربتك',
     st_name: 'اسمك', st_country: 'البلد', st_level: 'أدرّس في', st_email: 'البريد الإلكتروني (للرد فقط، لا يُعرض أبداً)',
@@ -238,7 +238,7 @@ const T = {
     // Pages, menu and download (Nov 2026)
     nav_home: 'الرئيسية',
     nav_about: 'من نحن وأسئلة',
-    home_new: '📖 قصص بثلاثة مستويات · 🎯 أهداف «أستطيع…» · 🔁 تسخين · 💡 لماذا؟',
+    home_new: '🎬 21 درس فيديو · 📖 قصص بثلاثة مستويات · 🎯 أهداف «أستطيع…» · 🔁 تسخين · 💡 لماذا؟',
     home_new_b: 'شاهد الجديد ←',
     feat_all: 'كل المميزات ←',
     cta_h: 'مجاني لكل الأساتذة',
@@ -280,10 +280,10 @@ const T = {
     how_h: '1 dakikada hazır',
     s1_h: 'Mobil erişim noktanızı açın', s1_p: 'Ya da okulun Wi-Fi\'ını kullanın. İnternet gerekmez.',
     s2_h: 'Öğrenciler QR kodu okutur', s2_p: 'Adlarına dokunurlar. Kurulacak bir şey yok, hesap yok.',
-    s3_h: 'Testi başlatın', s3_p: 'Cevaplar ekranınıza veya projeksiyona canlı olarak gelir.',
+    s3_h: 'Testi başlatın', how_tut: '▶ Eğitim videolarını izleyin', s3_p: 'Cevaplar ekranınıza veya projeksiyona canlı olarak gelir.',
     video_cap: 'İzleyin: 30 saniyede MI WAY', nav_tut: 'Eğitim videoları',
     tut_h: 'Eğitim videoları', tut_p: 'Tüm uygulamayı adım adım öğrenin. Ses İngilizce; İngilizce, Fransızca, Arapça ve Türkçe altyazılı.',
-    tut_laptop: '💻 Bilgisayar', tut_phone: '📱 Telefon', tut_students: 'Öğrenciler', tut_min: 'dk',
+    tut_g1: 'Buradan başlayın', tut_g2: 'Sınıfta', tut_g3: 'Dersten önce ve sonra', tut_g4: 'Öğrenciler için', tut_new: 'Yeni', tut_laptop: '💻 Bilgisayar', tut_phone: '📱 Telefon', tut_students: 'Öğrenciler', tut_min: 'dk',
     tut_prev: 'Önceki', tut_next: 'Sonraki', tut_of: '/', tut_vid: 'Video', tut_upnext: 'Sıradaki video', tut_play: 'Şimdi oynat', tut_cancel: 'İptal', tut_auto: 'Sıradaki videoyu otomatik oynat', cls_h: 'Gerçek sınıflarda',
     ttt_k: 'Test · Teach · Test', ttt_h: 'Kimin anladığını hemen görün',
     ttt_p1: '1. test, sınıfın neyi zaten bildiğini gösterir. Uygulama kaçırılan noktaları gösterir: sadece onları öğretirsiniz. 2. test ilerlemeyi gösterir.',
@@ -316,7 +316,7 @@ const T = {
     q5: 'Öğrencilerimin verileri güvende mi?', a5: 'Her şey cihazınızda kalır. Hiçbir şey buluta gönderilmez. <a href="https://sites.google.com/view/miway-classroom-privacy/home" target="_blank" rel="noopener">Gizlilik politikası</a>',
     q6: 'Öğretmen için Mac veya iPhone\'da çalışıyor mu?', a6: 'Henüz değil. Öğretmenin bir Android telefona veya Windows bilgisayara ihtiyacı var. Öğrenciler her telefonu kullanabilir.',
     nav_stories: 'Öğretmen hikâyeleri', nav_app: 'Uygulamayı edinin',
-    nav_new: 'Yenilikler', new_k: 'Yenilikler', new_ver: 'Sürüm 1.0.33 · Kasım 2026', new_h: 'MI WAY\'de yeni neler var', new_tag: 'Yeni',
+    nav_new: 'Yenilikler', new_k: 'Yenilikler', new_ver: 'Sürüm 1.0.34 · Kasım 2026', new_h: 'MI WAY\'de yeni neler var', new_tag: 'Yeni',
     new_lead: 'Tüm öğretmenler için ücretsiz güncellemeler. Uygulama güncellemeyi size kendisi önerir.',
     n1_h: '🎧 Her ders için bir dinleme', n1_p: '9 ders kitabının her dersi ve ünitesi için doğal seslerle bir dinleme (öğrenci karakterleri için genç sesler). Öğrenciler telefonlarından, 🌱🌿🌳 yardımıyla cevaplar. Kelime kartları: anlamını okumak ve duymak için bir anahtar kelimeye dokunun.',
     n10_h: '🎯 "Yapabilirim…" hedefleri ve sakin bir Test 1', n10_p: 'Telefonlar dersin hedefini Test 1\'den önce ve Test 2\'den sonra gösterir; öğrenciler 😟 🙂 😃 ile değerlendirir ve tahta değişimi gösterir. Test 1\'de hız puanı ve kürsü yoktur; öğrenciler tahmin etmek yerine düşünür. Test 2\'den sonra her telefon "🎉 Test 1\'ini geçtin!" der.',
@@ -341,7 +341,7 @@ const T = {
     m9: '🌱 Yardıma ihtiyacı olan öğrencilere ipucuyla ikinci deneme (kendi hızında testler ve telefonda alıştırma)',
     m10: '⏱ 4-3-2 konuşmaları: aynı kart 3 partnerle, 4, 3, sonra 2 dakikada',
     m11: '🎮 8 yeni sınıf oyunu',
-    m12: '🧠 Beceri haritası',
+    m12: '🧠 Beceri haritası', mg1: '🏫 Sınıfta', mg2: '🗣️ Dinleme, konuşma, okuma, yazma', mg3: '📒 Öğretmen araçları',
     st_k: 'Öğretmenler anlatıyor', st_h: 'Gerçek sınıflardan hikâyeler', st_p: 'MI WAY\'i öğrencilerinizle kullanıyor musunuz? Nasıl geçtiğini diğer öğretmenlere anlatın.',
     st_more: 'Daha fazla hikâye gör', st_less: 'Daha az gör', st_open: 'Deneyiminizi paylaşın', st_fh: 'Deneyiminizi paylaşın',
     st_name: 'Adınız', st_country: 'Ülke', st_level: 'Öğrettiğim kademe', st_email: 'E-posta (sadece cevap vermek için, asla gösterilmez)',
@@ -357,7 +357,7 @@ const T = {
     // Pages, menu and download (Nov 2026)
     nav_home: 'Ana sayfa',
     nav_about: 'Hakkında ve sorular',
-    home_new: '📖 3 seviyede hikâyeler · 🎯 "Yapabilirim…" hedefleri · 🔁 Isınma · 💡 Neden?',
+    home_new: '🎬 21 eğitim videosu · 📖 3 seviyede hikâyeler · 🎯 "Yapabilirim…" hedefleri · 🔁 Isınma · 💡 Neden?',
     home_new_b: 'Yenilikleri gör →',
     feat_all: 'Tüm özellikleri gör →',
     cta_h: 'Her öğretmen için ücretsiz',
@@ -545,7 +545,7 @@ function showTutorial(c, play) {
   document.getElementById('tut-frame').classList.toggle('tall', k === 'phone');
   document.getElementById('tut-title').textContent = c.title[lang()] || c.title.en;
   document.getElementById('tut-sub').textContent = c.sub[lang()] || c.sub.en;
-  document.querySelectorAll('#tut-list button').forEach((b) => b.classList.toggle('on', b.dataset.id === c.id));
+  document.querySelectorAll('#tut-groups .tut-card').forEach((b) => b.classList.toggle('on', b.dataset.id === c.id));
   const i = tutorials.indexOf(c);
   document.getElementById('tut-pos').textContent = `${word('tut_vid') || 'Video'} ${i + 1} ${word('tut_of') || 'of'} ${tutorials.length}`;
   document.getElementById('tut-prev').disabled = i <= 0;
@@ -606,24 +606,45 @@ frame.addEventListener('touchend', (e) => {
 });
 }
 
+// Videos in groups, each as a picture card. The numbers stay 1–21 (the videos say "Video 3 of 21").
+const TUT_GROUPS = [
+  ['tut_g1', 'Start here', ['01-setup', '02-connect', '19-find', '04-lessons']],
+  ['tut_g2', 'In class', ['05-live', '20-test2', '06-plans', '08-activities', '09-attendance', '17-listening', '12-speaking', '21-remote']],
+  ['tut_g3', 'Before and after class', ['07-lesson-tabs', '10-results', '11-writing', '13-parents', '14-students', '15-more']],
+  ['tut_g4', 'For students', ['03-students', '16-students-home', '18-students-listen']],
+];
+const TUT_NEW = ['19-find', '20-test2', '21-remote'];
 function renderTutorials() {
   if (!tv) return;
   if (!tutorials.length) { document.getElementById('tutorials').hidden = true; return; }
   document.querySelectorAll('[data-kind]').forEach((b) => b.classList.toggle('on', b.dataset.kind === kind));
-  const list = document.getElementById('tut-list');
-  list.innerHTML = '';
-  tutorials.forEach((c, i) => {
-    const li = document.createElement('li');
-    const b = document.createElement('button');
-    b.dataset.id = c.id;
-    b.innerHTML = `<span class="tut-n">${i + 1}</span><span class="tut-t"></span>`;
-    const t = b.querySelector('.tut-t');
-    t.textContent = c.title[lang()] || c.title.en;
-    if (c.students) t.insertAdjacentHTML('beforeend', `<span class="badge">${word('tut_students') || 'Students'}</span>`);
-    t.insertAdjacentHTML('beforeend', `<small>${Math.round(c.seconds / 60)} ${word('tut_min') || 'min'}</small>`);
-    b.addEventListener('click', () => { showTutorial(c, true); if (matchMedia('(max-width: 900px)').matches) document.getElementById('tut-frame').scrollIntoView({ behavior: 'smooth', block: 'start' }); });
-    li.appendChild(b);
-    list.appendChild(li);
+  const box = document.getElementById('tut-groups');
+  box.innerHTML = '';
+  const used = new Set();
+  const groups = TUT_GROUPS.map(([key, en, ids]) => [word(key) || en, ids.map((id) => tutorials.find((c) => c.id === id)).filter(Boolean)]);
+  const rest = tutorials.filter((c) => !TUT_GROUPS.some((g) => g[2].includes(c.id)));
+  if (rest.length) groups[groups.length - 1][1].push(...rest);
+  groups.forEach(([name, list]) => {
+    if (!list.length) return;
+    const g = document.createElement('section');
+    g.className = 'tut-g';
+    g.innerHTML = '<h3></h3><div class="tut-cards"></div>';
+    g.querySelector('h3').textContent = name;
+    const cards = g.querySelector('.tut-cards');
+    list.forEach((c) => {
+      if (used.has(c.id)) return;
+      used.add(c.id);
+      const b = document.createElement('button');
+      b.className = 'tut-card';
+      b.dataset.id = c.id;
+      b.innerHTML = `<span class="tut-pic"><img loading="lazy" alt="" src="/tutorials/laptop/${c.id}.jpg"><span class="tut-n">${tutorials.indexOf(c) + 1}</span><span class="tut-len">${Math.round(c.seconds / 60)} ${word('tut_min') || 'min'}</span></span><span class="tut-t"></span>`;
+      const t = b.querySelector('.tut-t');
+      t.textContent = c.title[lang()] || c.title.en;
+      if (TUT_NEW.includes(c.id)) t.insertAdjacentHTML('afterbegin', `<span class="badge new">${word('tut_new') || 'New'}</span> `);
+      b.addEventListener('click', () => { showTutorial(c, true); document.getElementById('tut-frame').scrollIntoView({ behavior: 'smooth', block: 'center' }); });
+      cards.appendChild(b);
+    });
+    box.appendChild(g);
   });
   showTutorial(current, false);
 }
@@ -675,8 +696,10 @@ function renderStories() {
 
 async function loadStories() {
   if (!CONFIG.storiesUrl || !form) return;
-  document.getElementById('stories').hidden = false;
   try { stories = (await fetch(CONFIG.storiesUrl).then(r => r.json())).stories || []; } catch { stories = []; }
+  // Shown only when there are stories, or when someone follows a link to share one.
+  if (!stories.length && location.hash !== '#share') return;
+  document.getElementById('stories').hidden = false;
   renderStories();
   if (location.hash === '#share') openShare();
 }
