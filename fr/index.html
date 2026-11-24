@@ -28,7 +28,7 @@
 <link rel="icon" href="/img/icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Nunito:wght@400;700;800&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/style.css">
 </head>
 <body data-page="home">
@@ -56,81 +56,124 @@
 <main id="top">
 
 <section class="hero">
+  <div class="glow"></div><div class="grid-bg"></div>
   <div class="wrap hero-in">
     <div class="hero-text">
-      <div class="dots"><i></i><i></i><i></i><i></i></div>
+      <a class="pill" href="/fr/features/#new" data-goatcounter-click="home-new"><b data-t="new_tag">Nouveau</b><span data-t="pill_new">21 tutoriels vidéo et des histoires à 3 niveaux</span></a>
       <h1 data-t="hero_h">Toute la classe répond <em>en direct</em></h1>
       <p class="lead" data-t="hero_p">Sur leur propre téléphone. Sans internet, sans compte, sans publicité. Gratuit pour tous les professeurs.</p>
-      <div class="cta">
-        <a class="btn btn-main" id="play-link" data-goatcounter-click="download-play-top" href="https://play.google.com/store/apps/details?id=com.miway.classroom" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 3.5v17l9-8.5-9-8.5Zm10.4 7.2 2.6-2.4-11-6.3 8.4 8.7Zm0 2.6-8.4 8.7 11-6.3-2.6-2.4Zm1.4-1.3 3 2.8 2.7-1.6c.7-.4.7-1.4 0-1.8l-2.7-1.6-3 2.2Z"/></svg>
-          <span><small data-t="get_on">Disponible sur</small>Google Play</span>
+      <div class="install">
+        <a class="inst main" id="win-link" data-dev="win" data-goatcounter-click="download-windows-top" href="/fr/download/">
+          <span class="inst-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5.5 10 4.5v7H3v-6Zm8-1.2L21 3v8.5H11V4.3ZM3 12.5h7v7l-7-1v-6Zm8 0h10V21l-10-1.4v-7.1Z"/></svg></span>
+          <span><small data-t="for_laptop">Pour votre ordinateur</small><b>Windows</b><i data-t="inst_free">Téléchargement gratuit</i></span>
         </a>
-        <a class="btn btn-ghost" id="win-link" data-goatcounter-click="download-windows-top" href="/fr/download/">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5.5 10 4.5v7H3v-6Zm8-1.2L21 3v8.5H11V4.3ZM3 12.5h7v7l-7-1v-6Zm8 0h10V21l-10-1.4v-7.1Z"/></svg>
-          <span><small data-t="for_laptop">Pour votre ordinateur</small>Windows</span>
+        <a class="inst" id="play-link" data-dev="android" data-goatcounter-click="download-play-top" href="https://play.google.com/store/apps/details?id=com.miway.classroom" target="_blank" rel="noopener">
+          <span class="inst-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 3.5v17l9-8.5-9-8.5Zm10.4 7.2 2.6-2.4-11-6.3 8.4 8.7Zm0 2.6-8.4 8.7 11-6.3-2.6-2.4Zm1.4-1.3 3 2.8 2.7-1.6c.7-.4.7-1.4 0-1.8l-2.7-1.6-3 2.2Z"/></svg></span>
+          <span><small data-t="for_phone">Pour votre téléphone</small><b>Android</b><i data-t="get_play">Google Play</i></span>
         </a>
       </div>
-      <p class="made" data-t="hero_made">Créée par un professeur d'anglais au Maroc, pour les professeurs du monde entier.</p>
+      <p class="inst-note"><span data-t="inst_stu">Les élèves n'installent rien : ils scannent un code QR.</span> <a href="/fr/download/" data-t="inst_help">Aide pour installer →</a></p>
+      <ul class="ticks">
+        <li data-t="tick1">Gratuit pour toujours</li><li data-t="tick2">Marche sans internet</li><li data-t="tick3">Sans compte, sans pub</li>
+      </ul>
       <p class="made" id="app-lang" data-t="app_lang" hidden></p>
     </div>
-    <div class="hero-shot">
-      <div class="hero-ad" id="hero-ad" hidden>
-        <video id="hero-ad-video" muted autoplay playsinline loop preload="none" aria-label="MI WAY Classroom in 50 seconds"></video>
-        <button class="hero-sound" id="hero-sound" type="button" data-goatcounter-click="hero-ad-sound">🔊 <span>Tap for sound</span></button>
+    <div class="stage">
+      <div class="devices" id="devices">
+        <div class="laptop"><img src="/img/w-live.jpg" alt="Teacher screen: a live question with students' answers arriving" width="1400" height="788"></div>
+        <div class="phone phone-hero"><img src="/img/p-student-q.jpg" alt="Student phone: tap one answer" width="540" height="1169"></div>
       </div>
-      <div class="laptop"><img src="/img/w-live.jpg" alt="Teacher screen: a live question with students' answers arriving" width="1400" height="788"></div>
-      <div class="phone phone-hero"><img src="/img/p-student-q.jpg" alt="Student phone: tap one answer" width="540" height="1169"></div>
+      <div class="chip chip-1"><span class="chip-ico">✅</span><span><span data-t="chip1">28 sur 30 ont répondu</span><span class="bar"></span></span></div>
+      <div class="chip chip-2"><span class="chip-ico">🏆</span><span><span data-t="chip2">Le podium !</span><small data-t="chip2s">Points, sons, confettis</small></span></div>
+      <div class="chip chip-3"><span class="chip-ico">📶</span><span><span data-t="chip3">Sans internet</span><small data-t="chip3s">Votre partage de connexion suffit</small></span></div>
     </div>
   </div>
 </section>
 
-<section class="pains wrap">
-  <div class="pain"><b data-t="pain1_h">Pas de Wi-Fi à l'école ?</b><span data-t="pain1_p">Votre téléphone ou votre ordinateur crée le réseau. Rien ne passe par internet.</span></div>
-  <div class="pain"><b data-t="pain2_h">Pas de budget ?</b><span data-t="pain2_p">Gratuit pour toujours. Pas de compte, pas de pub, pas de limite d'élèves.</span></div>
-  <div class="pain"><b data-t="pain3_h">Pas le temps ?</b><span data-t="pain3_p">Des leçons prêtes pour votre manuel, ou tapez votre quiz en quelques minutes.</span></div>
+<section class="wrap">
+  <div class="stats rv">
+    <div class="stat"><b>10</b><span data-t="num1">manuels prêts</span></div>
+    <div class="stat"><b>21</b><span data-t="num2">tutoriels vidéo</span></div>
+    <div class="stat"><b>4</b><span data-t="num3">versions de chaque question</span></div>
+    <div class="stat"><b>0</b><span data-t="num4">internet nécessaire</span></div>
+  </div>
 </section>
 
-<section class="wrap new-strip">
-  <a class="new-bar" href="/fr/features/#new" data-goatcounter-click="home-new"><span class="new-tag" data-t="new_tag">Nouveau</span><span class="new-bar-t"><b data-t="new_ver">Version 1.0.34 · novembre 2026</b> <span data-t="home_new">🎬 21 tutoriels vidéo · 📖 Histoires en 3 niveaux · 🎯 Objectifs « Je sais… » · 🔁 Échauffement · 💡 Pourquoi ?</span></span><em data-t="home_new_b">Voir les nouveautés →</em></a>
-</section>
-
-<section id="how" class="block">
+<section class="vid-sec">
   <div class="wrap">
-    <h2 data-t="how_h">Prêt en 1 minute</h2>
+    <div class="sec-head rv"><p class="kicker" data-t="vid_k">En action</p><h2 data-t="vid_h">MI WAY en 50 secondes</h2></div>
+    <div class="vid-frame rv d1">
+      <div class="hero-ad" id="hero-ad" hidden>
+        <video id="hero-ad-video" muted autoplay playsinline loop preload="none" aria-label="MI WAY Classroom in 50 seconds"></video>
+        <button class="hero-sound" id="hero-sound" type="button" data-goatcounter-click="hero-ad-sound">🔊 <span>Tap for sound</span></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="sec-head rv"><p class="kicker" data-t="pain_k">Pensée pour les vraies classes</p><h2 data-t="pain_h">Pas de Wi-Fi, pas de budget, pas le temps ? Pas de problème.</h2></div>
+    <div class="pains">
+      <div class="pain rv"><span class="ic"><svg viewBox="0 0 24 24"><path d="M2 2l20 20M8.5 16.5a5 5 0 0 1 7 0M2 8.8a15 15 0 0 1 4.2-2.7M10.7 5.1A15 15 0 0 1 22 8.8M5 12.9a10 10 0 0 1 5.2-2.8M16.9 11.2a10 10 0 0 1 2.1 1.7M12 20h.01"/></svg></span><b data-t="pain1_h">Pas de Wi-Fi à l'école ?</b><span data-t="pain1_p">Votre téléphone ou votre ordinateur crée le réseau. Rien ne passe par internet.</span></div>
+      <div class="pain rv d1"><span class="ic w"><svg viewBox="0 0 24 24"><path d="M19 14c1.5-1.5 3-3.2 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.8 0-3 .5-4.5 2-1.5-1.5-2.7-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4 3 5.5l7 7Z"/></svg></span><b data-t="pain2_h">Pas de budget ?</b><span data-t="pain2_p">Gratuit pour toujours. Pas de compte, pas de pub, pas de limite d'élèves.</span></div>
+      <div class="pain rv d2"><span class="ic g"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span><b data-t="pain3_h">Pas le temps ?</b><span data-t="pain3_p">Des leçons prêtes pour votre manuel, ou tapez votre quiz en quelques minutes.</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="how" class="block alt">
+  <div class="wrap">
+    <div class="sec-head rv"><p class="kicker" data-t="how_k">Comment ça marche</p><h2 data-t="how_h">Prêt en 1 minute</h2></div>
     <ol class="steps">
-      <li><span class="num">1</span><h3 data-t="s1_h">Activez votre point d'accès</h3><p data-t="s1_p">Ou le Wi-Fi de l'école. Internet n'est pas nécessaire.</p></li>
-      <li><span class="num">2</span><h3 data-t="s2_h">Les élèves scannent un QR code</h3><p data-t="s2_p">Ils touchent leur nom. Rien à installer, pas de compte.</p></li>
-      <li><span class="num">3</span><h3 data-t="s3_h">Lancez le quiz</h3><p data-t="s3_p">Les réponses arrivent en direct sur votre écran ou le projecteur.</p></li>
+      <li class="rv"><span class="num">1</span><h3 data-t="s1_h">Activez votre point d'accès</h3><p data-t="s1_p">Ou le Wi-Fi de l'école. Internet n'est pas nécessaire.</p></li>
+      <li class="rv d1"><span class="num">2</span><h3 data-t="s2_h">Les élèves scannent un QR code</h3><p data-t="s2_p">Ils touchent leur nom. Rien à installer, pas de compte.</p></li>
+      <li class="rv d2"><span class="num">3</span><h3 data-t="s3_h">Lancez le quiz</h3><p data-t="s3_p">Les réponses arrivent en direct sur votre écran ou le projecteur.</p></li>
     </ol>
-    <p class="center how-more"><a class="btn btn-ghost-dark" href="/fr/tutorials/" data-goatcounter-click="home-tutorials" data-t="how_tut">▶ Voir les tutoriels vidéo</a></p>
+    <p class="center how-more"><a class="btn btn-ghost" href="/fr/tutorials/" data-goatcounter-click="home-tutorials" data-t="how_tut">▶ Voir les tutoriels vidéo</a></p>
   </div>
 </section>
 
 <section class="block">
   <div class="wrap split">
-    <div>
+    <div class="rv">
       <p class="kicker" data-t="ttt_k">Test · Teach · Test</p>
       <h2 data-t="ttt_h">Voyez qui a compris, tout de suite</h2>
       <p data-t="ttt_p1">Le test 1 montre ce que la classe sait déjà. L'application montre les points manqués : vous n'enseignez que ceux-là. Le test 2 montre les progrès.</p>
       <p class="proof" data-t="ttt_proof">En 3 semaines, une classe est passée de 42 % à 58 % sur la même compétence.</p>
     </div>
-    <div class="shot-wide"><img src="/img/w-live-reveal.jpg" alt="The answers of the whole class after a question" loading="lazy" width="1400" height="788"></div>
+    <div class="shot-wide rv d1"><img src="/img/w-live-reveal.jpg" alt="The answers of the whole class after a question" loading="lazy" width="1400" height="788"><div class="jump"><s>42%</s><span aria-hidden="true">→</span><b>58%</b></div></div>
   </div>
 </section>
 
 <section id="features" class="block alt">
   <div class="wrap">
-    <h2 data-t="feat_h">Tout ce qu'il faut pour un cours d'anglais</h2>
-    <div class="cards">
-      <article class="card"><span class="ico c1">📚</span><h3 data-t="f1_h">Prêt pour votre manuel</h3><p data-t="f1_p">Spotlight 1AC–3AC, Outlook, Ticket to English, Gateway et Insights. Ou créez vos leçons pour n'importe quel manuel.</p></article>
-      <article class="card"><span class="ico c2">🎮</span><h3 data-t="f2_h">Les élèves adorent</h3><p data-t="f2_p">Points, podium, sons et confettis. Chaque question existe en 4 versions : impossible de copier.</p></article>
-      <article class="card"><span class="ico c3">🎧</span><h3 data-t="f3_h">L'écoute et l'oral pour tous les niveaux</h3><p data-t="f3_p">Une écoute pour chaque leçon et chaque unité, avec des voix naturelles, et des activités d'oral. 3 niveaux d'aide 🌱🌿🌳 : chaque élève participe.</p></article>
-      <article class="card"><span class="ico c4">🖼️</span><h3 data-t="f4_h">Le vocabulaire en images</h3><p data-t="f4_p">Des jeux de mots en classe, des fiches de mots à lire et à écouter, et des listes envoyées sur les téléphones pour réviser à la maison.</p></article>
-      <article class="card"><span class="ico c1">📒</span><h3 data-t="f5_h">Tous vos outils de classe</h3><p data-t="f5_p">Choisir un élève, absences, plan de classe, points de comportement, notes sur 20, export Excel.</p></article>
-      <article class="card"><span class="ico c3">🔒</span><h3 data-t="f6_h">Privé par conception</h3><p data-t="f6_p">Tout reste sur votre appareil. Pas de cloud, pas de suivi, pas de compte élève.</p></article>
+    <div class="sec-head rv"><p class="kicker" data-t="feat_k">Fonctions</p><h2 data-t="feat_h">Tout ce qu'il faut pour un cours d'anglais</h2></div>
+    <div class="bento">
+      <article class="card big rv"><span class="ic"><svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5v14zM20 17v4H6.5A2.5 2.5 0 0 1 4 18.5"/></svg></span><h3 data-t="f1_h">Prêt pour votre manuel</h3><p data-t="f1_p">Spotlight 1AC–3AC, Outlook, Ticket to English, Gateway et Insights. Ou créez vos leçons pour n'importe quel manuel.</p><img src="/img/w-lessons.jpg" alt="" loading="lazy" width="1400" height="788"></article>
+      <article class="card big rv d1"><span class="ic w"><svg viewBox="0 0 24 24"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4zM17 5h3v2a3 3 0 0 1-3 3M7 5H4v2a3 3 0 0 0 3 3"/></svg></span><h3 data-t="f2_h">Les élèves adorent</h3><p data-t="f2_p">Points, podium, sons et confettis. Chaque question existe en 4 versions : impossible de copier.</p><div class="shots"><img src="/img/p-student-ok.jpg" alt="" loading="lazy" width="540" height="1169"><img src="/img/p-vocab-game.jpg" alt="" loading="lazy" width="540" height="1169"><img src="/img/p-student-end.jpg" alt="" loading="lazy" width="540" height="1169"></div></article>
+      <article class="card rv"><span class="ic g"><svg viewBox="0 0 24 24"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1v-6h3zM3 19a2 2 0 0 0 2 2h1v-6H3z"/></svg></span><h3 data-t="f3_h">L'écoute et l'oral pour tous les niveaux</h3><p data-t="f3_p">Une écoute pour chaque leçon et chaque unité, avec des voix naturelles, et des activités d'oral. 3 niveaux d'aide 🌱🌿🌳 : chaque élève participe.</p></article>
+      <article class="card rv d1"><span class="ic y"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-5-5L5 21"/></svg></span><h3 data-t="f4_h">Le vocabulaire en images</h3><p data-t="f4_p">Des jeux de mots en classe, des fiches de mots à lire et à écouter, et des listes envoyées sur les téléphones pour réviser à la maison.</p></article>
+      <article class="card rv d2"><span class="ic"><svg viewBox="0 0 24 24"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2M9 12h6M9 16h4"/></svg></span><h3 data-t="f5_h">Tous vos outils de classe</h3><p data-t="f5_p">Choisir un élève, absences, plan de classe, points de comportement, notes sur 20, export Excel.</p></article>
+      <article class="card rv d3"><span class="ic w"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></span><h3 data-t="f6_h">Privé par conception</h3><p data-t="f6_p">Tout reste sur votre appareil. Pas de cloud, pas de suivi, pas de compte élève.</p></article>
     </div>
     <p class="center"><a class="btn btn-main" href="/fr/features/" data-goatcounter-click="home-features" data-t="feat_all">Voir toutes les fonctions →</a></p>
+  </div>
+</section>
+
+<section id="creator" class="block">
+  <div class="wrap">
+    <div class="creator rv">
+      <div class="photo-ring"><img class="teacher-photo" data-photo src="/img/creator.png" alt="Rabii Hajoui, creator of MI WAY Classroom" width="250" height="250" loading="lazy"><span class="logo-dots" aria-hidden="true"><i></i><i></i><i></i><i></i></span><img class="logo-badge" src="/img/icon.png" alt="" width="60" height="60"></div>
+      <div>
+        <p class="kicker" data-t="t_k">Créée par un professeur</p>
+        <h2 data-t="t_h">Bonjour, je suis Rabii Hajoui</h2>
+        <p class="role" data-t="cr_role">Professeur d'anglais au Maroc · Créateur de MI WAY Classroom</p>
+        <blockquote><p data-t="t_p1">Je suis professeur d'anglais au Maroc. Mes élèves adorent les jeux de quiz, mais notre école n'a pas de Wi-Fi. Alors j'ai créé ma propre application, qui marche sans internet.</p><p data-t="t_p2">Je l'utilise chaque semaine avec mes classes, et je l'améliore grâce aux idées des professeurs. Elle est gratuite et le restera.</p></blockquote>
+        <p class="sig">Created by RABII HAJOUI</p>
+        <div class="creator-foot"><div class="social" data-social></div><a class="btn btn-ghost" href="/fr/about/" data-t="cr_more">En savoir plus sur moi →</a></div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -186,11 +229,16 @@
   </div>
 </section>
 
-<section class="block cta-band">
+<section class="cta-band">
   <div class="wrap">
-    <h2 data-t="cta_h">Gratuit pour tous les professeurs</h2>
-    <p data-t="cta_p">Sans publicité, sans compte, sans internet. Prêt en 1 minute.</p>
-    <a class="btn btn-main" href="/fr/download/" data-goatcounter-click="cta-download" data-t="cta_b">Obtenir l'application</a>
+    <div class="cta-box rv">
+      <h2 data-t="cta_h">Gratuit pour tous les professeurs</h2>
+      <p data-t="cta_p">Sans publicité, sans compte, sans internet. Prêt en 1 minute.</p>
+      <div class="cta-btns">
+        <a class="btn btn-white" href="/fr/download/" data-goatcounter-click="cta-download" data-t="cta_b">Obtenir l'application</a>
+        <a class="btn btn-line" href="/fr/tutorials/" data-goatcounter-click="cta-tutorials" data-t="cta_tut">▶ Voir comment ça marche</a>
+      </div>
+    </div>
   </div>
 </section>
 

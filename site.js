@@ -4,7 +4,7 @@ const CONFIG = {
   releaseApi: 'https://api.github.com/repos/rabiihajoui/miwayclassroom/releases/latest',
   donateUrl: '',
   contactEmail: '',
-  teacherPhoto: '',
+  teacherPhoto: '/img/creator.png',
   // Teacher stories: the Google Apps Script web app link (see scripts/stories.gs). Empty = section hidden.
   storiesUrl: 'https://script.google.com/macros/s/AKfycbzds4d-KsP-LtuNuhBcqG3ZQGLf2Cqbzwt1Qq0Klfn7gugJ1lGXNwD-YiLscNY37HGQeA/exec',
   play: { en: 'en', fr: 'fr', ar: 'ar', tr: 'tr' },
@@ -148,6 +148,33 @@ const T = {
     foot_p: 'Quiz d\'anglais gratuits en direct sur les téléphones des élèves. Sans internet.',
     foot_app: 'L\'application',
     foot_help: 'Aide',
+    pill_new: "21 tutoriels vidéo et des histoires à 3 niveaux",
+    inst_free: "Téléchargement gratuit",
+    for_phone: "Pour votre téléphone",
+    get_play: "Google Play",
+    inst_stu: "Les élèves n'installent rien : ils scannent un code QR.",
+    inst_help: "Aide pour installer →",
+    tick1: "Gratuit pour toujours",
+    tick2: "Marche sans internet",
+    tick3: "Sans compte, sans pub",
+    chip1: "28 sur 30 ont répondu",
+    chip2: "Le podium !",
+    chip2s: "Points, sons, confettis",
+    chip3: "Sans internet",
+    chip3s: "Votre partage de connexion suffit",
+    num1: "manuels prêts",
+    num2: "tutoriels vidéo",
+    num3: "versions de chaque question",
+    num4: "internet nécessaire",
+    vid_k: "En action",
+    vid_h: "MI WAY en 50 secondes",
+    pain_k: "Pensée pour les vraies classes",
+    pain_h: "Pas de Wi-Fi, pas de budget, pas le temps ? Pas de problème.",
+    how_k: "Comment ça marche",
+    feat_k: "Fonctions",
+    cr_role: "Professeur d'anglais au Maroc · Créateur de MI WAY Classroom",
+    cr_more: "En savoir plus sur moi →",
+    cta_tut: "▶ Voir comment ça marche",
   },
   ar: {
     nav_how: 'كيف يعمل', nav_features: 'المميزات', nav_teacher: 'الأستاذ', nav_faq: 'أسئلة',
@@ -266,6 +293,33 @@ const T = {
     foot_p: 'اختبارات إنجليزية مجانية ومباشرة على هواتف التلاميذ. بدون إنترنت.',
     foot_app: 'التطبيق',
     foot_help: 'مساعدة',
+    pill_new: "21 درسًا بالفيديو وقصص بثلاثة مستويات",
+    inst_free: "تحميل مجاني",
+    for_phone: "لهاتفك",
+    get_play: "Google Play",
+    inst_stu: "التلاميذ لا يثبّتون شيئًا: يمسحون رمز QR فقط.",
+    inst_help: "مساعدة في التثبيت ←",
+    tick1: "مجاني للأبد",
+    tick2: "يعمل بدون إنترنت",
+    tick3: "بدون حسابات ولا إعلانات",
+    chip1: "أجاب 28 من 30",
+    chip2: "وقت المنصّة!",
+    chip2s: "نقاط، أصوات، احتفال",
+    chip3: "بدون إنترنت",
+    chip3s: "نقطة اتصال هاتفك تكفي",
+    num1: "كتب مدرسية جاهزة",
+    num2: "دروس بالفيديو",
+    num3: "نسخ لكل سؤال",
+    num4: "إنترنت مطلوب",
+    vid_k: "شاهده يعمل",
+    vid_h: "MI WAY في 50 ثانية",
+    pain_k: "مصمَّم للأقسام الحقيقية",
+    pain_h: "لا Wi-Fi، لا ميزانية، لا وقت؟ لا مشكلة.",
+    how_k: "كيف يعمل",
+    feat_k: "المميزات",
+    cr_role: "أستاذ اللغة الإنجليزية في المغرب · مُنشئ MI WAY Classroom",
+    cr_more: "المزيد عني ←",
+    cta_tut: "▶ شاهد كيف يعمل",
   },
   tr: {
     nav_how: 'Nasıl çalışır', nav_features: 'Özellikler', nav_teacher: 'Öğretmen', nav_faq: 'Sorular',
@@ -385,6 +439,33 @@ const T = {
     foot_p: 'Öğrenci telefonlarında ücretsiz canlı İngilizce sınavlar. İnternet gerekmez.',
     foot_app: 'Uygulama',
     foot_help: 'Yardım',
+    pill_new: "21 video eğitim ve 3 seviyeli hikâyeler",
+    inst_free: "Ücretsiz indir",
+    for_phone: "Telefonunuz için",
+    get_play: "Google Play",
+    inst_stu: "Öğrenciler hiçbir şey yüklemez: bir QR kodu okuturlar.",
+    inst_help: "Kurulum yardımı →",
+    tick1: "Sonsuza dek ücretsiz",
+    tick2: "İnternetsiz çalışır",
+    tick3: "Hesap yok, reklam yok",
+    chip1: "30 kişiden 28i cevapladı",
+    chip2: "Kürsü zamanı!",
+    chip2s: "Puanlar, sesler, konfeti",
+    chip3: "İnternet yok",
+    chip3s: "Telefonunuzun hotspotu yeterli",
+    num1: "hazır ders kitabı",
+    num2: "video eğitim",
+    num3: "her sorunun sürümü",
+    num4: "internet gerekir",
+    vid_k: "Uygulamada görün",
+    vid_h: "50 saniyede MI WAY",
+    pain_k: "Gerçek sınıflar için",
+    pain_h: "Wi-Fi yok, bütçe yok, zaman yok mu? Sorun değil.",
+    how_k: "Nasıl çalışır",
+    feat_k: "Özellikler",
+    cr_role: "Faslı İngilizce öğretmeni · MI WAY Classroom'un yaratıcısı",
+    cr_more: "Hakkımda daha fazlası →",
+    cta_tut: "▶ Nasıl çalıştığını izleyin",
   },
 };
 
@@ -436,7 +517,32 @@ function applyConfig(d) {
   } else win.classList.add('soon');
   if (CONFIG.donateUrl && document.getElementById('support')) { document.getElementById('support').hidden = false; document.getElementById('donate-btn').href = CONFIG.donateUrl; }
   if (CONFIG.contactEmail) { document.getElementById('contact-wrap').hidden = false; document.getElementById('contact-link').href = 'mailto:' + CONFIG.contactEmail; }
-  if (CONFIG.teacherPhoto && document.getElementById('teacher-photo')) document.getElementById('teacher-photo').src = CONFIG.teacherPhoto;
+  if (CONFIG.teacherPhoto) document.querySelectorAll('[data-photo]').forEach(i => { i.src = CONFIG.teacherPhoto; });
+}
+
+// New look: things appear while scrolling, the top bar gets a line, the laptop picture follows the mouse.
+document.documentElement.classList.add('js');
+const rv = document.querySelectorAll('.rv');
+if ('IntersectionObserver' in window) {
+  const io = new IntersectionObserver((es) => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { rootMargin: '0px 0px -8% 0px' });
+  rv.forEach(el => io.observe(el));
+} else rv.forEach(el => el.classList.add('in'));
+const topBar = document.querySelector('.nav');
+const onScroll = () => topBar.classList.toggle('scrolled', scrollY > 8);
+addEventListener('scroll', onScroll, { passive: true }); onScroll();
+const devs = document.getElementById('devices');
+if (devs && matchMedia('(hover: hover) and (min-width: 901px)').matches && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  const st = devs.parentElement, rtl = () => document.documentElement.dir === 'rtl' ? -1 : 1;
+  st.addEventListener('mousemove', (e) => {
+    const r = st.getBoundingClientRect(), x = (e.clientX - r.left) / r.width - .5, y = (e.clientY - r.top) / r.height - .5;
+    devs.style.transform = `rotateY(${-9 * rtl() + x * 10}deg) rotateX(${4 - y * 8}deg)`;
+  });
+  st.addEventListener('mouseleave', () => { devs.style.transform = ''; });
+}
+// Home: the big blue button is the one for this device (Google Play on Android phones).
+if (/Android/i.test(navigator.userAgent)) {
+  const w = document.getElementById('win-link'), p = document.getElementById('play-link');
+  if (w && p) { w.classList.remove('main'); p.classList.add('main'); p.parentElement.prepend(p); }
 }
 
 // Each language has its own address (/fr/, /ar/, /tr/) so Google can find it. Switching keeps the same page.
