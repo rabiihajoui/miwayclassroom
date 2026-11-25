@@ -33,8 +33,8 @@ document.querySelectorAll('[data-social]').forEach(box => {
 const T = {
   fr: {
     nav_how: 'Comment ça marche', nav_features: 'Fonctions', nav_teacher: 'Le professeur', nav_faq: 'Questions',
-    hero_h: 'Toute la classe répond <em>en direct</em>',
-    hero_p: 'Sur leur propre téléphone. Sans internet, sans compte, sans publicité. Gratuit pour tous les professeurs.',
+    hero_h: 'Même les élèves timides <em>répondent</em>',
+    hero_p: 'Chaque élève répond en direct sur son téléphone, et vous voyez qui a compris. Sans internet, sans compte, sans publicité. Gratuit pour tous les professeurs.',
     get_on: 'Disponible sur', for_laptop: 'Pour votre ordinateur',
     hero_made: 'Créée par un professeur d\'anglais au Maroc, pour les professeurs du monde entier.',
     pain1_h: 'Pas de Wi-Fi à l\'école ?', pain1_p: 'Votre téléphone ou votre ordinateur crée le réseau. Rien ne passe par internet.',
@@ -178,8 +178,8 @@ const T = {
   },
   ar: {
     nav_how: 'كيف يعمل', nav_features: 'المميزات', nav_teacher: 'الأستاذ', nav_faq: 'أسئلة',
-    hero_h: 'القسم كله يجيب <em>مباشرة</em>',
-    hero_p: 'من هواتفهم. بدون إنترنت، بدون حساب، بدون إعلانات. مجاني لكل الأساتذة.',
+    hero_h: 'حتى التلاميذ الخجولون <em>يجيبون</em>',
+    hero_p: 'يجيب كل تلميذ مباشرة من هاتفه، وترى من فهم. بدون إنترنت، بدون حساب، بدون إعلانات. مجاني لكل الأساتذة.',
     get_on: 'متوفر على', for_laptop: 'لحاسوبك',
     hero_made: 'صمّمه أستاذ للغة الإنجليزية في المغرب، لأساتذة العالم.',
     pain1_h: 'لا يوجد Wi-Fi في المؤسسة؟', pain1_p: 'هاتفك أو حاسوبك يصنع الشبكة. لا شيء يمر عبر الإنترنت.',
@@ -323,8 +323,8 @@ const T = {
   },
   tr: {
     nav_how: 'Nasıl çalışır', nav_features: 'Özellikler', nav_teacher: 'Öğretmen', nav_faq: 'Sorular',
-    hero_h: 'Tüm sınıf <em>canlı</em> cevaplıyor',
-    hero_p: 'Kendi telefonlarından. İnternet yok, hesap yok, reklam yok. Tüm öğretmenler için ücretsiz.',
+    hero_h: 'Sessiz öğrenciler bile <em>cevap veriyor</em>',
+    hero_p: 'Her öğrenci kendi telefonundan canlı cevap verir, kimin anladığını görürsünüz. İnternet yok, hesap yok, reklam yok. Tüm öğretmenler için ücretsiz.',
     get_on: 'Şuradan edinin:', for_laptop: 'Bilgisayarınız için',
     hero_made: 'Fas\'ta bir İngilizce öğretmeni tarafından, dünyanın her yerindeki öğretmenler için yapıldı.',
     app_lang: 'Uygulama İngilizcedir ve İngilizce dersleri için yapılmıştır.',
