@@ -377,5 +377,23 @@ window.TUTORIALS = [
    "ar": "هاتفك الأندرويد يدير القسم وأنت تتجول بين التلاميذ",
    "tr": "Siz sınıfta dolaşırken Android telefonunuz dersi yönetir"
   }
+ },
+ {
+  "id": "22-speaking-games",
+  "seconds": 222,
+  "students": false,
+  "phone": true,
+  "title": {
+   "en": "Speaking games",
+   "fr": "Speaking games",
+   "ar": "Speaking games",
+   "tr": "Speaking games"
+  },
+  "sub": {
+   "en": "Taboo, Find someone who, Opinion swap, Story chain and more: students talk, in pairs, groups and teams",
+   "fr": "Taboo, Find someone who, Opinion swap, Story chain and more: students talk, in pairs, groups and teams",
+   "ar": "Taboo, Find someone who, Opinion swap, Story chain and more: students talk, in pairs, groups and teams",
+   "tr": "Taboo, Find someone who, Opinion swap, Story chain and more: students talk, in pairs, groups and teams"
+  }
  }
 ];
